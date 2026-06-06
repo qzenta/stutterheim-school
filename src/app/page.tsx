@@ -44,11 +44,12 @@ const achievements = [
   },
 ];
 
+const BASE_IMG = "https://www.stutterheimschool.co.za/extra-images";
 const galleryPreviews = [
-  "https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1509062522246-3755977927d4?w=600&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80&fit=crop",
+  { src: `${BASE_IMG}/swimming.jpg`, alt: "Swimming programme at SIS" },
+  { src: `${BASE_IMG}/ballet.jpg`, alt: "Ballet at Stutterheim International School" },
+  { src: `${BASE_IMG}/Field trip.jpg`, alt: "SIS learners on field trip" },
+  { src: `${BASE_IMG}/Camping.webp`, alt: "SIS camping and outdoor experience" },
 ];
 
 export default function HomePage() {
@@ -218,13 +219,13 @@ export default function HomePage() {
           </FadeIn>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {galleryPreviews.map((src, i) => (
-              <FadeIn key={src} delay={i * 80}>
+            {galleryPreviews.map((item, i) => (
+              <FadeIn key={item.src} delay={i * 80}>
                 <Link href="/gallery" className="block aspect-square overflow-hidden rounded-xl group shadow-sm">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={src}
-                    alt={`School gallery photo ${i + 1}`}
+                    src={item.src}
+                    alt={item.alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </Link>

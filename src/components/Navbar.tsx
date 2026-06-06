@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
+import Image from "next/image";
 import SearchModal from "@/components/SearchModal";
 
 type NavChild = { label: string; href: string };
@@ -87,12 +88,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <div className="bg-[#111480] text-white font-extrabold text-xs px-2.5 py-1.5 rounded tracking-wide">
-            SIS
-          </div>
-          <div className="leading-tight hidden sm:block">
-            <p className="font-bold text-sm text-[#111480]">Stutterheim International School</p>
-          </div>
+          <Image
+            src="https://www.stutterheimschool.co.za/images/logo.png"
+            alt="Stutterheim International School"
+            width={160}
+            height={52}
+            className="h-12 w-auto object-contain"
+            priority
+            unoptimized
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -110,7 +114,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-0.5 px-3 py-2 rounded transition-all text-sm ${
+                  className={`flex items-center px-3 py-2 rounded transition-all text-sm ${
                     item.highlight
                       ? "bg-[#111480] text-white font-bold hover:bg-blue-900"
                       : isActive
@@ -119,14 +123,6 @@ export default function Navbar() {
                   }`}
                 >
                   {item.label}
-                  {item.children && (
-                    <ChevronDown
-                      size={13}
-                      className={`transition-transform duration-200 ${
-                        activeDropdown === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-                  )}
                 </Link>
 
                 {item.children && activeDropdown === item.label && (
