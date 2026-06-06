@@ -30,7 +30,7 @@ const subjects = [
 
 export default function SubjectsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20">
       <h1 className="text-4xl font-bold text-[#111480] mb-2">Subjects Offered</h1>
       <div className="w-16 h-1 bg-[#FFD000] rounded mb-8" />
       <p className="text-gray-600 mb-2">

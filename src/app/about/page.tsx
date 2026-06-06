@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "About | Stutterheim International School",
@@ -7,11 +8,13 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-[#111480] mb-2">About Us</h1>
-      <div className="w-16 h-1 bg-[#FFD000] rounded mb-8" />
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20">
+      <FadeIn>
+        <h1 className="text-4xl font-bold text-[#111480] mb-2">About Us</h1>
+        <div className="w-16 h-1 bg-[#FFD000] rounded mb-8" />
+      </FadeIn>
 
-      <section className="mb-12">
+      <section className="mb-12" id="story">
         <h2 className="text-2xl font-bold text-[#111480] mb-3">Our Mission</h2>
         <p className="text-gray-700 leading-relaxed">
           Our mission is to provide a safe and conducive environment where everyone is valued and

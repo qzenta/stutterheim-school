@@ -1,127 +1,293 @@
 import Link from "next/link";
+import { GraduationCap, Building2, Users, Trophy, BookOpen, Heart, Phone } from "lucide-react";
+import HeroSlider from "@/components/HeroSlider";
+import AnimatedStats from "@/components/AnimatedStats";
+import FadeIn from "@/components/FadeIn";
 
-const stats = [
-  { value: "20+", label: "Subjects Offered" },
-  { value: "60+", label: "Students Enrolled" },
-  { value: "6+", label: "Qualified Teachers" },
-  { value: "2+", label: "Awards Received" },
+// ─── B3: Why Choose SIS pillars ───────────────────────────────────────────────
+const pillars = [
+  {
+    icon: GraduationCap,
+    title: "Academic Excellence",
+    desc: "Rigorous curriculum across 20+ subjects with dedicated, qualified educators committed to learner attainment and success.",
+  },
+  {
+    icon: Building2,
+    title: "State-of-the-Art Facilities",
+    desc: "Modern classrooms, laboratories, and sporting infrastructure designed to create an optimal learning environment.",
+  },
+  {
+    icon: Heart,
+    title: "Holistic Development",
+    desc: "Ballet, swimming, outreach, and extracurricular programmes nurture each learner's unique talents and character.",
+  },
 ];
 
-const activities = [
-  "Ballet Dancing",
-  "Sports & Recreation",
-  "Swimming Lessons",
-  "Outreach Team",
-  "Certificates & Academic Achievements",
+// ─── B5: Achievements ─────────────────────────────────────────────────────────
+const achievements = [
+  {
+    icon: BookOpen,
+    title: "Certificates & Academic Honours",
+    desc: "Learners consistently achieve distinction-level results across our full subject offering.",
+    year: "2024–2025",
+  },
+  {
+    icon: Trophy,
+    title: "Sports & Recreation",
+    desc: "Regional recognition in swimming, athletics, and team sports competitions.",
+    year: "2024",
+  },
+  {
+    icon: Users,
+    title: "Community Outreach",
+    desc: "Recognised for outstanding service to the Stutterheim community through our outreach programme.",
+    year: "2023–2025",
+  },
+];
+
+// ─── B6: Gallery previews ─────────────────────────────────────────────────────
+const galleryPreviews = [
+  "https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80",
+  "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80",
+  "https://images.unsplash.com/photo-1509062522246-3755977927d4?w=600&q=80",
+  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80",
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-[#111480] text-white py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[#FFD000] font-semibold text-sm uppercase tracking-widest mb-3">
-            Now Open: Admissions 2027
-          </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Academic Excellence<br />in the Eastern Cape
-          </h1>
-          <p className="text-blue-200 text-lg sm:text-xl mb-10 max-w-2xl mx-auto">
-            Stutterheim International School offers holistic education with state-of-the-art
-            facilities, qualified teachers, and a boarding programme with limited spaces.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="px-8 py-3 bg-[#FFD000] text-[#111480] font-bold rounded hover:bg-amber-400 transition-colors text-lg"
-            >
-              Apply Now
-            </Link>
-            <Link
-              href="/about"
-              className="px-8 py-3 border border-white text-white font-semibold rounded hover:bg-white hover:text-[#111480] transition-colors text-lg"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* B1 — Full-screen hero slider */}
+      <HeroSlider />
 
-      {/* Stats */}
-      <section className="bg-white border-b border-gray-100 py-12 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <p className="text-4xl font-bold text-[#111480]">{s.value}</p>
-              <p className="text-sm text-gray-500 mt-1">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* B2 — Animated stats bar */}
+      <AnimatedStats />
 
-      {/* Mission snippet */}
-      <section className="py-16 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#111480] mb-4">Our Mission</h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            To provide a safe and conducive environment where everyone is valued and respected.
-            All staff members, in partnership with parents and families, are fully committed to
-            learner attainment and success.
-          </p>
-          <div className="mt-6 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
-        </div>
-      </section>
+      {/* B3 — Why Choose SIS */}
+      <section className="py-20 px-4 bg-[#F7F8FA]">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn className="text-center mb-14">
+            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+              Why Parents Choose Us
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111480]">
+              A Complete Education
+            </h2>
+            <div className="mt-4 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+          </FadeIn>
 
-      {/* Key pillars */}
-      <section className="bg-white py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#111480] text-center mb-10">Why Choose SIS?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {[
-              { title: "Academic Excellence", desc: "Rigorous curriculum across 20+ subjects with dedicated, qualified educators." },
-              { title: "State-of-the-Art Facilities", desc: "Modern classrooms, labs, and sporting infrastructure for well-rounded development." },
-              { title: "Holistic Development", desc: "Ballet, swimming, outreach, and extracurricular programmes alongside academics." },
-            ].map((p) => (
-              <div key={p.title} className="bg-[#F7F8FA] rounded-lg p-6 border border-gray-100">
-                <div className="w-10 h-1 bg-[#FFD000] rounded mb-4" />
-                <h3 className="font-bold text-[#111480] mb-2">{p.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
-              </div>
+            {pillars.map((p, i) => (
+              <FadeIn key={p.title} delay={i * 120}>
+                <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-[#111480]/10 rounded-lg flex items-center justify-center mb-5">
+                    <p.icon className="w-6 h-6 text-[#111480]" />
+                  </div>
+                  <div className="w-8 h-1 bg-[#FFD000] rounded mb-4" />
+                  <h3 className="font-bold text-[#111480] text-lg mb-3">{p.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
+                </div>
+              </FadeIn>
             ))}
           </div>
+
+          {/* Boarding callout */}
+          <FadeIn className="mt-10">
+            <div className="bg-[#FFD000] rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <p className="font-bold text-[#111480] text-lg">
+                  🏠 Boarding Facility Available — Limited Spaces
+                </p>
+                <p className="text-[#111480]/80 text-sm mt-1">
+                  Secure accommodation for learners from outside Stutterheim.
+                </p>
+              </div>
+              <a
+                href={`https://wa.me/27673977613?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20boarding%20at%20Stutterheim%20International%20School.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 flex items-center gap-2 px-6 py-3 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-colors hover:scale-105 duration-200 text-sm"
+              >
+                <Phone size={15} />
+                WhatsApp Us
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Activities */}
-      <section className="py-16 px-4">
+      {/* B4 — Admissions 2027 */}
+      <section className="bg-[#111480] text-white py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#111480] text-center mb-8">Activities & Programmes</h2>
-          <ul className="flex flex-wrap justify-center gap-3">
-            {activities.map((a) => (
-              <li key={a} className="bg-[#111480] text-white px-4 py-2 rounded-full text-sm font-medium">
-                {a}
-              </li>
+          <FadeIn className="text-center mb-14">
+            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+              2027 Academic Year
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold">Applications Now Open</h2>
+            <p className="text-blue-200 mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+              Secure your child&apos;s place at Stutterheim International School. Follow our
+              simple three-step application process.
+            </p>
+            <div className="mt-4 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+          </FadeIn>
+
+          {/* 3 Steps */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+            {[
+              { step: "01", title: "Submit Form", desc: "Complete and submit the application form — download below or apply online." },
+              { step: "02", title: "Review", desc: "Our admissions team reviews your application and contacts you within 5 business days." },
+              { step: "03", title: "Confirmation", desc: "Receive your official acceptance letter and secure your space for 2027." },
+            ].map((s, i) => (
+              <FadeIn key={s.step} delay={i * 120}>
+                <div className="bg-white/10 border border-white/20 rounded-xl p-6 text-center hover:bg-white/15 transition-colors">
+                  <p className="text-[#FFD000] text-4xl font-bold mb-3">{s.step}</p>
+                  <h3 className="font-bold text-white text-base mb-2">{s.title}</h3>
+                  <p className="text-blue-200 text-sm leading-relaxed">{s.desc}</p>
+                </div>
+              </FadeIn>
             ))}
-          </ul>
+          </div>
+
+          {/* Download buttons */}
+          <FadeIn>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="#"
+                className="flex items-center gap-2 px-6 py-3 bg-[#FFD000] text-[#111480] font-bold rounded-lg hover:bg-amber-400 transition-all hover:scale-105 text-sm"
+              >
+                📄 Application Form (PDF)
+              </a>
+              <a
+                href="#"
+                className="flex items-center gap-2 px-6 py-3 bg-white/15 text-white border border-white/30 font-semibold rounded-lg hover:bg-white/25 transition-all hover:scale-105 text-sm"
+              >
+                📄 Fee Structure (PDF)
+              </a>
+              <Link
+                href="/admissions"
+                className="flex items-center gap-2 px-6 py-3 bg-white/15 text-white border border-white/30 font-semibold rounded-lg hover:bg-white/25 transition-all hover:scale-105 text-sm"
+              >
+                Apply Online →
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* Admissions CTA */}
-      <section className="bg-[#111480] text-white py-16 px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-[#FFD000] font-semibold text-sm uppercase tracking-widest mb-2">Limited Spaces</p>
-          <h2 className="text-3xl font-bold mb-4">Boarding Facility Available</h2>
-          <p className="text-blue-200 mb-8">
-            We offer boarding with limited spaces. Apply early to secure a place for the 2027 academic year.
+      {/* B5 — Achievements */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn className="text-center mb-14">
+            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+              Track Record
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111480]">Our Achievements</h2>
+            <div className="mt-4 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+          </FadeIn>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {achievements.map((a, i) => (
+              <FadeIn key={a.title} delay={i * 120}>
+                <div className="border border-gray-100 rounded-xl p-7 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
+                  <div className="w-10 h-10 bg-[#FFD000]/20 rounded-lg flex items-center justify-center mb-4">
+                    <a.icon className="w-5 h-5 text-[#111480]" />
+                  </div>
+                  <p className="text-xs text-[#FFD000] font-semibold mb-2">{a.year}</p>
+                  <h3 className="font-bold text-[#111480] mb-2 text-base">{a.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{a.desc}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn className="text-center mt-8">
+            <Link
+              href="/achievements"
+              className="inline-flex items-center gap-2 text-[#111480] font-semibold text-sm hover:text-[#FFD000] transition-colors"
+            >
+              View All Achievements →
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* B6 — Gallery Preview */}
+      <section className="py-20 px-4 bg-[#F7F8FA]">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn className="text-center mb-12">
+            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+              Life at SIS
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111480]">Gallery</h2>
+            <div className="mt-4 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+          </FadeIn>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {galleryPreviews.map((src, i) => (
+              <FadeIn key={src} delay={i * 80}>
+                <Link href="/gallery" className="block aspect-square overflow-hidden rounded-lg group">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={src}
+                    alt={`School gallery photo ${i + 1}`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn className="text-center mt-8">
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#111480] text-[#111480] font-semibold rounded-lg hover:bg-[#111480] hover:text-white transition-colors text-sm"
+            >
+              View Full Gallery →
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* B7 — From the Director */}
+      <section className="py-20 px-4 bg-[#111480] text-white">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn className="flex flex-col sm:flex-row gap-10 items-center">
+            {/* Photo placeholder */}
+            <div className="shrink-0 w-40 h-40 rounded-full bg-white/20 border-4 border-[#FFD000] flex items-center justify-center text-4xl">
+              👨‍💼
+            </div>
+            <div>
+              <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
+                From the Director
+              </p>
+              <blockquote className="text-blue-100 text-lg leading-relaxed italic mb-4">
+                &ldquo;At Stutterheim International School, we believe every child deserves a
+                world-class education regardless of where they live. Our commitment is to
+                empower learners to become confident, compassionate, and globally competitive
+                individuals.&rdquo;
+              </blockquote>
+              <p className="font-bold text-white">Dr Suraj Haruna</p>
+              <p className="text-blue-300 text-sm">Director, Stutterheim International School</p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* B8 — CTA Strip */}
+      <section className="bg-[#FFD000] py-16 px-4">
+        <FadeIn className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111480] mb-4">
+            Ready to Join Our School Family?
+          </h2>
+          <p className="text-[#111480]/80 mb-8 text-base">
+            Applications for the 2027 academic year are open. Limited spaces available — apply today.
           </p>
           <Link
-            href="/contact"
-            className="px-8 py-3 bg-[#FFD000] text-[#111480] font-bold rounded hover:bg-amber-400 transition-colors text-lg"
+            href="/admissions"
+            className="inline-block px-10 py-4 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-base shadow-lg"
           >
-            Enquire About Admissions
+            Start Your Application
           </Link>
-        </div>
+        </FadeIn>
       </section>
     </>
   );

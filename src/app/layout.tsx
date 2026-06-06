@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import AdmissionsBanner from "@/components/AdmissionsBanner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -47,7 +48,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#F7F8FA] text-[#1F1F1F] font-[var(--font-geist-sans)]">
-        <Navbar />
+        {/* Fixed header: dismissible banner + sticky nav stacked */}
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <AdmissionsBanner />
+          <Navbar />
+        </div>
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
