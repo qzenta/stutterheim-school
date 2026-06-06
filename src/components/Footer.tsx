@@ -1,12 +1,16 @@
+"use client";
+
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
+  { href: "/pre-school", label: "Pre-School (Grade R)" },
+  { href: "/primary-school", label: "Primary School (Gr 1–7)" },
+  { href: "/high-school", label: "High School (Gr 8–12)" },
   { href: "/admissions", label: "Admissions" },
-  { href: "/subjects", label: "Subjects" },
-  { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -15,6 +19,33 @@ const downloads = [
   { href: "#", label: "Fee Structure (PDF)" },
   { href: "#", label: "School Brochure (PDF)" },
   { href: "/admissions", label: "Apply Online" },
+];
+
+const faqs = [
+  {
+    q: "When do applications open for 2027?",
+    a: "Applications for the 2027 academic year are now open. We encourage early applications as spaces are limited across all grades.",
+  },
+  {
+    q: "Does SIS offer boarding?",
+    a: "Yes. SIS has a residential boarding facility for learners who travel from outside Stutterheim. Contact us early to secure a boarding space.",
+  },
+  {
+    q: "What grades does SIS offer?",
+    a: "We offer Grade R (Pre-School) through Grade 12, covering Foundation Phase, Intermediate Phase, Senior Phase, and FET Phase.",
+  },
+  {
+    q: "How many subjects are offered?",
+    a: "SIS offers 20+ subjects across all phases including Languages, Mathematics, Sciences, Commerce, Humanities, Arts, and Technology.",
+  },
+  {
+    q: "What are the school fees?",
+    a: "Please visit our Fees page or contact the office directly. A full fee schedule is available on request or as a download.",
+  },
+  {
+    q: "How do I contact the school?",
+    a: "Call us on (067) 397-7613, email sis@stutterheimschool.co.za, or visit 49 Louisa Street, Stutterheim, Eastern Cape.",
+  },
 ];
 
 const socials = [
@@ -47,10 +78,58 @@ const socials = [
   },
 ];
 
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-white/10 last:border-0">
+      <button
+        className="w-full flex items-center justify-between py-3.5 text-left gap-4 group"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+      >
+        <span className="text-sm text-blue-100 font-medium group-hover:text-white transition-colors leading-snug">
+          {q}
+        </span>
+        <ChevronDown
+          size={16}
+          className={`text-blue-300 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      {open && (
+        <p className="text-blue-300 text-sm leading-relaxed pb-4 pr-6">{a}</p>
+      )}
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="bg-[#0d1060] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+      {/* FAQ strip */}
+      <div className="border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="lg:col-span-1">
+              <p className="text-white font-bold text-lg mb-2">Frequently Asked Questions</p>
+              <p className="text-blue-300 text-sm leading-relaxed">
+                Quick answers to common queries. Can&apos;t find what you need?{" "}
+                <Link href="/contact" className="text-white underline hover:no-underline">
+                  Contact us directly.
+                </Link>
+              </p>
+            </div>
+            <div className="lg:col-span-2 divide-y divide-white/10">
+              {faqs.map((faq) => (
+                <FaqItem key={faq.q} q={faq.q} a={faq.a} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main columns */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
           {/* Column 1: Logo + tagline + socials */}
@@ -105,7 +184,7 @@ export default function Footer() {
           {/* Column 3: Downloads */}
           <div>
             <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-5">
-              Downloads & Admissions
+              Downloads &amp; Admissions
             </h3>
             <ul className="space-y-2.5">
               {downloads.map((d) => (

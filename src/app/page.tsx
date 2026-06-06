@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GraduationCap, Building2, Heart, BookOpen, Trophy, Users, Phone } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
 import AnimatedStats from "@/components/AnimatedStats";
+import PartnersMarquee from "@/components/PartnersMarquee";
 import FadeIn from "@/components/FadeIn";
 
 const pillars = [
@@ -265,6 +266,9 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
+
+      {/* Partners Marquee */}
+      <PartnersMarquee />
 
       {/* CTA Strip */}
       <section className="bg-white border-t border-gray-100 py-16 px-4">

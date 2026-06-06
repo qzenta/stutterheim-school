@@ -3,18 +3,20 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+const BASE = "https://www.stutterheimschool.co.za/extra-images";
+
 const slides = [
   {
-    url: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&q=85&fit=crop",
-    alt: "Students engaged in a modern classroom",
+    url: `${BASE}/banner1.jpg`,
+    alt: "SIS learners in school uniform on campus steps",
   },
   {
-    url: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1600&q=85&fit=crop",
-    alt: "Students collaborating and learning",
+    url: `${BASE}/banner4.jpg`,
+    alt: "Young learner studying at school desk",
   },
   {
-    url: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1600&q=85&fit=crop",
-    alt: "Beautiful school campus",
+    url: `${BASE}/banner3.jpg`,
+    alt: "Primary school children engaged in digital learning",
   },
 ];
 
@@ -24,7 +26,7 @@ export default function HeroSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((c) => (c + 1) % slides.length);
-    }, 5000);
+    }, 5500);
     return () => clearInterval(interval);
   }, []);
 
@@ -41,19 +43,19 @@ export default function HeroSlider() {
           <img
             src={slide.url}
             alt={slide.alt}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             loading={i === 0 ? "eager" : "lazy"}
           />
         </div>
       ))}
 
-      {/* Overlay — navy gradient from left, lighter to let images breathe */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#111480]/85 via-[#111480]/50 to-[#111480]/10" />
+      {/* Overlay — darkens right side for right-aligned text readability */}
+      <div className="absolute inset-0 bg-gradient-to-l from-[#111480]/90 via-[#111480]/50 to-[#111480]/10" />
 
-      {/* Content — left-aligned, cambrilearn style */}
+      {/* Content — RIGHT aligned */}
       <div className="absolute inset-0 flex items-center">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full">
-          <div className="max-w-xl">
+          <div className="max-w-xl ml-auto text-right">
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.25em] mb-4">
               Stutterheim, Eastern Cape
             </p>
@@ -61,10 +63,10 @@ export default function HeroSlider() {
               Shaping Tomorrow&apos;s<br />Leaders Today
             </h1>
             <p className="text-blue-100 text-base sm:text-lg leading-relaxed mb-8">
-              A premier private school offering academic excellence, holistic development,
-              and boarding facilities in the Eastern Cape.
+              A premier private school offering Pre-School, Primary &amp; High School
+              education — academic excellence, holistic development, and boarding facilities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 justify-end">
               <Link
                 href="/admissions"
                 className="px-7 py-3.5 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm shadow"
@@ -82,9 +84,9 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      {/* Dot indicators — bottom left */}
+      {/* Dot indicators — bottom right to match text alignment */}
       <div className="absolute bottom-6 left-0 right-0">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex gap-2">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex gap-2 justify-end">
           {slides.map((_, i) => (
             <button
               key={i}

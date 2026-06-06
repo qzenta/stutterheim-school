@@ -3,6 +3,17 @@
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 
+const messages = [
+  "🎓  Now Open: Admissions for 2027 — Limited spaces available.",
+  "🏠  Boarding Facility Available — Secure your space early.",
+  "📚  Pre-School · Primary School · High School — All under one roof.",
+  "📞  Call us: (067) 397-7613 · sis@stutterheimschool.co.za",
+  "🏅  20+ Subjects · 60+ Enrolled Learners · 6+ Qualified Teachers.",
+];
+
+// Duplicate messages for seamless looping
+const ticker = [...messages, ...messages];
+
 export default function AdmissionsBanner() {
   const [visible, setVisible] = useState(false);
 
@@ -19,30 +30,27 @@ export default function AdmissionsBanner() {
   if (!visible) return null;
 
   return (
-    <div className="bg-[#111480] text-white px-4 py-2">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-        <p className="text-sm font-medium flex items-center gap-2 min-w-0">
-          <span className="shrink-0">🎓</span>
-          <span className="truncate sm:whitespace-normal">
-            Now Open: Admissions for 2027 — Limited spaces available. Apply today.
-          </span>
-        </p>
-        <div className="flex items-center gap-3 shrink-0">
-          <a
-            href="/admissions"
-            className="hidden sm:inline-flex items-center text-xs font-bold bg-white text-[#111480] px-3 py-1.5 rounded hover:bg-blue-50 transition-colors whitespace-nowrap"
-          >
-            Apply Now →
-          </a>
-          <button
-            onClick={dismiss}
-            aria-label="Dismiss admissions banner"
-            className="p-0.5 hover:opacity-60 transition-opacity"
-          >
-            <X size={15} />
-          </button>
+    <div className="bg-[#111480] text-white overflow-hidden relative" style={{ height: "36px" }}>
+      {/* Scrolling ticker */}
+      <div className="flex items-center h-full">
+        <div className="animate-marquee flex whitespace-nowrap will-change-transform">
+          {ticker.map((msg, i) => (
+            <span key={i} className="inline-flex items-center text-xs font-medium px-8">
+              {msg}
+              <span className="mx-6 text-white/30">|</span>
+            </span>
+          ))}
         </div>
       </div>
+
+      {/* Dismiss button — absolute right */}
+      <button
+        onClick={dismiss}
+        aria-label="Dismiss banner"
+        className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-white/60 hover:text-white transition-colors z-10 bg-[#111480]"
+      >
+        <X size={13} />
+      </button>
     </div>
   );
 }
