@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A3A8F] text-white">
+    <footer className="bg-[#111480] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
-          <p className="text-[#E8A020] font-bold text-lg mb-2">Stutterheim International School</p>
+          <p className="text-[#FFD000] font-bold text-lg mb-2">Stutterheim International School</p>
           <p className="text-sm text-blue-200">49 Louisa Street<br />Stutterheim, Eastern Cape, 4930</p>
           <p className="text-sm text-blue-200 mt-2">
             <a href="tel:+27673977613" className="hover:text-white transition-colors">(067) 397-7613</a>

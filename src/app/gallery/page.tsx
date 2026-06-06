@@ -12,8 +12,8 @@ const images: { src: string; alt: string; category: string }[] = [];
 export default function GalleryPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-[#1A3A8F] mb-2">Gallery</h1>
-      <div className="w-16 h-1 bg-[#E8A020] rounded mb-8" />
+      <h1 className="text-4xl font-bold text-[#111480] mb-2">Gallery</h1>
+      <div className="w-16 h-1 bg-[#FFD000] rounded mb-8" />
 
       {images.length === 0 ? (
         <div className="text-center py-24 text-gray-400">

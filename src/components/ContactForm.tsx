@@ -38,7 +38,7 @@ export default function ContactForm() {
           name="name"
           type="text"
           required
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A3A8F]"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#111480]"
         />
       </div>
 
@@ -51,7 +51,7 @@ export default function ContactForm() {
           name="email"
           type="email"
           required
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A3A8F]"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#111480]"
         />
       </div>
 
@@ -63,7 +63,7 @@ export default function ContactForm() {
           id="phone"
           name="phone"
           type="tel"
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A3A8F]"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#111480]"
         />
       </div>
 
@@ -75,7 +75,7 @@ export default function ContactForm() {
           id="subject"
           name="subject"
           required
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A3A8F] bg-white"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#111480] bg-white"
         >
           <option value="">Select a subject…</option>
           <option value="General Enquiry">General Enquiry</option>
@@ -93,14 +93,14 @@ export default function ContactForm() {
           name="message"
           rows={5}
           required
-          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A3A8F] resize-none"
+          className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#111480] resize-none"
         />
       </div>
 
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full bg-[#1A3A8F] text-white font-semibold py-3 rounded-lg hover:bg-blue-900 transition-colors disabled:opacity-60"
+        className="w-full bg-[#111480] text-white font-semibold py-3 rounded-lg hover:bg-blue-900 transition-colors disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : "Send Message"}
       </button>

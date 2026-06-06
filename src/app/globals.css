@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --royal-blue: #1A3A8F;
-  --gold: #E8A020;
+  --royal-blue: #111480;
+  --gold: #FFD000;
   --white: #FFFFFF;
   --offwhite: #F7F8FA;
   --charcoal: #1F1F1F;
@@ -10,8 +10,8 @@
 }
 
 @theme inline {
-  --color-royal-blue: #1A3A8F;
-  --color-gold: #E8A020;
+  --color-royal-blue: #111480;
+  --color-gold: #FFD000;
   --color-offwhite: #F7F8FA;
   --color-charcoal: #1F1F1F;
   --color-muted: #6B7280;

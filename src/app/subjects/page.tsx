@@ -31,8 +31,8 @@ const subjects = [
 export default function SubjectsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-[#1A3A8F] mb-2">Subjects Offered</h1>
-      <div className="w-16 h-1 bg-[#E8A020] rounded mb-8" />
+      <h1 className="text-4xl font-bold text-[#111480] mb-2">Subjects Offered</h1>
+      <div className="w-16 h-1 bg-[#FFD000] rounded mb-8" />
       <p className="text-gray-600 mb-10">
         We offer a broad curriculum of {subjects.length}+ subjects to ensure every learner can find
         their strengths and pursue their passions.
@@ -41,7 +41,7 @@ export default function SubjectsPage() {
         {subjects.map((s) => (
           <li
             key={s}
-            className="bg-white border border-gray-100 rounded-lg px-5 py-3 text-sm font-medium text-[#1A3A8F] shadow-sm"
+            className="bg-white border border-gray-100 rounded-lg px-5 py-3 text-sm font-medium text-[#111480] shadow-sm"
           >
             {s}
           </li>

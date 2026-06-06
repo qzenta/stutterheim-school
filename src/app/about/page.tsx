@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-[#1A3A8F] mb-2">About Us</h1>
-      <div className="w-16 h-1 bg-[#E8A020] rounded mb-8" />
+      <h1 className="text-4xl font-bold text-[#111480] mb-2">About Us</h1>
+      <div className="w-16 h-1 bg-[#FFD000] rounded mb-8" />
 
       <section className="mb-12">
-        <h2 className="text-2xl font-bold text-[#1A3A8F] mb-3">Our Mission</h2>
+        <h2 className="text-2xl font-bold text-[#111480] mb-3">Our Mission</h2>
         <p className="text-gray-700 leading-relaxed">
           To provide an inclusive, internationally-oriented education that equips every learner with the
           knowledge, values, and skills needed to thrive in a rapidly changing world.
@@ -20,7 +20,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-bold text-[#1A3A8F] mb-3">Our Vision</h2>
+        <h2 className="text-2xl font-bold text-[#111480] mb-3">Our Vision</h2>
         <p className="text-gray-700 leading-relaxed">
           To be the leading institution in the Eastern Cape for academic excellence, character development,
           and holistic education — producing graduates who are globally competitive and community-minded.
@@ -28,7 +28,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-bold text-[#1A3A8F] mb-3">Our School</h2>
+        <h2 className="text-2xl font-bold text-[#111480] mb-3">Our School</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           Stutterheim International School is situated at 49 Louisa Street, Stutterheim, Eastern Cape.
           Under the leadership of Director Dr Suraj Haruna, the school has grown into a thriving community
@@ -40,7 +40,7 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="bg-[#1A3A8F] text-white rounded-lg p-8">
+      <section className="bg-[#111480] text-white rounded-lg p-8">
         <h2 className="text-2xl font-bold mb-3">Boarding Facility</h2>
         <p className="text-blue-200 leading-relaxed">
           SIS offers a boarding facility for learners who travel from outside Stutterheim.

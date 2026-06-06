@@ -18,23 +18,23 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-[#1A3A8F] text-white shadow-md sticky top-0 z-50">
+    <header className="bg-[#111480] text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-3 font-semibold text-lg tracking-tight">
-          <span className="text-[#E8A020] font-bold">SIS</span>
+          <span className="text-[#FFD000] font-bold">SIS</span>
           <span className="hidden sm:inline">Stutterheim International School</span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="hover:text-[#E8A020] transition-colors">
+            <Link key={l.href} href={l.href} className="hover:text-[#FFD000] transition-colors">
               {l.label}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="ml-2 px-4 py-2 bg-[#E8A020] text-[#1A3A8F] font-semibold rounded hover:bg-amber-400 transition-colors"
+            className="ml-2 px-4 py-2 bg-[#FFD000] text-[#111480] font-semibold rounded hover:bg-amber-400 transition-colors"
           >
             Apply Now
           </Link>
@@ -52,12 +52,12 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-[#1A3A8F] border-t border-blue-700 px-4 pb-4">
+        <div className="lg:hidden bg-[#111480] border-t border-blue-700 px-4 pb-4">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="block py-2 text-sm hover:text-[#E8A020] transition-colors"
+              className="block py-2 text-sm hover:text-[#FFD000] transition-colors"
               onClick={() => setOpen(false)}
             >
               {l.label}
@@ -65,7 +65,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="mt-3 block text-center px-4 py-2 bg-[#E8A020] text-[#1A3A8F] font-semibold rounded"
+            className="mt-3 block text-center px-4 py-2 bg-[#FFD000] text-[#111480] font-semibold rounded"
             onClick={() => setOpen(false)}
           >
             Apply Now
