@@ -50,10 +50,10 @@ export default function FeesPage() {
   return (
     <>
       {/* Page header */}
-      <div className="bg-[#111480] text-white pt-36 pb-20 px-4">
+      <div className="bg-[#111480] text-white pt-24 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
-            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Transparent Pricing
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">Fee Structure</h1>
@@ -61,18 +61,18 @@ export default function FeesPage() {
               We believe quality education should be accessible. Contact us or download the
               official fee schedule for 2027 rates.
             </p>
-            <div className="mt-6 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+            <div className="mt-6 w-16 h-1 bg-[#111480] mx-auto rounded" />
           </FadeIn>
         </div>
       </div>
 
       {/* Download CTA */}
-      <section className="py-12 px-4 bg-[#FFD000]">
+      <section className="py-12 px-4 bg-[#111480]">
         <FadeIn className="max-w-3xl mx-auto text-center">
-          <p className="text-[#111480] font-bold text-lg mb-2">
+          <p className="text-white font-bold text-lg mb-2">
             📄 Download the Official 2027 Fee Schedule
           </p>
-          <p className="text-[#111480]/70 text-sm mb-6">
+          <p className="text-blue-200 text-sm mb-6">
             The PDF contains confirmed per-grade fees, payment terms, and boarding rates.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -84,7 +84,7 @@ export default function FeesPage() {
             </a>
             <Link
               href="/contact"
-              className="px-8 py-3 border-2 border-[#111480] text-[#111480] font-bold rounded-lg hover:bg-[#111480] hover:text-white transition-all hover:scale-105 text-sm"
+              className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#111480] transition-all hover:scale-105 text-sm"
             >
               Enquire Directly
             </Link>
@@ -144,7 +144,7 @@ export default function FeesPage() {
         <div className="max-w-4xl mx-auto">
           <FadeIn className="text-center mb-10">
             <h2 className="text-2xl font-bold text-[#111480]">Payment Information</h2>
-            <div className="mt-3 w-12 h-1 bg-[#FFD000] mx-auto rounded" />
+            <div className="mt-3 w-12 h-1 bg-[#111480] mx-auto rounded" />
           </FadeIn>
           <FadeIn>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-center">
@@ -174,7 +174,7 @@ export default function FeesPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/admissions"
-              className="px-8 py-3 bg-[#FFD000] text-[#111480] font-bold rounded-lg hover:bg-amber-400 transition-all hover:scale-105 text-sm"
+              className="px-8 py-3 bg-[#111480] text-[#111480] font-bold rounded-lg hover:bg-amber-400 transition-all hover:scale-105 text-sm"
             >
               Start Application
             </Link>

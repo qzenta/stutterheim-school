@@ -68,10 +68,10 @@ export default function AdmissionsPage() {
   return (
     <>
       {/* Page header */}
-      <div className="bg-[#111480] text-white pt-36 pb-20 px-4" id="how">
+      <div className="bg-[#111480] text-white pt-24 pb-20 px-4" id="how">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
-            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               2027 Academic Year
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">Admissions</h1>
@@ -79,13 +79,13 @@ export default function AdmissionsPage() {
               We welcome applications from all learners who are seeking a quality, holistic education
               in a safe and supportive environment.
             </p>
-            <div className="mt-6 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+            <div className="mt-6 w-16 h-1 bg-[#111480] mx-auto rounded" />
           </FadeIn>
         </div>
       </div>
 
       {/* Application downloads */}
-      <section className="py-16 px-4 bg-[#FFD000]">
+      <section className="py-16 px-4 bg-[#111480]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-8">
             <h2 className="text-2xl font-bold text-[#111480]">Download Application Materials</h2>
@@ -128,18 +128,18 @@ export default function AdmissionsPage() {
       <section className="py-20 px-4 bg-[#F7F8FA]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-14">
-            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Simple Process
             </p>
             <h2 className="text-3xl font-bold text-[#111480]">How to Apply</h2>
-            <div className="mt-4 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
           </FadeIn>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {steps.map((step, i) => (
               <FadeIn key={step.num} delay={i * 100}>
                 <div className="bg-white rounded-xl border border-gray-100 p-7 hover:shadow-md transition-shadow h-full">
-                  <p className="text-[#FFD000] text-3xl font-bold mb-3">{step.num}</p>
+                  <p className="text-[#111480] text-3xl font-bold mb-3">{step.num}</p>
                   <h3 className="font-bold text-[#111480] text-base mb-2">{step.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
                 </div>
@@ -153,11 +153,11 @@ export default function AdmissionsPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="text-center mb-12">
-            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               What You Need
             </p>
             <h2 className="text-3xl font-bold text-[#111480]">Application Requirements</h2>
-            <div className="mt-4 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
           </FadeIn>
 
           <FadeIn>
@@ -190,7 +190,7 @@ export default function AdmissionsPage() {
                 { label: "School Starts", date: "January 2027" },
               ].map((d) => (
                 <div key={d.label} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                  <p className="text-[#FFD000] font-bold text-lg mb-1">{d.date}</p>
+                  <p className="text-white font-bold text-lg mb-1">{d.date}</p>
                   <p className="text-blue-200 text-sm">{d.label}</p>
                 </div>
               ))}
@@ -203,11 +203,11 @@ export default function AdmissionsPage() {
       <section className="py-20 px-4 bg-[#F7F8FA]">
         <div className="max-w-3xl mx-auto">
           <FadeIn className="text-center mb-12">
-            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Got Questions?
             </p>
             <h2 className="text-3xl font-bold text-[#111480]">Frequently Asked Questions</h2>
-            <div className="mt-4 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
           </FadeIn>
 
           <div className="space-y-3">

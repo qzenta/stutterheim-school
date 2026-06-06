@@ -102,10 +102,10 @@ export default function AchievementsPage() {
   return (
     <>
       {/* Page header */}
-      <div className="bg-[#111480] text-white pt-36 pb-20 px-4">
+      <div className="bg-[#111480] text-white pt-24 pb-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
-            <p className="text-[#FFD000] text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Our Track Record
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">Achievements & Honours</h1>
@@ -113,7 +113,7 @@ export default function AchievementsPage() {
               We take pride in the accomplishments of our learners — in the classroom, on the field,
               and in the community.
             </p>
-            <div className="mt-6 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
+            <div className="mt-6 w-16 h-1 bg-[#111480] mx-auto rounded" />
           </FadeIn>
         </div>
       </div>
@@ -135,7 +135,7 @@ export default function AchievementsPage() {
               {cat.items.map((item, i) => (
                 <FadeIn key={item.title} delay={i * 100}>
                   <div className="bg-white rounded-xl border border-gray-100 p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
-                    <p className="text-[#FFD000] text-xs font-semibold mb-2">{item.year}</p>
+                    <p className="text-blue-500 text-xs font-semibold mb-2">{item.year}</p>
                     <h3 className="font-bold text-[#111480] mb-3 text-base">{item.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                   </div>
@@ -147,12 +147,12 @@ export default function AchievementsPage() {
       </div>
 
       {/* CTA */}
-      <section className="bg-[#FFD000] py-16 px-4">
+      <section className="bg-[#111480] py-16 px-4">
         <FadeIn className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#111480] mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Become Part of Our Story
           </h2>
-          <p className="text-[#111480]/80 mb-8 text-base">
+          <p className="text-blue-200 mb-8 text-base">
             Your child&apos;s achievement begins at Stutterheim International School.
           </p>
           <a

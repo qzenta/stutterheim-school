@@ -62,19 +62,10 @@ export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Close mobile menu on route change
   useEffect(() => {
     setOpen(false);
     setMobileExpanded(null);
@@ -89,32 +80,25 @@ export default function Navbar() {
     closeTimer.current = setTimeout(() => setActiveDropdown(null), 180);
   };
 
-  const isHeroPage = pathname === "/";
-  const navBg =
-    scrolled || open
-      ? "bg-[#111480] shadow-lg"
-      : isHeroPage
-      ? "bg-transparent"
-      : "bg-[#111480] shadow-md";
-
   return (
-    <nav className={`transition-all duration-300 ${navBg}`}>
+    <nav className="bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
-          <div className="bg-[#FFD000] text-[#111480] font-extrabold text-xs px-2 py-1 rounded tracking-wide">
+          <div className="bg-[#111480] text-white font-extrabold text-xs px-2.5 py-1.5 rounded tracking-wide">
             SIS
           </div>
-          <div className="text-white leading-tight">
-            <p className="font-bold text-sm hidden sm:block">Stutterheim International School</p>
-            <p className="font-bold text-sm sm:hidden">SIS</p>
+          <div className="leading-tight hidden sm:block">
+            <p className="font-bold text-sm text-[#111480]">Stutterheim International School</p>
           </div>
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden xl:flex items-center gap-0.5 text-sm font-medium">
           {navItems.map((item) => {
-            const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href + "/"));
             return (
               <div
                 key={item.label}
@@ -124,12 +108,12 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-0.5 px-3 py-2 rounded transition-all ${
+                  className={`flex items-center gap-0.5 px-3 py-2 rounded transition-all text-sm ${
                     item.highlight
-                      ? "bg-[#FFD000] text-[#111480] font-bold hover:bg-amber-400"
+                      ? "bg-[#111480] text-white font-bold hover:bg-blue-900"
                       : isActive
-                      ? "text-[#FFD000]"
-                      : "text-white/90 hover:text-[#FFD000]"
+                      ? "text-[#111480] font-semibold"
+                      : "text-gray-600 hover:text-[#111480]"
                   }`}
                 >
                   {item.label}
@@ -143,7 +127,6 @@ export default function Navbar() {
                   )}
                 </Link>
 
-                {/* Dropdown */}
                 {item.children && activeDropdown === item.label && (
                   <div
                     className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-xl py-1.5 z-50 border border-gray-100"
@@ -154,7 +137,7 @@ export default function Navbar() {
                       <Link
                         key={child.label}
                         href={child.href}
-                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#111480] font-medium transition-colors"
+                        className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-blue-50 hover:text-[#111480] font-medium transition-colors"
                       >
                         {child.label}
                       </Link>
@@ -164,28 +147,28 @@ export default function Navbar() {
               </div>
             );
           })}
-        </div>
 
-        {/* Search icon (desktop) */}
-        <button
-          className="hidden xl:flex p-2 text-white/70 hover:text-[#FFD000] transition-colors ml-1"
-          onClick={() => setSearchOpen(true)}
-          aria-label="Search site"
-        >
-          <Search size={18} />
-        </button>
+          {/* Search icon */}
+          <button
+            className="p-2 text-gray-400 hover:text-[#111480] transition-colors ml-1"
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search site"
+          >
+            <Search size={18} />
+          </button>
+        </div>
 
         {/* Mobile controls */}
         <div className="xl:hidden flex items-center gap-1">
           <button
-            className="p-2 text-white/70 hover:text-[#FFD000] transition-colors"
+            className="p-2 text-gray-400 hover:text-[#111480] transition-colors"
             onClick={() => setSearchOpen(true)}
             aria-label="Search site"
           >
             <Search size={20} />
           </button>
           <button
-            className="p-2 text-white hover:text-[#FFD000] transition-colors"
+            className="p-2 text-[#111480] hover:text-blue-700 transition-colors"
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation menu"
           >
@@ -194,25 +177,27 @@ export default function Navbar() {
         </div>
       </div>
 
-      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
-
-      {/* Mobile drawer — slide down */}
+      {/* Mobile drawer */}
       <div
-        className={`xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`xl:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t border-gray-100 ${
           open ? "max-h-[80vh] overflow-y-auto" : "max-h-0"
         }`}
       >
-        <div className="border-t border-[#1a2090] px-4 pt-3 pb-6 space-y-0.5">
+        <div className="px-4 pt-3 pb-6 space-y-0.5">
           {navItems.map((item) => (
             <div key={item.label}>
               {item.children ? (
                 <>
                   <button
                     className={`w-full flex items-center justify-between py-2.5 px-2 text-sm font-medium rounded transition-colors ${
-                      item.highlight ? "text-[#FFD000]" : "text-white hover:text-[#FFD000]"
+                      item.highlight
+                        ? "text-[#111480] font-bold"
+                        : "text-gray-700 hover:text-[#111480]"
                     }`}
                     onClick={() =>
-                      setMobileExpanded(mobileExpanded === item.label ? null : item.label)
+                      setMobileExpanded(
+                        mobileExpanded === item.label ? null : item.label
+                      )
                     }
                   >
                     {item.label}
@@ -224,12 +209,12 @@ export default function Navbar() {
                     />
                   </button>
                   {mobileExpanded === item.label && (
-                    <div className="ml-3 pl-3 border-l border-[#2a34a0] pb-1 space-y-0.5">
+                    <div className="ml-3 pl-3 border-l border-gray-200 pb-1 space-y-0.5">
                       {item.children.map((child) => (
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="block py-2 px-2 text-sm text-blue-200 hover:text-white transition-colors"
+                          className="block py-2 px-2 text-sm text-gray-500 hover:text-[#111480] transition-colors"
                           onClick={() => {
                             setOpen(false);
                             setMobileExpanded(null);
@@ -246,8 +231,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`block py-2.5 px-2 text-sm font-medium rounded transition-colors ${
                     pathname === item.href
-                      ? "text-[#FFD000]"
-                      : "text-white hover:text-[#FFD000]"
+                      ? "text-[#111480] font-semibold"
+                      : "text-gray-700 hover:text-[#111480]"
                   }`}
                   onClick={() => setOpen(false)}
                 >
@@ -260,7 +245,7 @@ export default function Navbar() {
           <div className="pt-3">
             <Link
               href="/admissions"
-              className="block text-center px-4 py-3 bg-[#FFD000] text-[#111480] font-bold rounded text-sm hover:bg-amber-400 transition-colors"
+              className="block text-center px-4 py-3 bg-[#111480] text-white font-bold rounded text-sm hover:bg-blue-900 transition-colors"
               onClick={() => setOpen(false)}
             >
               Apply for 2027
@@ -268,6 +253,8 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </nav>
   );
 }

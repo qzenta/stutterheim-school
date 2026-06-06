@@ -56,7 +56,7 @@ export default function Footer() {
           {/* Column 1: Logo + tagline + socials */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-[#FFD000] text-[#111480] font-extrabold text-xs px-2 py-1 rounded">
+              <div className="bg-white text-[#111480] font-extrabold text-xs px-2 py-1 rounded">
                 SIS
               </div>
               <span className="font-bold text-sm text-white leading-tight">
@@ -75,7 +75,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#FFD000] hover:text-[#111480] flex items-center justify-center transition-all duration-200"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#111480] flex items-center justify-center transition-all duration-200"
                 >
                   {svg}
                 </a>
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-[#FFD000] font-semibold text-xs uppercase tracking-wider mb-5">
+            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-5">
               Quick Links
             </h3>
             <ul className="space-y-2.5">
@@ -104,7 +104,7 @@ export default function Footer() {
 
           {/* Column 3: Downloads */}
           <div>
-            <h3 className="text-[#FFD000] font-semibold text-xs uppercase tracking-wider mb-5">
+            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-5">
               Downloads & Admissions
             </h3>
             <ul className="space-y-2.5">
@@ -114,7 +114,7 @@ export default function Footer() {
                     href={d.href}
                     className="text-blue-200 text-sm hover:text-white transition-colors flex items-center gap-1.5"
                   >
-                    <span className="text-[#FFD000]">↓</span>
+                    <span className="text-white">↓</span>
                     {d.label}
                   </a>
                 </li>
@@ -123,7 +123,7 @@ export default function Footer() {
             <div className="mt-6">
               <Link
                 href="/admissions"
-                className="inline-block px-5 py-2.5 bg-[#FFD000] text-[#111480] font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors"
+                className="inline-block px-5 py-2.5 bg-white text-[#111480] font-bold rounded-lg text-sm hover:bg-blue-50 transition-colors"
               >
                 Apply for 2027 →
               </Link>
@@ -132,18 +132,18 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <div>
-            <h3 className="text-[#FFD000] font-semibold text-xs uppercase tracking-wider mb-5">
+            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-5">
               Get In Touch
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin size={15} className="text-[#FFD000] mt-0.5 shrink-0" />
+                <MapPin size={15} className="text-white mt-0.5 shrink-0" />
                 <span className="text-blue-200 text-sm leading-snug">
                   49 Louisa Street<br />Stutterheim, Eastern Cape, 4930
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={15} className="text-[#FFD000] shrink-0" />
+                <Phone size={15} className="text-white shrink-0" />
                 <a
                   href="tel:+27673977613"
                   className="text-blue-200 text-sm hover:text-white transition-colors"
@@ -152,7 +152,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={15} className="text-[#FFD000] shrink-0" />
+                <Mail size={15} className="text-white shrink-0" />
                 <a
                   href="mailto:sis@stutterheimschool.co.za"
                   className="text-blue-200 text-sm hover:text-white transition-colors"
@@ -161,7 +161,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Clock size={15} className="text-[#FFD000] shrink-0" />
+                <Clock size={15} className="text-white shrink-0" />
                 <span className="text-blue-200 text-sm">Mon – Fri: 7:00 AM – 3:00 PM</span>
               </li>
             </ul>

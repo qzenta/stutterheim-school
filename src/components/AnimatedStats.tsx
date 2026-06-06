@@ -41,7 +41,7 @@ function Counter({ end, suffix }: { end: number; suffix: string }) {
   }, [end]);
 
   return (
-    <span ref={ref} className="tabular-nums">
+    <span ref={ref} className="tabular-nums text-white">
       {count}
       {suffix}
     </span>
@@ -54,7 +54,7 @@ export default function AnimatedStats() {
       <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         {stats.map((s) => (
           <div key={s.label} className="flex flex-col items-center gap-2">
-            <p className="text-5xl lg:text-6xl font-bold text-[#FFD000]">
+            <p className="text-5xl lg:text-6xl font-bold text-white">
               <Counter end={s.end} suffix={s.suffix} />
             </p>
             <p className="text-blue-200 text-sm font-medium leading-snug max-w-[120px]">{s.label}</p>
