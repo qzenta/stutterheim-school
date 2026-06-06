@@ -14,16 +14,18 @@ export default function AboutPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-[#111480] mb-3">Our Mission</h2>
         <p className="text-gray-700 leading-relaxed">
-          To provide an inclusive, internationally-oriented education that equips every learner with the
-          knowledge, values, and skills needed to thrive in a rapidly changing world.
+          Our mission is to provide a safe and conducive environment where everyone is valued and
+          respected. All staff members, in partnership with parents and families, are fully committed
+          to learner attainment and success.
         </p>
       </section>
 
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-[#111480] mb-3">Our Vision</h2>
         <p className="text-gray-700 leading-relaxed">
-          To be the leading institution in the Eastern Cape for academic excellence, character development,
-          and holistic education — producing graduates who are globally competitive and community-minded.
+          Our vision is to empower learners to acquire, demonstrate, and articulate knowledge,
+          attitude and skills that will support them as life-long and global learners, and enable
+          them to contribute to a non-racial world.
         </p>
       </section>
 
@@ -31,12 +33,13 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold text-[#111480] mb-3">Our School</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
           Stutterheim International School is situated at 49 Louisa Street, Stutterheim, Eastern Cape.
-          Under the leadership of Director Dr Suraj Haruna, the school has grown into a thriving community
-          of learners and educators committed to excellence.
+          Under the leadership of Director Dr Suraj Haruna, the school has grown into a thriving
+          community of learners and educators committed to excellence.
         </p>
         <p className="text-gray-700 leading-relaxed">
           With over 60 enrolled students, 6+ qualified teachers, and more than 20 subjects on offer,
-          SIS delivers a comprehensive academic programme alongside a rich extracurricular life.
+          SIS delivers a comprehensive academic programme alongside a rich extracurricular life —
+          including ballet, swimming, sports, outreach, and academic achievement programmes.
         </p>
       </section>
 

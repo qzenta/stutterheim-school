@@ -65,8 +65,9 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#111480] mb-4">Our Mission</h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            To provide an inclusive, internationally-oriented education that equips every learner
-            with the knowledge, values, and skills needed to thrive in a rapidly changing world.
+            To provide a safe and conducive environment where everyone is valued and respected.
+            All staff members, in partnership with parents and families, are fully committed to
+            learner attainment and success.
           </p>
           <div className="mt-6 w-16 h-1 bg-[#FFD000] mx-auto rounded" />
         </div>
