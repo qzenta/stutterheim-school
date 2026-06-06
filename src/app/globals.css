@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --royal-blue: #1A3A8F;
+  --gold: #E8A020;
+  --white: #FFFFFF;
+  --offwhite: #F7F8FA;
+  --charcoal: #1F1F1F;
+  --muted: #6B7280;
+}
+
+@theme inline {
+  --color-royal-blue: #1A3A8F;
+  --color-gold: #E8A020;
+  --color-offwhite: #F7F8FA;
+  --color-charcoal: #1F1F1F;
+  --color-muted: #6B7280;
+}
+
+body {
+  background: var(--offwhite);
+  color: var(--charcoal);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease both;
+}
