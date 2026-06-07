@@ -24,12 +24,12 @@ export default function PartnersMarquee() {
 
       {/* Marquee track */}
       <div className="relative flex overflow-hidden select-none">
-        <div className="animate-partners flex items-center gap-16 will-change-transform">
+        <div className="animate-partners flex items-center gap-20 will-change-transform">
           {track.map((p, i) => (
             <div
               key={i}
               className="flex-shrink-0 flex items-center justify-center"
-              style={{ width: "220px", height: "96px" }}
+              style={{ width: "260px", height: "110px" }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

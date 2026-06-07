@@ -49,11 +49,19 @@ const feeCategories = [
 export default function FeesPage() {
   return (
     <>
-      {/* Page header */}
-      <div className="bg-[#111480] text-white pt-24 pb-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Page banner */}
+      <div
+        className="relative text-white pt-24 pb-20 px-4"
+        style={{
+          backgroundImage: `url(https://www.stutterheimschool.co.za/extra-images/campus-history.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#111480]/82" />
+        <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
-            <p className="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Transparent Pricing
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">Fee Structure</h1>
@@ -61,7 +69,7 @@ export default function FeesPage() {
               We believe quality education should be accessible. Contact us or download the
               official fee schedule for 2027 rates.
             </p>
-            <div className="mt-6 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <div className="mt-6 w-16 h-1 bg-white/40 mx-auto rounded" />
           </FadeIn>
         </div>
       </div>
@@ -70,17 +78,17 @@ export default function FeesPage() {
       <section className="py-12 px-4 bg-[#111480]">
         <FadeIn className="max-w-3xl mx-auto text-center">
           <p className="text-white font-bold text-lg mb-2">
-            📄 Download the Official 2027 Fee Schedule
+            📄 2027 Fee Schedule
           </p>
           <p className="text-blue-200 text-sm mb-6">
-            The PDF contains confirmed per-grade fees, payment terms, and boarding rates.
+            Contact us to receive the official fee schedule by email, or enquire directly with the school office.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="#"
-              className="px-8 py-3 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm"
+              href="mailto:sis@stutterheimschool.co.za?subject=Fee%20Structure%20Request%20-%202027"
+              className="px-8 py-3 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm"
             >
-              Download Fee Structure (PDF)
+              Request Fee Structure by Email
             </a>
             <Link
               href="/contact"
@@ -174,7 +182,7 @@ export default function FeesPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/admissions"
-              className="px-8 py-3 bg-[#111480] text-[#111480] font-bold rounded-lg hover:bg-amber-400 transition-all hover:scale-105 text-sm"
+              className="px-8 py-3 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm"
             >
               Start Application
             </Link>

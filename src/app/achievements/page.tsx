@@ -101,19 +101,27 @@ const categories = [
 export default function AchievementsPage() {
   return (
     <>
-      {/* Page header */}
-      <div className="bg-[#111480] text-white pt-24 pb-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Page banner */}
+      <div
+        className="relative text-white pt-24 pb-20 px-4"
+        style={{
+          backgroundImage: `url(https://www.stutterheimschool.co.za/extra-images/Tournament.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#111480]/80" />
+        <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
-            <p className="text-white text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Our Track Record
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">Achievements & Honours</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4">Achievements &amp; Honours</h1>
             <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
               We take pride in the accomplishments of our learners — in the classroom, on the field,
               and in the community.
             </p>
-            <div className="mt-6 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <div className="mt-6 w-16 h-1 bg-white/40 mx-auto rounded" />
           </FadeIn>
         </div>
       </div>
@@ -157,7 +165,7 @@ export default function AchievementsPage() {
           </p>
           <a
             href="/admissions"
-            className="inline-block px-10 py-4 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-base"
+            className="inline-block px-10 py-4 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-base"
           >
             Apply for 2027
           </a>

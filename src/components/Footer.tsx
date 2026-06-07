@@ -15,10 +15,10 @@ const quickLinks = [
 ];
 
 const downloads = [
-  { href: "#", label: "Application Form (PDF)" },
-  { href: "#", label: "Fee Structure (PDF)" },
-  { href: "#", label: "School Brochure (PDF)" },
-  { href: "/admissions", label: "Apply Online" },
+  { href: "mailto:sis@stutterheimschool.co.za?subject=Application%20Form%20Request", label: "Request Application Form" },
+  { href: "mailto:sis@stutterheimschool.co.za?subject=Fee%20Structure%20Request", label: "Request Fee Structure" },
+  { href: "mailto:sis@stutterheimschool.co.za?subject=School%20Brochure%20Request", label: "Request School Brochure" },
+  { href: "/contact", label: "Apply Online" },
 ];
 
 const faqs = [

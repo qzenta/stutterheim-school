@@ -91,9 +91,9 @@ export default function Navbar() {
           <Image
             src="https://www.stutterheimschool.co.za/images/logo.png"
             alt="Stutterheim International School"
-            width={160}
-            height={52}
-            className="h-12 w-auto object-contain"
+            width={200}
+            height={64}
+            className="h-16 w-auto object-contain"
             priority
             unoptimized
           />

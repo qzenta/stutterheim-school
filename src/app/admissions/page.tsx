@@ -67,11 +67,20 @@ const faqs = [
 export default function AdmissionsPage() {
   return (
     <>
-      {/* Page header */}
-      <div className="bg-[#111480] text-white pt-24 pb-20 px-4" id="how">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Page banner */}
+      <div
+        className="relative text-white pt-24 pb-20 px-4"
+        id="how"
+        style={{
+          backgroundImage: `url(https://www.stutterheimschool.co.za/extra-images/banner1.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#111480]/82" />
+        <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
-            <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+            <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               2027 Academic Year
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">Admissions</h1>
@@ -79,46 +88,46 @@ export default function AdmissionsPage() {
               We welcome applications from all learners who are seeking a quality, holistic education
               in a safe and supportive environment.
             </p>
-            <div className="mt-6 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <div className="mt-6 w-16 h-1 bg-white/40 mx-auto rounded" />
           </FadeIn>
         </div>
       </div>
 
       {/* Application downloads */}
-      <section className="py-16 px-4 bg-[#111480]">
+      <section className="py-14 px-4 bg-[#F7F8FA] border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-[#111480]">Download Application Materials</h2>
-            <p className="text-[#111480]/70 mt-2 text-sm">
-              All documents will be provided by Dr Haruna — check back for downloads or contact us directly.
+            <h2 className="text-2xl font-bold text-[#111480]">Application Materials</h2>
+            <p className="text-gray-500 mt-2 text-sm">
+              PDFs will be available once confirmed by Dr Haruna. In the meantime, contact us directly to receive any documents by email.
             </p>
           </FadeIn>
           <FadeIn>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="#"
+                href="mailto:sis@stutterheimschool.co.za?subject=Application%20Form%20Request"
                 className="flex items-center gap-2 px-7 py-3.5 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
-                📄 Application Form (PDF)
+                📄 Request Application Form
               </a>
               <a
-                href="#"
+                href="mailto:sis@stutterheimschool.co.za?subject=Fee%20Structure%20Request"
                 className="flex items-center gap-2 px-7 py-3.5 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
-                📄 Fee Structure (PDF)
+                📄 Request Fee Structure
               </a>
               <a
-                href="#"
+                href="mailto:sis@stutterheimschool.co.za?subject=School%20Brochure%20Request"
                 className="flex items-center gap-2 px-7 py-3.5 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
-                📄 School Brochure (PDF)
+                📄 Request School Brochure
               </a>
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className="flex items-center gap-2 px-7 py-3.5 border-2 border-[#111480] text-[#111480] font-bold rounded-lg hover:bg-[#111480] hover:text-white transition-all hover:scale-105 text-sm"
               >
-                🌐 Apply Online (Google Form)
-              </a>
+                🌐 Apply Online via Contact Form
+              </Link>
             </div>
           </FadeIn>
         </div>
