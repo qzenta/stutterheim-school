@@ -11,15 +11,26 @@ export const metadata: Metadata = {
 // Replace the `bio` text with the actual biography provided by the school.
 // ─────────────────────────────────────────────────────────────────────────────
 // ─── TEACHING STAFF (7) + SUPPORT STAFF (1) ──────────────────────────────────
+// ─── LEADERSHIP: Zimaseka Kalimashe (Co-Director) is homepage only.
+// Mdingi Vuyelwa (Principal) + Amanda Salzwedel (Asst Principal) appear here + homepage.
+// ─────────────────────────────────────────────────────────────────────────────
 const staff = [
-  // ── Leadership ──────────────────────────────────────────────────────────────
+  // ── School Leadership (also on homepage) ────────────────────────────────────
   {
-    name: "Dr Suraj Haruna",
-    role: "Director & Principal",
-    subjects: "School Leadership · Administration",
+    name: "Mdingi Vuyelwa",
+    role: "Principal",
+    subjects: "School Leadership · Academic Management · Staff Development",
     type: "teaching" as const,
     photo: "",
-    bio: "Dr Suraj Haruna is the founding Director and Principal of Stutterheim International School. His visionary leadership has built SIS into a thriving centre of academic excellence and holistic development in the Eastern Cape.",
+    bio: "Mdingi Vuyelwa leads Stutterheim International School with passion and purpose, ensuring academic excellence and a nurturing environment for every learner from Grade R through Grade 12. Photo and full bio coming soon.",
+  },
+  {
+    name: "Amanda Salzwedel",
+    role: "Assistant Principal",
+    subjects: "School Administration · Learner Affairs · Curriculum Support",
+    type: "teaching" as const,
+    photo: "",
+    bio: "Amanda Salzwedel supports the Principal in all aspects of school management, learner welfare, and curriculum delivery. Photo and full bio coming soon.",
   },
   // ── Teaching Staff ──────────────────────────────────────────────────────────
   {
@@ -84,9 +95,13 @@ const staff = [
 export default function StaffPage() {
   return (
     <>
-      {/* Page header */}
-      <div className="bg-[#111480] text-white pt-24 pb-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Page banner */}
+      <div
+        className="relative text-white pt-24 pb-16 px-4"
+        style={{ backgroundImage: "url(/extra-images/banner2.jpg)", backgroundSize: "cover", backgroundPosition: "center top" }}
+      >
+        <div className="absolute inset-0 bg-[#0C0E6B]/80" />
+        <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-300 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Our People
@@ -101,32 +116,50 @@ export default function StaffPage() {
       </div>
 
       {/* Teaching staff */}
-      <section className="py-16 px-4 bg-[#F7F8FA]">
+      <section className="py-16 px-4 bg-[#F5F6F8]">
         <div className="max-w-6xl mx-auto">
+          {/* Leadership callout */}
+          <FadeIn className="mb-12">
+            <div className="bg-[#0C0E6B] rounded-xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <p className="text-white font-bold text-sm">School Leadership</p>
+                <p className="text-blue-200 text-xs mt-1">
+                  Meet Co-Director Zimaseka Kalimashe on the homepage leadership section.
+                </p>
+              </div>
+              <a
+                href="/#leadership"
+                className="shrink-0 px-5 py-2 bg-white text-[#0C0E6B] font-bold rounded-lg text-xs hover:bg-blue-50 transition-colors whitespace-nowrap"
+              >
+                View Leadership →
+              </a>
+            </div>
+          </FadeIn>
+
           <FadeIn className="mb-8">
-            <h2 className="text-xl font-bold text-[#111480]">Teaching Staff</h2>
-            <div className="mt-2 w-10 h-1 bg-[#111480] rounded" />
+            <h2 className="text-xl font-bold text-[#0C0E6B]">Teaching Staff</h2>
+            <div className="mt-2 w-10 h-1 bg-[#0C0E6B] rounded" />
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {staff.filter(m => m.type === "teaching").map((member, i) => (
               <FadeIn key={`${member.name}-${i}`} delay={i * 80}>
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                   {/* Headshot area */}
-                  <div className="h-52 bg-[#111480]/5 flex items-center justify-center relative overflow-hidden">
+                  <div className="h-52 bg-[#0C0E6B]/5 flex items-center justify-center relative overflow-hidden">
                     {member.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
                     ) : (
                       <div className="flex flex-col items-center gap-2 text-center px-4">
-                        <div className="w-20 h-20 rounded-full bg-[#111480]/15 border-4 border-[#111480]/10 flex items-center justify-center">
-                          <span className="text-3xl font-bold text-[#111480]/40">{member.name.charAt(0)}</span>
+                        <div className="w-20 h-20 rounded-full bg-[#0C0E6B]/15 border-4 border-[#0C0E6B]/10 flex items-center justify-center">
+                          <span className="text-3xl font-bold text-[#0C0E6B]/40">{member.name.charAt(0)}</span>
                         </div>
-                        <p className="text-[#111480]/30 text-xs font-medium">Headshot coming soon</p>
+                        <p className="text-[#0C0E6B]/30 text-xs font-medium">Headshot coming soon</p>
                       </div>
                     )}
                   </div>
                   <div className="p-5 flex flex-col flex-1">
-                    <h3 className="font-bold text-[#111480] text-base leading-tight">{member.name}</h3>
+                    <h3 className="font-bold text-[#0C0E6B] text-base leading-tight">{member.name}</h3>
                     <p className="text-blue-500 text-xs font-semibold mt-1">{member.role}</p>
                     <p className="text-gray-400 text-xs mt-1 mb-3">{member.subjects}</p>
                     <p className="text-gray-600 text-sm leading-relaxed flex-1">{member.bio}</p>
@@ -138,14 +171,14 @@ export default function StaffPage() {
 
           {/* Support staff */}
           <FadeIn className="mb-8">
-            <h2 className="text-xl font-bold text-[#111480]">Support Staff</h2>
-            <div className="mt-2 w-10 h-1 bg-[#111480] rounded" />
+            <h2 className="text-xl font-bold text-[#0C0E6B]">Support Staff</h2>
+            <div className="mt-2 w-10 h-1 bg-[#0C0E6B] rounded" />
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {staff.filter(m => m.type === "support").map((member, i) => (
               <FadeIn key={`${member.name}-support-${i}`} delay={i * 80}>
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
-                  <div className="h-52 bg-[#111480]/5 flex items-center justify-center relative overflow-hidden">
+                  <div className="h-52 bg-[#0C0E6B]/5 flex items-center justify-center relative overflow-hidden">
                     {member.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
@@ -160,7 +193,7 @@ export default function StaffPage() {
                   </div>
                   <div className="p-5 flex flex-col flex-1">
                     <span className="inline-block text-xs font-semibold text-gray-500 bg-gray-100 rounded px-2 py-0.5 mb-2 self-start">Support</span>
-                    <h3 className="font-bold text-[#111480] text-base leading-tight">{member.name}</h3>
+                    <h3 className="font-bold text-[#0C0E6B] text-base leading-tight">{member.name}</h3>
                     <p className="text-gray-500 text-xs font-semibold mt-1">{member.role}</p>
                     <p className="text-gray-400 text-xs mt-1 mb-3">{member.subjects}</p>
                     <p className="text-gray-600 text-sm leading-relaxed flex-1">{member.bio}</p>
@@ -179,7 +212,7 @@ export default function StaffPage() {
       </section>
 
       {/* Join us CTA */}
-      <section className="bg-[#111480] py-14 px-4">
+      <section className="bg-[#0C0E6B] py-14 px-4">
         <FadeIn className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Join Our Team</h2>
           <p className="text-blue-200 text-sm mb-6">
@@ -187,7 +220,7 @@ export default function StaffPage() {
           </p>
           <a
             href="mailto:sis@stutterheimschool.co.za?subject=Teaching%20Position%20Enquiry"
-            className="inline-block px-8 py-3 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm"
+            className="inline-block px-8 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm"
           >
             Send Your CV
           </a>

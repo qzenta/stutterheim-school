@@ -57,16 +57,21 @@ export default function ApplyPage() {
 
   return (
     <>
-      {/* Header */}
-      <div className="bg-[#0C0E6B] pt-24 pb-12 px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <Image src="/images/logo.png" alt="SIS" width={120} height={40} className="h-12 w-auto object-contain mx-auto mb-5" unoptimized />
+      {/* Page banner */}
+      <div
+        className="relative text-white pt-24 pb-16 px-4"
+        style={{ backgroundImage: "url(/extra-images/banner1.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+      >
+        <div className="absolute inset-0 bg-[#0C0E6B]/82" />
+        <div className="relative max-w-2xl mx-auto text-center">
+          <Image src="/images/logo.png" alt="SIS" width={120} height={40} className="h-12 w-auto object-contain mx-auto mb-5 opacity-90" unoptimized />
           <p className="text-blue-300 text-xs font-semibold uppercase tracking-[0.2em] mb-3">2027 Admissions</p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">Apply Online</h1>
           <p className="text-blue-200 text-sm leading-relaxed max-w-lg mx-auto">
             Complete this short enquiry form and our admissions team will contact you within 5 business days
             with the full application pack and next steps.
           </p>
+          <div className="mt-5 w-16 h-1 bg-white/40 mx-auto rounded" />
         </div>
       </div>
 

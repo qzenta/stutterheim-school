@@ -115,8 +115,12 @@ export default function HomePage() {
       </section>
 
       {/* Admissions 2027 */}
-      <section className="bg-[#0C0E6B] text-white py-20 px-4">
-        <div className="max-w-5xl mx-auto">
+      <section
+        className="relative text-white py-20 px-4"
+        style={{ backgroundImage: "url(/extra-images/banner5.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+      >
+        <div className="absolute inset-0 bg-[#0C0E6B]/85" />
+        <div className="relative max-w-5xl mx-auto">
           <FadeIn className="text-center mb-14">
             <p className="text-blue-300 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               2027 Academic Year
@@ -281,7 +285,7 @@ export default function HomePage() {
             </FadeIn>
 
             {/* ── RIGHT: Principal (top) + Asst Principal (bottom) ── */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 h-full">
               {[
                 {
                   name: "Mdingi Vuyelwa",
@@ -300,8 +304,8 @@ export default function HomePage() {
                   delay: 280,
                 },
               ].map((leader) => (
-                <FadeIn key={leader.name} delay={leader.delay}>
-                  <div className="group flex flex-row items-center gap-6 bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default flex-1">
+                <FadeIn key={leader.name} delay={leader.delay} className="flex-1 flex flex-col">
+                  <div className="group flex flex-row items-center gap-6 bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default h-full">
                     {/* Avatar */}
                     <div className="relative w-20 h-20 shrink-0">
                       <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${leader.accent} border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500`} />
