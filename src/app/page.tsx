@@ -44,11 +44,11 @@ const achievements = [
   },
 ];
 
-const BASE_IMG = "https://www.stutterheimschool.co.za/extra-images";
+const BASE_IMG = "/extra-images";
 const galleryPreviews = [
   { src: `${BASE_IMG}/swimming.jpg`, alt: "Swimming programme at SIS" },
   { src: `${BASE_IMG}/ballet.jpg`, alt: "Ballet at Stutterheim International School" },
-  { src: `${BASE_IMG}/Field trip.jpg`, alt: "SIS learners on field trip" },
+  { src: `${BASE_IMG}/field-trip.jpg`, alt: "SIS learners on field trip" },
   { src: `${BASE_IMG}/Camping.webp`, alt: "SIS camping and outdoor experience" },
 ];
 
@@ -68,21 +68,21 @@ export default function HomePage() {
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Why Parents Choose Us
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111480]">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0C0E6B]">
               A Complete Education
             </h2>
-            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <div className="mt-4 w-16 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {pillars.map((p, i) => (
               <FadeIn key={p.title} delay={i * 120}>
-                <div className="bg-[#F7F8FA] rounded-xl p-8 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 bg-[#111480] rounded-lg flex items-center justify-center mb-5">
+                <div className="bg-[#F5F6F8] rounded-xl p-8 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-[#0C0E6B] rounded-lg flex items-center justify-center mb-5">
                     <p.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="w-8 h-1 bg-[#111480] rounded mb-4" />
-                  <h3 className="font-bold text-[#111480] text-lg mb-3">{p.title}</h3>
+                  <div className="w-8 h-1 bg-[#0C0E6B] rounded mb-4" />
+                  <h3 className="font-bold text-[#0C0E6B] text-lg mb-3">{p.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
                 </div>
               </FadeIn>
@@ -91,7 +91,7 @@ export default function HomePage() {
 
           {/* Boarding callout */}
           <FadeIn className="mt-10">
-            <div className="bg-[#111480] rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="bg-[#0C0E6B] rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <p className="font-bold text-white text-lg">
                   🏠 Boarding Facility Available — Limited Spaces
@@ -104,7 +104,7 @@ export default function HomePage() {
                 href="https://wa.me/27673977613?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20boarding%20at%20Stutterheim%20International%20School."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 flex items-center gap-2 px-6 py-3 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-colors hover:scale-105 duration-200 text-sm"
+                className="shrink-0 flex items-center gap-2 px-6 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-colors hover:scale-105 duration-200 text-sm"
               >
                 <Phone size={15} />
                 WhatsApp Us
@@ -115,7 +115,7 @@ export default function HomePage() {
       </section>
 
       {/* Admissions 2027 */}
-      <section className="bg-[#111480] text-white py-20 px-4">
+      <section className="bg-[#0C0E6B] text-white py-20 px-4">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-14">
             <p className="text-blue-300 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -148,16 +148,16 @@ export default function HomePage() {
           <FadeIn>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="#"
-                className="flex items-center gap-2 px-6 py-3 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm"
+                href="/downloads/SIS-Application-Form-2027.docx"
+                className="flex items-center gap-2 px-6 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm"
               >
-                📄 Application Form (PDF)
+                📄 Download Application Form
               </a>
               <a
-                href="#"
+                href="/fees"
                 className="flex items-center gap-2 px-6 py-3 bg-white/15 text-white border border-white/30 font-semibold rounded-lg hover:bg-white/25 transition-all hover:scale-105 text-sm"
               >
-                📄 Fee Structure (PDF)
+                📄 Fee Structure
               </a>
               <Link
                 href="/admissions"
@@ -171,25 +171,25 @@ export default function HomePage() {
       </section>
 
       {/* Achievements */}
-      <section className="py-20 px-4 bg-[#F7F8FA]">
+      <section className="py-20 px-4 bg-[#F5F6F8]">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="text-center mb-14">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Track Record
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111480]">Our Achievements</h2>
-            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0C0E6B]">Our Achievements</h2>
+            <div className="mt-4 w-16 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {achievements.map((a, i) => (
               <FadeIn key={a.title} delay={i * 120}>
                 <div className="bg-white border border-gray-100 rounded-xl p-7 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
-                  <div className="w-10 h-10 bg-[#111480]/10 rounded-lg flex items-center justify-center mb-4">
-                    <a.icon className="w-5 h-5 text-[#111480]" />
+                  <div className="w-10 h-10 bg-[#0C0E6B]/10 rounded-lg flex items-center justify-center mb-4">
+                    <a.icon className="w-5 h-5 text-[#0C0E6B]" />
                   </div>
                   <p className="text-blue-500 text-xs font-semibold mb-2">{a.year}</p>
-                  <h3 className="font-bold text-[#111480] mb-2 text-base">{a.title}</h3>
+                  <h3 className="font-bold text-[#0C0E6B] mb-2 text-base">{a.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{a.desc}</p>
                 </div>
               </FadeIn>
@@ -199,7 +199,7 @@ export default function HomePage() {
           <FadeIn className="text-center mt-8">
             <Link
               href="/achievements"
-              className="inline-flex items-center gap-2 text-[#111480] font-semibold text-sm hover:text-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 text-[#0C0E6B] font-semibold text-sm hover:text-blue-700 transition-colors"
             >
               View All Achievements →
             </Link>
@@ -214,8 +214,8 @@ export default function HomePage() {
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Life at SIS
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111480]">Gallery</h2>
-            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0C0E6B]">Gallery</h2>
+            <div className="mt-4 w-16 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -236,7 +236,7 @@ export default function HomePage() {
           <FadeIn className="text-center mt-8">
             <Link
               href="/gallery"
-              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#111480] text-[#111480] font-semibold rounded-lg hover:bg-[#111480] hover:text-white transition-colors text-sm"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#0C0E6B] text-[#0C0E6B] font-semibold rounded-lg hover:bg-[#0C0E6B] hover:text-white transition-colors text-sm"
             >
               View Full Gallery →
             </Link>
@@ -244,27 +244,83 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* From the Director */}
-      <section className="py-20 px-4 bg-[#111480] text-white">
-        <div className="max-w-4xl mx-auto">
-          <FadeIn className="flex flex-col sm:flex-row gap-10 items-center">
-            <div className="shrink-0 w-36 h-36 rounded-full bg-white/20 border-4 border-white/40 flex items-center justify-center text-4xl">
-              👨‍💼
-            </div>
-            <div>
-              <p className="text-blue-300 text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-                From the Director
-              </p>
-              <blockquote className="text-blue-100 text-lg leading-relaxed italic mb-4">
-                &ldquo;At Stutterheim International School, we believe every child deserves a
-                world-class education regardless of where they live. Our commitment is to
-                empower learners to become confident, compassionate, and globally competitive
-                individuals.&rdquo;
-              </blockquote>
-              <p className="font-bold text-white">Dr Suraj Haruna</p>
-              <p className="text-blue-300 text-sm">Director, Stutterheim International School</p>
-            </div>
+      {/* School Leadership */}
+      <section id="leadership" className="py-20 px-4 bg-[#0C0E6B] text-white overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn className="text-center mb-14">
+            <p className="text-blue-300 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
+              The People Behind SIS
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold">School Leadership</h2>
+            <div className="mt-4 w-16 h-1 bg-white/30 mx-auto rounded" />
           </FadeIn>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Zimaseka Kalimashe",
+                role: "Co-Director",
+                quote: "We are committed to nurturing confident, compassionate, and globally competitive individuals.",
+                photo: "",
+                initials: "ZK",
+                accent: "from-indigo-400/20 to-indigo-600/10",
+              },
+              {
+                name: "Mdingi Vuyelwa",
+                role: "Principal",
+                quote: "Academic excellence and holistic growth go hand in hand at Stutterheim International School.",
+                photo: "",
+                initials: "MV",
+                accent: "from-sky-400/20 to-sky-600/10",
+              },
+              {
+                name: "Amanda Salzwedel",
+                role: "Assistant Principal",
+                quote: "Every learner has unique potential — our role is to discover it, develop it, and celebrate it.",
+                photo: "",
+                initials: "AS",
+                accent: "from-blue-400/20 to-blue-600/10",
+              },
+            ].map((leader, i) => (
+              <FadeIn key={leader.name} delay={i * 160}>
+                <div className="group flex flex-col items-center text-center bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default h-full">
+                  {/* Avatar */}
+                  <div className={`relative w-28 h-28 mb-5`}>
+                    <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${leader.accent} border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500`} />
+                    {leader.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={leader.photo}
+                        alt={leader.name}
+                        className="w-full h-full rounded-full object-cover object-top relative z-10"
+                      />
+                    ) : (
+                      <div className="w-full h-full rounded-full flex items-center justify-center relative z-10">
+                        <span className="text-2xl font-bold text-white/60 group-hover:text-white/90 transition-colors duration-300">
+                          {leader.initials}
+                        </span>
+                      </div>
+                    )}
+                    {/* Animated ring */}
+                    <div className="absolute inset-[-6px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
+                  </div>
+
+                  {/* Badge */}
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300 bg-blue-900/40 border border-blue-400/20 rounded-full px-3 py-1 mb-3 group-hover:bg-blue-800/60 transition-colors">
+                    {leader.role}
+                  </span>
+
+                  <h3 className="font-bold text-white text-lg leading-tight mb-4">{leader.name}</h3>
+
+                  <div className="w-8 h-px bg-white/20 mb-4 group-hover:w-16 transition-all duration-500" />
+
+                  <blockquote className="text-blue-200 text-sm leading-relaxed italic flex-1">
+                    &ldquo;{leader.quote}&rdquo;
+                  </blockquote>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -274,7 +330,7 @@ export default function HomePage() {
       {/* CTA Strip */}
       <section className="bg-white border-t border-gray-100 py-16 px-4">
         <FadeIn className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111480] mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0C0E6B] mb-4">
             Ready to Join Our School Family?
           </h2>
           <p className="text-gray-500 mb-8 text-base">
@@ -282,7 +338,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/admissions"
-            className="inline-block px-10 py-4 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-base shadow"
+            className="inline-block px-10 py-4 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-base shadow"
           >
             Start Your Application
           </Link>

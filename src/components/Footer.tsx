@@ -15,10 +15,10 @@ const quickLinks = [
 ];
 
 const downloads = [
-  { href: "mailto:sis@stutterheimschool.co.za?subject=Application%20Form%20Request", label: "Request Application Form" },
-  { href: "mailto:sis@stutterheimschool.co.za?subject=Fee%20Structure%20Request", label: "Request Fee Structure" },
+  { href: "/apply", label: "Apply Online" },
+  { href: "/downloads/SIS-Application-Form-2027.docx", label: "Download Application Form" },
+  { href: "/fees", label: "Fee Structure" },
   { href: "mailto:sis@stutterheimschool.co.za?subject=School%20Brochure%20Request", label: "Request School Brochure" },
-  { href: "/contact", label: "Apply Online" },
 ];
 
 const faqs = [
@@ -135,7 +135,7 @@ export default function Footer() {
           {/* Column 1: Logo + tagline + socials */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-white text-[#111480] font-extrabold text-xs px-2 py-1 rounded">
+              <div className="bg-white text-[#0C0E6B] font-extrabold text-xs px-2 py-1 rounded">
                 SIS
               </div>
               <span className="font-bold text-sm text-white leading-tight">
@@ -154,7 +154,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#111480] flex items-center justify-center transition-all duration-200"
+                  className="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-[#0C0E6B] flex items-center justify-center transition-all duration-200"
                 >
                   {svg}
                 </a>
@@ -202,7 +202,7 @@ export default function Footer() {
             <div className="mt-6">
               <Link
                 href="/admissions"
-                className="inline-block px-5 py-2.5 bg-white text-[#111480] font-bold rounded-lg text-sm hover:bg-blue-50 transition-colors"
+                className="inline-block px-5 py-2.5 bg-white text-[#0C0E6B] font-bold rounded-lg text-sm hover:bg-blue-50 transition-colors"
               >
                 Apply for 2027 →
               </Link>
@@ -255,7 +255,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Stutterheim International School (Pty) Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="hover:text-white transition-colors">
+            <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
             <span className="text-white/20">·</span>
