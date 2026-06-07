@@ -255,71 +255,79 @@ export default function HomePage() {
             <div className="mt-4 w-16 h-1 bg-white/30 mx-auto rounded" />
           </FadeIn>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Zimaseka Kalimashe",
-                role: "Co-Director",
-                quote: "We are committed to nurturing confident, compassionate, and globally competitive individuals.",
-                photo: "",
-                initials: "ZK",
-                accent: "from-indigo-400/20 to-indigo-600/10",
-              },
-              {
-                name: "Mdingi Vuyelwa",
-                role: "Principal",
-                quote: "Academic excellence and holistic growth go hand in hand at Stutterheim International School.",
-                photo: "",
-                initials: "MV",
-                accent: "from-sky-400/20 to-sky-600/10",
-              },
-              {
-                name: "Amanda Salzwedel",
-                role: "Assistant Principal",
-                quote: "Every learner has unique potential — our role is to discover it, develop it, and celebrate it.",
-                photo: "",
-                initials: "AS",
-                accent: "from-blue-400/20 to-blue-600/10",
-              },
-            ].map((leader, i) => (
-              <FadeIn key={leader.name} delay={i * 160}>
-                <div className="group flex flex-col items-center text-center bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default h-full">
-                  {/* Avatar */}
-                  <div className={`relative w-28 h-28 mb-5`}>
-                    <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${leader.accent} border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500`} />
-                    {leader.photo ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={leader.photo}
-                        alt={leader.name}
-                        className="w-full h-full rounded-full object-cover object-top relative z-10"
-                      />
-                    ) : (
+          {/* Director left (tall) · Principal + Asst Principal stacked right */}
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 items-stretch">
+
+            {/* ── LEFT: Co-Director (tall vertical card) ── */}
+            <FadeIn delay={0}>
+              <div className="group flex flex-col items-center text-center bg-white/5 border border-white/10 rounded-2xl p-10 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default h-full min-h-[420px] justify-center">
+                {/* Avatar — larger for director */}
+                <div className="relative w-36 h-36 mb-6">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-400/20 to-indigo-600/10 border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500" />
+                  <div className="w-full h-full rounded-full flex items-center justify-center relative z-10">
+                    <span className="text-3xl font-bold text-white/60 group-hover:text-white/90 transition-colors duration-300">ZK</span>
+                  </div>
+                  <div className="absolute inset-[-8px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
+                </div>
+                <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300 bg-blue-900/40 border border-blue-400/20 rounded-full px-3 py-1 mb-3 group-hover:bg-blue-800/60 transition-colors">
+                  Co-Director
+                </span>
+                <h3 className="font-bold text-white text-xl leading-tight mb-4">Zimaseka Kalimashe</h3>
+                <div className="w-10 h-px bg-white/20 mb-4 group-hover:w-20 transition-all duration-500" />
+                <blockquote className="text-blue-200 text-sm leading-relaxed italic max-w-xs">
+                  &ldquo;We are committed to nurturing confident, compassionate, and globally competitive individuals.&rdquo;
+                </blockquote>
+              </div>
+            </FadeIn>
+
+            {/* ── RIGHT: Principal (top) + Asst Principal (bottom) ── */}
+            <div className="flex flex-col gap-6">
+              {[
+                {
+                  name: "Mdingi Vuyelwa",
+                  role: "Principal",
+                  initials: "MV",
+                  quote: "Academic excellence and holistic growth go hand in hand at Stutterheim International School.",
+                  accent: "from-sky-400/20 to-sky-600/10",
+                  delay: 160,
+                },
+                {
+                  name: "Amanda Salzwedel",
+                  role: "Assistant Principal",
+                  initials: "AS",
+                  quote: "Every learner has unique potential — our role is to discover it, develop it, and celebrate it.",
+                  accent: "from-blue-400/20 to-blue-600/10",
+                  delay: 280,
+                },
+              ].map((leader) => (
+                <FadeIn key={leader.name} delay={leader.delay}>
+                  <div className="group flex flex-row items-center gap-6 bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default flex-1">
+                    {/* Avatar */}
+                    <div className="relative w-20 h-20 shrink-0">
+                      <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${leader.accent} border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500`} />
                       <div className="w-full h-full rounded-full flex items-center justify-center relative z-10">
-                        <span className="text-2xl font-bold text-white/60 group-hover:text-white/90 transition-colors duration-300">
+                        <span className="text-xl font-bold text-white/60 group-hover:text-white/90 transition-colors duration-300">
                           {leader.initials}
                         </span>
                       </div>
-                    )}
-                    {/* Animated ring */}
-                    <div className="absolute inset-[-6px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
+                      <div className="absolute inset-[-5px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
+                    </div>
+                    {/* Text */}
+                    <div className="flex flex-col text-left">
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300 bg-blue-900/40 border border-blue-400/20 rounded-full px-3 py-1 mb-2 self-start group-hover:bg-blue-800/60 transition-colors">
+                        {leader.role}
+                      </span>
+                      <h3 className="font-bold text-white text-lg leading-tight mb-2">{leader.name}</h3>
+                      <div className="w-8 h-px bg-white/20 mb-3 group-hover:w-14 transition-all duration-500" />
+                      <blockquote className="text-blue-200 text-sm leading-relaxed italic">
+                        &ldquo;{leader.quote}&rdquo;
+                      </blockquote>
+                    </div>
                   </div>
+                </FadeIn>
+              ))}
+            </div>
 
-                  {/* Badge */}
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300 bg-blue-900/40 border border-blue-400/20 rounded-full px-3 py-1 mb-3 group-hover:bg-blue-800/60 transition-colors">
-                    {leader.role}
-                  </span>
-
-                  <h3 className="font-bold text-white text-lg leading-tight mb-4">{leader.name}</h3>
-
-                  <div className="w-8 h-px bg-white/20 mb-4 group-hover:w-16 transition-all duration-500" />
-
-                  <blockquote className="text-blue-200 text-sm leading-relaxed italic flex-1">
-                    &ldquo;{leader.quote}&rdquo;
-                  </blockquote>
-                </div>
-              </FadeIn>
-            ))}
           </div>
         </div>
       </section>
