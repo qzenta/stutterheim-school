@@ -10,18 +10,23 @@ export const metadata: Metadata = {
 // Replace `photo` with the URL or local path to the staff member's headshot.
 // Replace the `bio` text with the actual biography provided by the school.
 // ─────────────────────────────────────────────────────────────────────────────
+// ─── TEACHING STAFF (7) + SUPPORT STAFF (1) ──────────────────────────────────
 const staff = [
+  // ── Leadership ──────────────────────────────────────────────────────────────
   {
     name: "Dr Suraj Haruna",
     role: "Director & Principal",
     subjects: "School Leadership · Administration",
+    type: "teaching" as const,
     photo: "",
     bio: "Dr Suraj Haruna is the founding Director and Principal of Stutterheim International School. His visionary leadership has built SIS into a thriving centre of academic excellence and holistic development in the Eastern Cape.",
   },
+  // ── Teaching Staff ──────────────────────────────────────────────────────────
   {
     name: "Teacher Name",
     role: "Foundation Phase Educator",
-    subjects: "Grade R · Grades 1–3",
+    subjects: "Grade R · Grades 1–3 · Early Literacy & Numeracy",
+    type: "teaching" as const,
     photo: "",
     bio: "A passionate foundation phase educator dedicated to nurturing early literacy, numeracy, and social skills in our youngest learners. Bio to be updated by the school.",
   },
@@ -29,6 +34,7 @@ const staff = [
     name: "Teacher Name",
     role: "Intermediate Phase Educator",
     subjects: "Grades 4–6 · Mathematics · Natural Sciences",
+    type: "teaching" as const,
     photo: "",
     bio: "Committed to making Mathematics and Sciences accessible and engaging for Intermediate Phase learners. Bio to be updated by the school.",
   },
@@ -36,6 +42,7 @@ const staff = [
     name: "Teacher Name",
     role: "Senior Phase Educator",
     subjects: "Grade 7 · English · Social Sciences",
+    type: "teaching" as const,
     photo: "",
     bio: "A dedicated educator preparing Grade 7 learners for the transition to high school through strong language and critical thinking skills. Bio to be updated by the school.",
   },
@@ -43,15 +50,34 @@ const staff = [
     name: "Teacher Name",
     role: "FET Phase Educator",
     subjects: "Grades 8–12 · Physical Sciences · Life Sciences",
+    type: "teaching" as const,
     photo: "",
     bio: "Specialist in Science subjects for the FET phase, with a focus on hands-on learning and matric exam preparation. Bio to be updated by the school.",
   },
   {
     name: "Teacher Name",
     role: "FET Phase Educator",
-    subjects: "Grades 8–12 · Accounting · Business Studies",
+    subjects: "Grades 8–12 · Accounting · Business Studies · Economics",
+    type: "teaching" as const,
     photo: "",
     bio: "Experienced Commerce educator bringing real-world business knowledge into the classroom to prepare learners for tertiary study and entrepreneurship. Bio to be updated by the school.",
+  },
+  {
+    name: "Teacher Name",
+    role: "Languages & Humanities Educator",
+    subjects: "Grades 8–12 · Afrikaans · isiXhosa · History",
+    type: "teaching" as const,
+    photo: "",
+    bio: "A multilingual educator passionate about South African languages and history, helping learners connect their academic work to their cultural heritage. Bio to be updated by the school.",
+  },
+  // ── Support Staff ────────────────────────────────────────────────────────────
+  {
+    name: "Staff Member Name",
+    role: "School Administrator & Support Staff",
+    subjects: "Administration · Learner Welfare · Office Management",
+    type: "support" as const,
+    photo: "",
+    bio: "Our dedicated support staff member ensures the smooth daily operation of the school — from learner records and communications to welfare and logistics. Details to be updated by the school.",
   },
 ];
 
@@ -74,41 +100,69 @@ export default function StaffPage() {
         </div>
       </div>
 
-      {/* Staff grid */}
+      {/* Teaching staff */}
       <section className="py-16 px-4 bg-[#F7F8FA]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {staff.map((member, i) => (
+          <FadeIn className="mb-8">
+            <h2 className="text-xl font-bold text-[#111480]">Teaching Staff</h2>
+            <div className="mt-2 w-10 h-1 bg-[#111480] rounded" />
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {staff.filter(m => m.type === "teaching").map((member, i) => (
               <FadeIn key={`${member.name}-${i}`} delay={i * 80}>
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                   {/* Headshot area */}
                   <div className="h-52 bg-[#111480]/5 flex items-center justify-center relative overflow-hidden">
                     {member.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={member.photo}
-                        alt={member.name}
-                        className="w-full h-full object-cover object-top"
-                      />
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
                     ) : (
                       <div className="flex flex-col items-center gap-2 text-center px-4">
                         <div className="w-20 h-20 rounded-full bg-[#111480]/15 border-4 border-[#111480]/10 flex items-center justify-center">
-                          <span className="text-3xl font-bold text-[#111480]/40">
-                            {member.name.charAt(0)}
-                          </span>
+                          <span className="text-3xl font-bold text-[#111480]/40">{member.name.charAt(0)}</span>
                         </div>
                         <p className="text-[#111480]/30 text-xs font-medium">Headshot coming soon</p>
                       </div>
                     )}
                   </div>
-
-                  {/* Card body */}
                   <div className="p-5 flex flex-col flex-1">
-                    <div className="mb-3">
-                      <h3 className="font-bold text-[#111480] text-base leading-tight">{member.name}</h3>
-                      <p className="text-blue-500 text-xs font-semibold mt-1">{member.role}</p>
-                      <p className="text-gray-400 text-xs mt-1">{member.subjects}</p>
-                    </div>
+                    <h3 className="font-bold text-[#111480] text-base leading-tight">{member.name}</h3>
+                    <p className="text-blue-500 text-xs font-semibold mt-1">{member.role}</p>
+                    <p className="text-gray-400 text-xs mt-1 mb-3">{member.subjects}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed flex-1">{member.bio}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          {/* Support staff */}
+          <FadeIn className="mb-8">
+            <h2 className="text-xl font-bold text-[#111480]">Support Staff</h2>
+            <div className="mt-2 w-10 h-1 bg-[#111480] rounded" />
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {staff.filter(m => m.type === "support").map((member, i) => (
+              <FadeIn key={`${member.name}-support-${i}`} delay={i * 80}>
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
+                  <div className="h-52 bg-[#111480]/5 flex items-center justify-center relative overflow-hidden">
+                    {member.photo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
+                    ) : (
+                      <div className="flex flex-col items-center gap-2 text-center px-4">
+                        <div className="w-20 h-20 rounded-full bg-gray-200 border-4 border-gray-100 flex items-center justify-center">
+                          <span className="text-3xl font-bold text-gray-400">{member.name.charAt(0)}</span>
+                        </div>
+                        <p className="text-gray-300 text-xs font-medium">Headshot coming soon</p>
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <span className="inline-block text-xs font-semibold text-gray-500 bg-gray-100 rounded px-2 py-0.5 mb-2 self-start">Support</span>
+                    <h3 className="font-bold text-[#111480] text-base leading-tight">{member.name}</h3>
+                    <p className="text-gray-500 text-xs font-semibold mt-1">{member.role}</p>
+                    <p className="text-gray-400 text-xs mt-1 mb-3">{member.subjects}</p>
                     <p className="text-gray-600 text-sm leading-relaxed flex-1">{member.bio}</p>
                   </div>
                 </div>
@@ -117,8 +171,8 @@ export default function StaffPage() {
           </div>
 
           <FadeIn className="mt-12 text-center">
-            <p className="text-gray-500 text-sm">
-              Staff headshots and full biographies will be updated when provided by the school.
+            <p className="text-gray-400 text-sm">
+              Headshots and full biographies will be updated when provided by the school.
             </p>
           </FadeIn>
         </div>
