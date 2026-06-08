@@ -134,13 +134,9 @@ export default function Footer() {
 
           {/* Column 1: Logo + tagline + socials */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="bg-white text-[#0C0E6B] font-extrabold text-xs px-2 py-1 rounded">
-                SIS
-              </div>
-              <span className="font-bold text-sm text-white leading-tight">
-                Stutterheim<br />International School
-              </span>
+            <div className="mb-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/footer-logo.png" alt="Stutterheim International School" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-blue-200 text-sm leading-relaxed mb-6">
               Providing academic excellence and holistic development to learners in

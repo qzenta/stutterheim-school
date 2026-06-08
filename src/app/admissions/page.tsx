@@ -72,12 +72,12 @@ export default function AdmissionsPage() {
         className="relative text-white pt-24 pb-20 px-4"
         id="how"
         style={{
-          backgroundImage: `url(https://www.stutterheimschool.co.za/extra-images/banner1.jpg)`,
+          backgroundImage: `url(/extra-images/banner1.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
         }}
       >
-        <div className="absolute inset-0 bg-[#111480]/82" />
+        <div className="absolute inset-0 bg-[#0C0E6B]/82" />
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -94,10 +94,10 @@ export default function AdmissionsPage() {
       </div>
 
       {/* Application downloads */}
-      <section className="py-14 px-4 bg-[#F7F8FA] border-b border-gray-100">
+      <section className="py-14 px-4 bg-[#F5F6F8] border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-[#111480]">Application Materials</h2>
+            <h2 className="text-2xl font-bold text-[#0C0E6B]">Application Materials</h2>
             <p className="text-gray-500 mt-2 text-sm">
               PDFs will be available once confirmed by Dr Haruna. In the meantime, contact us directly to receive any documents by email.
             </p>
@@ -106,25 +106,25 @@ export default function AdmissionsPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="mailto:sis@stutterheimschool.co.za?subject=Application%20Form%20Request"
-                className="flex items-center gap-2 px-7 py-3.5 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
+                className="flex items-center gap-2 px-7 py-3.5 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
                 📄 Request Application Form
               </a>
               <a
                 href="mailto:sis@stutterheimschool.co.za?subject=Fee%20Structure%20Request"
-                className="flex items-center gap-2 px-7 py-3.5 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
+                className="flex items-center gap-2 px-7 py-3.5 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
                 📄 Request Fee Structure
               </a>
               <a
                 href="mailto:sis@stutterheimschool.co.za?subject=School%20Brochure%20Request"
-                className="flex items-center gap-2 px-7 py-3.5 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
+                className="flex items-center gap-2 px-7 py-3.5 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
                 📄 Request School Brochure
               </a>
               <Link
                 href="/contact"
-                className="flex items-center gap-2 px-7 py-3.5 border-2 border-[#111480] text-[#111480] font-bold rounded-lg hover:bg-[#111480] hover:text-white transition-all hover:scale-105 text-sm"
+                className="flex items-center gap-2 px-7 py-3.5 border-2 border-[#0C0E6B] text-[#0C0E6B] font-bold rounded-lg hover:bg-[#0C0E6B] hover:text-white transition-all hover:scale-105 text-sm"
               >
                 🌐 Apply Online via Contact Form
               </Link>
@@ -134,22 +134,22 @@ export default function AdmissionsPage() {
       </section>
 
       {/* How to apply — steps */}
-      <section className="py-20 px-4 bg-[#F7F8FA]">
+      <section className="py-20 px-4 bg-[#F5F6F8]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-14">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Simple Process
             </p>
-            <h2 className="text-3xl font-bold text-[#111480]">How to Apply</h2>
-            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-3xl font-bold text-[#0C0E6B]">How to Apply</h2>
+            <div className="mt-4 w-16 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {steps.map((step, i) => (
               <FadeIn key={step.num} delay={i * 100}>
                 <div className="bg-white rounded-xl border border-gray-100 p-7 hover:shadow-md transition-shadow h-full">
-                  <p className="text-[#111480] text-3xl font-bold mb-3">{step.num}</p>
-                  <h3 className="font-bold text-[#111480] text-base mb-2">{step.title}</h3>
+                  <p className="text-[#0C0E6B] text-3xl font-bold mb-3">{step.num}</p>
+                  <h3 className="font-bold text-[#0C0E6B] text-base mb-2">{step.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </FadeIn>
@@ -165,15 +165,15 @@ export default function AdmissionsPage() {
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               What You Need
             </p>
-            <h2 className="text-3xl font-bold text-[#111480]">Application Requirements</h2>
-            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-3xl font-bold text-[#0C0E6B]">Application Requirements</h2>
+            <div className="mt-4 w-16 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
 
           <FadeIn>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {requirements.map((req) => (
-                <div key={req} className="flex items-start gap-3 p-4 bg-[#F7F8FA] rounded-lg border border-gray-100">
-                  <CheckCircle className="w-5 h-5 text-[#111480] shrink-0 mt-0.5" />
+                <div key={req} className="flex items-start gap-3 p-4 bg-[#F5F6F8] rounded-lg border border-gray-100">
+                  <CheckCircle className="w-5 h-5 text-[#0C0E6B] shrink-0 mt-0.5" />
                   <span className="text-gray-700 text-sm">{req}</span>
                 </div>
               ))}
@@ -183,7 +183,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Key dates placeholder */}
-      <section className="py-16 px-4 bg-[#111480] text-white">
+      <section className="py-16 px-4 bg-[#0C0E6B] text-white">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="text-center mb-10">
             <h2 className="text-2xl font-bold mb-2">Key Dates for 2027</h2>
@@ -209,21 +209,21 @@ export default function AdmissionsPage() {
       </section>
 
       {/* FAQ accordion */}
-      <section className="py-20 px-4 bg-[#F7F8FA]">
+      <section className="py-20 px-4 bg-[#F5F6F8]">
         <div className="max-w-3xl mx-auto">
           <FadeIn className="text-center mb-12">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               Got Questions?
             </p>
-            <h2 className="text-3xl font-bold text-[#111480]">Frequently Asked Questions</h2>
-            <div className="mt-4 w-16 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-3xl font-bold text-[#0C0E6B]">Frequently Asked Questions</h2>
+            <div className="mt-4 w-16 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
 
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <FadeIn key={faq.q} delay={i * 80}>
                 <details className="bg-white rounded-xl border border-gray-100 group">
-                  <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#111480] text-sm list-none select-none">
+                  <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-semibold text-[#0C0E6B] text-sm list-none select-none">
                     {faq.q}
                     <ChevronDown size={16} className="shrink-0 transition-transform group-open:rotate-180" />
                   </summary>
@@ -237,7 +237,7 @@ export default function AdmissionsPage() {
             <p className="text-gray-600 text-sm mb-4">Still have questions?</p>
             <Link
               href="/contact"
-              className="inline-block px-8 py-3 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-colors text-sm"
+              className="inline-block px-8 py-3 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-colors text-sm"
             >
               Contact Us
             </Link>

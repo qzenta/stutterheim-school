@@ -15,12 +15,12 @@ export async function POST(req: NextRequest) {
     }
 
     const payload = {
-      sender: { name: "SIS Website", email: "noreply@stutterheimschool.co.za" },
+      sender: { name: "SIS Website", email: "sis@stutterheimschool.co.za" },
       to: [{ email: "sis@stutterheimschool.co.za", name: "Stutterheim International School" }],
       replyTo: { email, name },
       subject: `New Enquiry — ${subject} — ${name}`,
       htmlContent: `
-        <h2 style="color:#111480;font-family:Arial,sans-serif;">New Website Enquiry</h2>
+        <h2 style="color:#0C0E6B;font-family:Arial,sans-serif;">New Website Enquiry</h2>
         <table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;">
           <tr><td style="padding:8px;font-weight:bold;color:#555;width:140px;">Name</td><td style="padding:8px;">${name}</td></tr>
           <tr style="background:#f9f9f9;"><td style="padding:8px;font-weight:bold;color:#555;">Email</td><td style="padding:8px;"><a href="mailto:${email}">${email}</a></td></tr>

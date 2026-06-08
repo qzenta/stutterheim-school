@@ -94,7 +94,7 @@ export default function SearchModal({ open, onClose }: Props) {
                 onClick={onClose}
                 className="flex flex-col px-5 py-3 hover:bg-blue-50 transition-colors group"
               >
-                <span className="text-sm font-semibold text-[#111480] group-hover:text-blue-700">{p.title}</span>
+                <span className="text-sm font-semibold text-[#0C0E6B] group-hover:text-blue-700">{p.title}</span>
                 <span className="text-xs text-gray-500 mt-0.5 leading-snug">{p.desc}</span>
               </Link>
             ))

@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --royal-blue: #111480;
-  --gold: #FFD000;
+  --royal-blue: #0C0E6B;
   --white: #FFFFFF;
-  --offwhite: #F7F8FA;
+  --offwhite: #F5F6F8;
+  --light-navy: #E8E9F4;
   --charcoal: #1F1F1F;
   --muted: #6B7280;
 }
 
 @theme inline {
-  --color-royal-blue: #111480;
-  --color-gold: #FFD000;
-  --color-offwhite: #F7F8FA;
+  --color-royal-blue: #0C0E6B;
+  --color-offwhite: #F5F6F8;
+  --color-light-navy: #E8E9F4;
   --color-charcoal: #1F1F1F;
   --color-muted: #6B7280;
 }
@@ -24,7 +24,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  font-size: 106.25%; /* 17px base — slightly larger than default 16px */
+  font-size: 106.25%; /* 17px base */
 }
 
 @keyframes fadeInUp {

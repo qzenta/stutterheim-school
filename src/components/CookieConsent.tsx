@@ -40,10 +40,10 @@ export default function CookieConsent() {
       <div className="bg-white border border-gray-200 shadow-2xl sm:rounded-2xl sm:max-w-sm p-5 m-0 sm:m-0">
         {/* Icon + heading */}
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-9 h-9 bg-[#111480] rounded-lg flex items-center justify-center shrink-0 text-base">
+          <div className="w-9 h-9 bg-[#0C0E6B] rounded-lg flex items-center justify-center shrink-0 text-base">
             🍪
           </div>
-          <p className="font-bold text-[#111480] text-sm">We use cookies</p>
+          <p className="font-bold text-[#0C0E6B] text-sm">We use cookies</p>
         </div>
 
         <p className="text-gray-600 text-xs leading-relaxed mb-4">
@@ -53,7 +53,7 @@ export default function CookieConsent() {
           South Africa&apos;s{" "}
           <abbr title="Protection of Personal Information Act" className="no-underline cursor-help">POPIA</abbr>
           {" "}and our{" "}
-          <Link href="/contact" className="text-[#111480] underline hover:no-underline">
+          <Link href="/contact" className="text-[#0C0E6B] underline hover:no-underline">
             Privacy Policy
           </Link>
           .
@@ -62,7 +62,7 @@ export default function CookieConsent() {
         <div className="flex gap-2">
           <button
             onClick={accept}
-            className="flex-1 py-2.5 bg-[#111480] text-white font-bold rounded-lg text-xs hover:bg-blue-900 transition-colors"
+            className="flex-1 py-2.5 bg-[#0C0E6B] text-white font-bold rounded-lg text-xs hover:bg-blue-900 transition-colors"
           >
             Accept All
           </button>

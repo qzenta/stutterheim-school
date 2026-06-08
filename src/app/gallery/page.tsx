@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Photos from events, activities, and life at Stutterheim International School — ballet, swimming, sports, academics and more.",
 };
 
-const BASE = "https://www.stutterheimschool.co.za/extra-images";
+const BASE = "/extra-images";
 
 const categories = ["All", "Campus Life", "Sports & Activities", "Events", "Academics"] as const;
 type Category = (typeof categories)[number];
@@ -35,29 +35,29 @@ const images: { src: string; alt: string; category: Category }[] = [
   // Sports & Activities
   { src: `${BASE}/swimming.jpg`, alt: "SIS swimming programme", category: "Sports & Activities" },
   { src: `${BASE}/ballet.jpg`, alt: "Ballet programme at SIS", category: "Sports & Activities" },
-  { src: `${BASE}/ballet 2.webp`, alt: "Ballet performance by SIS learners", category: "Sports & Activities" },
+  { src: `${BASE}/ballet-2.webp`, alt: "Ballet performance by SIS learners", category: "Sports & Activities" },
   { src: `${BASE}/Racing.jpg`, alt: "SIS learners at racing event", category: "Sports & Activities" },
   { src: `${BASE}/Tournament.jpg`, alt: "SIS sports tournament", category: "Sports & Activities" },
-  { src: `${BASE}/Field day.webp`, alt: "SIS field day activities", category: "Sports & Activities" },
+  { src: `${BASE}/field-day.webp`, alt: "SIS field day activities", category: "Sports & Activities" },
   { src: `${BASE}/theatre.webp`, alt: "Theatre and performing arts at SIS", category: "Sports & Activities" },
 
   // Events & Trips
-  { src: `${BASE}/Field trip.jpg`, alt: "SIS learners on field trip", category: "Events" },
+  { src: `${BASE}/field-trip.jpg`, alt: "SIS learners on field trip", category: "Events" },
   { src: `${BASE}/Camping.webp`, alt: "SIS camping and outdoor experience", category: "Events" },
-  { src: `${BASE}/Book Fair.jpg`, alt: "Annual book fair at SIS", category: "Events" },
-  { src: `${BASE}/Make a Difference.jpg`, alt: "SIS community outreach programme", category: "Events" },
+  { src: `${BASE}/book-fair.jpg`, alt: "Annual book fair at SIS", category: "Events" },
+  { src: `${BASE}/make-a-difference.jpg`, alt: "SIS community outreach programme", category: "Events" },
   { src: `${BASE}/event1.jpg`, alt: "School event 1", category: "Events" },
   { src: `${BASE}/event2.jpg`, alt: "School event 2", category: "Events" },
   { src: `${BASE}/event3.jpg`, alt: "School event 3", category: "Events" },
   { src: `${BASE}/event4.jpg`, alt: "School event 4", category: "Events" },
 
   // Academics
-  { src: `${BASE}/learning arts.jpg`, alt: "Creative arts and learning", category: "Academics" },
-  { src: `${BASE}/lerning eng.jpg`, alt: "English language learning", category: "Academics" },
-  { src: `${BASE}/learnig math.webp`, alt: "Mathematics in the classroom", category: "Academics" },
-  { src: `${BASE}/learnig science.avif`, alt: "Science lessons at SIS", category: "Academics" },
-  { src: `${BASE}/learning afr.webp`, alt: "Afrikaans language learning", category: "Academics" },
-  { src: `${BASE}/learnig tech.avif`, alt: "Technology and digital learning", category: "Academics" },
+  { src: `${BASE}/learning-arts.jpg`, alt: "Creative arts and learning", category: "Academics" },
+  { src: `${BASE}/lerning-eng.jpg`, alt: "English language learning", category: "Academics" },
+  { src: `${BASE}/learnig-math.webp`, alt: "Mathematics in the classroom", category: "Academics" },
+  { src: `${BASE}/learnig-science.avif`, alt: "Science lessons at SIS", category: "Academics" },
+  { src: `${BASE}/learning-afr.webp`, alt: "Afrikaans language learning", category: "Academics" },
+  { src: `${BASE}/learnig-tech.avif`, alt: "Technology and digital learning", category: "Academics" },
 ];
 
 export default function GalleryPage() {
@@ -72,7 +72,7 @@ export default function GalleryPage() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[#111480]/80" />
+        <div className="absolute inset-0 bg-[#0C0E6B]/80" />
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -107,7 +107,7 @@ export default function GalleryPage() {
               </div>
               <div className="rounded-xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`${BASE}/Field trip.jpg`} alt="SIS field trip" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src={`${BASE}/field-trip.jpg`} alt="SIS field trip" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="rounded-xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -122,8 +122,8 @@ export default function GalleryPage() {
       <section className="pb-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-8">
-            <h2 className="text-xl font-bold text-[#111480]">All Photos</h2>
-            <div className="mt-2 w-10 h-1 bg-[#111480] rounded" />
+            <h2 className="text-xl font-bold text-[#0C0E6B]">All Photos</h2>
+            <div className="mt-2 w-10 h-1 bg-[#0C0E6B] rounded" />
           </FadeIn>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -145,11 +145,11 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#111480] py-14 px-4">
+      <section className="bg-[#0C0E6B] py-14 px-4">
         <FadeIn className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Want to See More?</h2>
           <p className="text-blue-200 text-sm mb-6">Visit us or contact us to arrange a school tour.</p>
-          <Link href="/contact" className="inline-block px-8 py-3 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">
+          <Link href="/contact" className="inline-block px-8 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">
             Book a Tour
           </Link>
         </FadeIn>

@@ -30,7 +30,7 @@ const phases = [
     phase: "Senior Phase",
     grades: "Grade 7",
     focus: "Transition preparation: deeper subject work and study skills for high school.",
-    color: "bg-navy-50 border-[#111480]/20",
+    color: "bg-navy-50 border-[#0C0E6B]/20",
   },
 ];
 
@@ -41,12 +41,12 @@ export default function PrimarySchoolPage() {
       <div
         className="relative text-white pt-24 pb-20 px-4"
         style={{
-          backgroundImage: `url(https://www.stutterheimschool.co.za/extra-images/banner1.jpg)`,
+          backgroundImage: `url(/extra-images/banner1.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
         }}
       >
-        <div className="absolute inset-0 bg-[#111480]/80" />
+        <div className="absolute inset-0 bg-[#0C0E6B]/80" />
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -66,14 +66,14 @@ export default function PrimarySchoolPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-[#111480]">Three Distinct Learning Phases</h2>
-            <div className="mt-3 w-12 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-2xl font-bold text-[#0C0E6B]">Three Distinct Learning Phases</h2>
+            <div className="mt-3 w-12 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {phases.map((p, i) => (
               <FadeIn key={p.phase} delay={i * 100}>
                 <div className={`rounded-xl p-6 border ${p.color}`}>
-                  <p className="text-[#111480] font-bold text-sm mb-1">{p.phase}</p>
+                  <p className="text-[#0C0E6B] font-bold text-sm mb-1">{p.phase}</p>
                   <p className="text-xs text-blue-500 font-semibold mb-3">{p.grades}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{p.focus}</p>
                 </div>
@@ -84,22 +84,22 @@ export default function PrimarySchoolPage() {
       </section>
 
       {/* Subjects + image */}
-      <section className="py-16 px-4 bg-[#F7F8FA]">
+      <section className="py-16 px-4 bg-[#F5F6F8]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Curriculum</p>
-              <h2 className="text-2xl font-bold text-[#111480] mb-6">Subjects Offered</h2>
+              <h2 className="text-2xl font-bold text-[#0C0E6B] mb-6">Subjects Offered</h2>
               <ul className="grid grid-cols-1 gap-2">
                 {subjects.map((s) => (
                   <li key={s} className="flex items-center gap-2 text-sm text-gray-700">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#111480] shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#0C0E6B] shrink-0" />
                     {s}
                   </li>
                 ))}
               </ul>
               <div className="mt-6">
-                <Link href="/subjects" className="text-sm font-semibold text-[#111480] hover:underline">
+                <Link href="/subjects" className="text-sm font-semibold text-[#0C0E6B] hover:underline">
                   View all subjects →
                 </Link>
               </div>
@@ -107,7 +107,7 @@ export default function PrimarySchoolPage() {
             <div className="rounded-2xl overflow-hidden shadow-lg aspect-video">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://www.stutterheimschool.co.za/extra-images/banner1.jpg"
+                src="/extra-images/banner1.jpg"
                 alt="Primary school learners at SIS"
                 className="w-full h-full object-cover"
               />
@@ -117,12 +117,12 @@ export default function PrimarySchoolPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#111480] py-14 px-4">
+      <section className="bg-[#0C0E6B] py-14 px-4">
         <FadeIn className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Give Your Child the Best Foundation</h2>
           <p className="text-blue-200 text-sm mb-6">2027 enrolments now open. Limited places in each grade.</p>
           <div className="flex gap-3 justify-center">
-            <Link href="/admissions" className="inline-block px-8 py-3 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">
+            <Link href="/admissions" className="inline-block px-8 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">
               Apply Now
             </Link>
             <Link href="/contact" className="inline-block px-8 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-sm">

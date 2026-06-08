@@ -247,11 +247,9 @@ export default function ApplyPage() {
             </div>
 
             {/* Reference number notice */}
-            <div className="bg-[#fff3cd] border border-yellow-300 rounded-xl px-6 py-4 text-center">
-              <p className="text-sm text-gray-700">
-                <strong>Upon submission you will receive a unique reference number.</strong><br />
-                Please write this on your application form when submitting it to the school.
-              </p>
+            <div className="bg-[#fff3cd] border-2 border-yellow-400 rounded-xl px-6 py-5 text-center">
+              <p className="text-base font-bold text-[#0C0E6B] mb-1">📋 You will receive a unique reference number</p>
+              <p className="text-sm text-gray-700">Upon submission, a reference number (e.g. <span className="font-mono font-bold">SIS-2027-XXXXXX</span>) will appear on screen and be emailed to you. Write it clearly on your paper application form before submitting it to the school.</p>
             </div>
 
             {/* Submit */}

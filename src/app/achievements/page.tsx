@@ -105,12 +105,12 @@ export default function AchievementsPage() {
       <div
         className="relative text-white pt-24 pb-20 px-4"
         style={{
-          backgroundImage: `url(https://www.stutterheimschool.co.za/extra-images/Tournament.jpg)`,
+          backgroundImage: `url(/extra-images/Tournament.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[#111480]/80" />
+        <div className="absolute inset-0 bg-[#0C0E6B]/80" />
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -135,7 +135,7 @@ export default function AchievementsPage() {
                 <div className={`w-10 h-10 ${cat.bgColor} rounded-lg flex items-center justify-center`}>
                   <cat.icon className={`w-5 h-5 ${cat.color}`} />
                 </div>
-                <h2 className="text-2xl font-bold text-[#111480]">{cat.heading}</h2>
+                <h2 className="text-2xl font-bold text-[#0C0E6B]">{cat.heading}</h2>
               </div>
             </FadeIn>
 
@@ -144,7 +144,7 @@ export default function AchievementsPage() {
                 <FadeIn key={item.title} delay={i * 100}>
                   <div className="bg-white rounded-xl border border-gray-100 p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
                     <p className="text-blue-500 text-xs font-semibold mb-2">{item.year}</p>
-                    <h3 className="font-bold text-[#111480] mb-3 text-base">{item.title}</h3>
+                    <h3 className="font-bold text-[#0C0E6B] mb-3 text-base">{item.title}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </FadeIn>
@@ -155,7 +155,7 @@ export default function AchievementsPage() {
       </div>
 
       {/* CTA */}
-      <section className="bg-[#111480] py-16 px-4">
+      <section className="bg-[#0C0E6B] py-16 px-4">
         <FadeIn className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Become Part of Our Story
@@ -165,7 +165,7 @@ export default function AchievementsPage() {
           </p>
           <a
             href="/admissions"
-            className="inline-block px-10 py-4 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-base"
+            className="inline-block px-10 py-4 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-base"
           >
             Apply for 2027
           </a>

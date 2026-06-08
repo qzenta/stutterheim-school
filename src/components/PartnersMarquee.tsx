@@ -1,13 +1,13 @@
-const BASE = "https://www.stutterheimschool.co.za/extra-images";
+const BASE = "/extra-images";
 
 const partners = [
-  { src: `${BASE}/flicker-01.jpg`, name: "Dept. of Basic Education" },
-  { src: `${BASE}/flicker-02.jpg`, name: "Sikatrix Accountants" },
-  { src: `${BASE}/flicker-03.jpg`, name: "EC Dept. of Education" },
-  { src: `${BASE}/flicker-04.jpg`, name: "UMALUSI" },
-  { src: `${BASE}/flicker-05.jpg`, name: "Education South Africa" },
-  { src: `${BASE}/flicker-06.jpg`, name: "W&RSETA" },
-  { src: `${BASE}/flicker-07.jpg`, name: "Macmillan Education" },
+  { src: `${BASE}/flicker-01.jpg`, name: "Dept. of Basic Education", h: 96, maxW: 160 },
+  { src: `/extra-images/sikatrix.webp`, name: "Sikatrix Accountants", h: 72, maxW: 160 },
+  { src: `${BASE}/flicker-03.jpg`, name: "EC Dept. of Education", h: 96, maxW: 160 },
+  { src: `${BASE}/flicker-04.jpg`, name: "UMALUSI", h: 96, maxW: 160 },
+  { src: `${BASE}/flicker-05.jpg`, name: "Education South Africa", h: 96, maxW: 160 },
+  { src: `${BASE}/flicker-06.jpg`, name: "W&RSETA", h: 96, maxW: 180 },
+  { src: `${BASE}/flicker-07.jpg`, name: "Macmillan Education", h: 96, maxW: 180 },
 ];
 
 // Double the array for seamless loop
@@ -24,18 +24,19 @@ export default function PartnersMarquee() {
 
       {/* Marquee track */}
       <div className="relative flex overflow-hidden select-none">
-        <div className="animate-partners flex items-center gap-20 will-change-transform">
+        <div className="animate-partners flex items-center gap-2 will-change-transform">
           {track.map((p, i) => (
             <div
               key={i}
               className="flex-shrink-0 flex items-center justify-center"
-              style={{ width: "260px", height: "110px" }}
+              style={{ height: "80px" }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.src}
                 alt={p.name}
-                className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                style={{ height: `${p.h}px`, width: "auto", maxWidth: `${p.maxW}px`, objectFit: "contain" }}
+                className="transition-all duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>

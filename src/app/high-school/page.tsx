@@ -30,12 +30,12 @@ export default function HighSchoolPage() {
       <div
         className="relative text-white pt-24 pb-20 px-4"
         style={{
-          backgroundImage: `url(https://www.stutterheimschool.co.za/extra-images/banner4.jpg)`,
+          backgroundImage: `url(/extra-images/banner4.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[#111480]/80" />
+        <div className="absolute inset-0 bg-[#0C0E6B]/80" />
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -52,7 +52,7 @@ export default function HighSchoolPage() {
       </div>
 
       {/* Stats strip */}
-      <section className="bg-[#111480] py-8 px-4">
+      <section className="bg-[#0C0E6B] py-8 px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           {highlights.map((h) => (
             <div key={h.label}>
@@ -69,14 +69,14 @@ export default function HighSchoolPage() {
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-10">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-2">CAPS Curriculum</p>
-            <h2 className="text-2xl font-bold text-[#111480]">Subjects by Group</h2>
-            <div className="mt-3 w-12 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-2xl font-bold text-[#0C0E6B]">Subjects by Group</h2>
+            <div className="mt-3 w-12 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {subjects.map((g, i) => (
               <FadeIn key={g.group} delay={i * 80}>
-                <div className="bg-[#F7F8FA] rounded-xl p-5 border border-gray-100">
-                  <h3 className="font-bold text-[#111480] text-sm mb-3 border-b border-gray-200 pb-2">{g.group}</h3>
+                <div className="bg-[#F5F6F8] rounded-xl p-5 border border-gray-100">
+                  <h3 className="font-bold text-[#0C0E6B] text-sm mb-3 border-b border-gray-200 pb-2">{g.group}</h3>
                   <ul className="space-y-1.5">
                     {g.items.map((s) => (
                       <li key={s} className="flex items-center gap-2 text-sm text-gray-700">
@@ -90,7 +90,7 @@ export default function HighSchoolPage() {
             ))}
           </div>
           <FadeIn className="mt-6 text-center">
-            <Link href="/subjects" className="text-sm font-semibold text-[#111480] hover:underline">
+            <Link href="/subjects" className="text-sm font-semibold text-[#0C0E6B] hover:underline">
               View full subjects list →
             </Link>
           </FadeIn>
@@ -98,20 +98,20 @@ export default function HighSchoolPage() {
       </section>
 
       {/* Boarding callout */}
-      <section className="py-16 px-4 bg-[#F7F8FA]">
+      <section className="py-16 px-4 bg-[#F5F6F8]">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="rounded-2xl overflow-hidden shadow-lg aspect-video">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://www.stutterheimschool.co.za/extra-images/banner2.jpg"
+                src="/extra-images/banner2.jpg"
                 alt="SIS learners on school activity"
                 className="w-full h-full object-cover"
               />
             </div>
             <div>
               <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Boarding Facility</p>
-              <h2 className="text-2xl font-bold text-[#111480] mb-4">Live, Learn &amp; Grow</h2>
+              <h2 className="text-2xl font-bold text-[#0C0E6B] mb-4">Live, Learn &amp; Grow</h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Our boarding facility provides a safe and structured residential environment for learners
                 who travel from outside Stutterheim. Supervised study sessions, meals, and monitored
@@ -120,7 +120,7 @@ export default function HighSchoolPage() {
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Early booking is strongly advised — boarding spaces fill quickly each year.
               </p>
-              <Link href="/admissions" className="px-6 py-3 bg-[#111480] text-white font-bold rounded-lg hover:bg-blue-900 transition-colors text-sm inline-block">
+              <Link href="/admissions" className="px-6 py-3 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-colors text-sm inline-block">
                 Book a Boarding Space
               </Link>
             </div>
@@ -129,12 +129,12 @@ export default function HighSchoolPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#111480] py-14 px-4">
+      <section className="bg-[#0C0E6B] py-14 px-4">
         <FadeIn className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl font-bold text-white mb-3">Ready for High School?</h2>
           <p className="text-blue-200 text-sm mb-6">2027 enrolments open. Day scholar and boarding options available.</p>
           <div className="flex gap-3 justify-center">
-            <Link href="/admissions" className="inline-block px-8 py-3 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">
+            <Link href="/admissions" className="inline-block px-8 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">
               Apply Now
             </Link>
             <Link href="/contact" className="inline-block px-8 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-sm">

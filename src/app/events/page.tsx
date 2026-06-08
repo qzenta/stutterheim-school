@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Current notices, term dates, and upcoming events at Stutterheim International School.",
 };
 
-const BASE = "https://www.stutterheimschool.co.za/extra-images";
+const BASE = "/extra-images";
 
 // Update these arrays when the school sends through term dates and notices
 const notices: { date: string; title: string; body: string }[] = [];
@@ -25,12 +25,12 @@ export default function EventsPage() {
       <div
         className="relative text-white pt-24 pb-16 px-4"
         style={{
-          backgroundImage: `url(${BASE}/Book Fair.jpg)`,
+          backgroundImage: `url(${BASE}/book-fair.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[#111480]/80" />
+        <div className="absolute inset-0 bg-[#0C0E6B]/80" />
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -50,12 +50,12 @@ export default function EventsPage() {
         {/* Notices */}
         <section className="mb-14">
           <FadeIn>
-            <h2 className="text-2xl font-bold text-[#111480] mb-2">Notices</h2>
-            <div className="w-10 h-1 bg-[#111480] rounded mb-6" />
+            <h2 className="text-2xl font-bold text-[#0C0E6B] mb-2">Notices</h2>
+            <div className="w-10 h-1 bg-[#0C0E6B] rounded mb-6" />
           </FadeIn>
           {notices.length === 0 ? (
             <FadeIn>
-              <div className="bg-[#F7F8FA] border border-gray-100 rounded-xl p-8 text-center">
+              <div className="bg-[#F5F6F8] border border-gray-100 rounded-xl p-8 text-center">
                 <p className="text-3xl mb-3">📋</p>
                 <p className="text-gray-500 font-medium">No notices at this time.</p>
                 <p className="text-gray-400 text-sm mt-1">Check back soon — notices will appear here as the school publishes them.</p>
@@ -66,7 +66,7 @@ export default function EventsPage() {
               {notices.map((n, i) => (
                 <li key={i} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
                   <p className="text-xs text-gray-400 mb-1">{n.date}</p>
-                  <p className="font-bold text-[#111480] mb-2">{n.title}</p>
+                  <p className="font-bold text-[#0C0E6B] mb-2">{n.title}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{n.body}</p>
                 </li>
               ))}
@@ -77,13 +77,13 @@ export default function EventsPage() {
         {/* Term dates */}
         <section className="mb-14">
           <FadeIn>
-            <h2 className="text-2xl font-bold text-[#111480] mb-2">Term Dates 2027</h2>
-            <div className="w-10 h-1 bg-[#111480] rounded mb-6" />
+            <h2 className="text-2xl font-bold text-[#0C0E6B] mb-2">Term Dates 2027</h2>
+            <div className="w-10 h-1 bg-[#0C0E6B] rounded mb-6" />
           </FadeIn>
           <FadeIn>
             <div className="overflow-x-auto rounded-xl shadow-sm border border-gray-100">
               <table className="w-full text-sm text-left">
-                <thead className="bg-[#111480] text-white">
+                <thead className="bg-[#0C0E6B] text-white">
                   <tr>
                     <th className="px-5 py-3.5 font-semibold">Term</th>
                     <th className="px-5 py-3.5 font-semibold">Start Date</th>
@@ -92,7 +92,7 @@ export default function EventsPage() {
                 </thead>
                 <tbody>
                   {termDates.map((t, i) => (
-                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#F7F8FA]"}>
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#F5F6F8]"}>
                       <td className="px-5 py-4 text-gray-700 font-medium">{t.term}</td>
                       <td className="px-5 py-4 text-gray-500">{t.start}</td>
                       <td className="px-5 py-4 text-gray-500">{t.end}</td>
@@ -110,16 +110,16 @@ export default function EventsPage() {
         {/* Upcoming school events photos strip */}
         <section>
           <FadeIn>
-            <h2 className="text-2xl font-bold text-[#111480] mb-2">School Activities</h2>
-            <div className="w-10 h-1 bg-[#111480] rounded mb-6" />
+            <h2 className="text-2xl font-bold text-[#0C0E6B] mb-2">School Activities</h2>
+            <div className="w-10 h-1 bg-[#0C0E6B] rounded mb-6" />
           </FadeIn>
           <FadeIn>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { src: `${BASE}/Book Fair.jpg`, label: "Book Fair" },
+                { src: `${BASE}/book-fair.jpg`, label: "Book Fair" },
                 { src: `${BASE}/Camping.webp`, label: "Camping" },
-                { src: `${BASE}/Field trip.jpg`, label: "Field Trip" },
-                { src: `${BASE}/Make a Difference.jpg`, label: "Community Outreach" },
+                { src: `${BASE}/field-trip.jpg`, label: "Field Trip" },
+                { src: `${BASE}/make-a-difference.jpg`, label: "Community Outreach" },
               ].map((item) => (
                 <div key={item.label} className="relative rounded-xl overflow-hidden group" style={{ aspectRatio: "1" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -128,7 +128,7 @@ export default function EventsPage() {
                     alt={item.label}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-[#111480]/40 group-hover:bg-[#111480]/20 transition-colors" />
+                  <div className="absolute inset-0 bg-[#0C0E6B]/40 group-hover:bg-[#0C0E6B]/20 transition-colors" />
                   <p className="absolute bottom-2 left-0 right-0 text-center text-white text-xs font-semibold px-2">{item.label}</p>
                 </div>
               ))}

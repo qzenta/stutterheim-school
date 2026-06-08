@@ -48,7 +48,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#F7F8FA] text-[#1F1F1F] font-[var(--font-geist-sans)]">
+      <body className="min-h-full flex flex-col bg-[#F5F6F8] text-[#1F1F1F] font-[var(--font-geist-sans)]">
         {/* Sticky header: banner + navbar */}
         <div className="sticky top-0 left-0 right-0 z-50">
           <AdmissionsBanner />

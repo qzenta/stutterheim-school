@@ -30,7 +30,7 @@ export default function AdmissionsBanner() {
   if (!visible) return null;
 
   return (
-    <div className="bg-[#111480] text-white overflow-hidden relative" style={{ height: "36px" }}>
+    <div className="bg-[#0C0E6B] text-white overflow-hidden relative" style={{ height: "36px" }}>
       {/* Scrolling ticker */}
       <div className="flex items-center h-full">
         <div className="animate-marquee flex whitespace-nowrap will-change-transform">
@@ -47,7 +47,7 @@ export default function AdmissionsBanner() {
       <button
         onClick={dismiss}
         aria-label="Dismiss banner"
-        className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-white/60 hover:text-white transition-colors z-10 bg-[#111480]"
+        className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-white/60 hover:text-white transition-colors z-10 bg-[#0C0E6B]"
       >
         <X size={13} />
       </button>

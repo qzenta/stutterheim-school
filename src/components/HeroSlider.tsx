@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const BASE = "https://www.stutterheimschool.co.za/extra-images";
+const BASE = "/extra-images";
 
 const slides = [
   {
@@ -50,7 +50,7 @@ export default function HeroSlider() {
       ))}
 
       {/* Overlay — darkens right side for right-aligned text readability */}
-      <div className="absolute inset-0 bg-gradient-to-l from-[#111480]/90 via-[#111480]/50 to-[#111480]/10" />
+      <div className="absolute inset-0 bg-gradient-to-l from-[#0C0E6B]/90 via-[#0C0E6B]/50 to-[#0C0E6B]/10" />
 
       {/* Content — RIGHT aligned */}
       <div className="absolute inset-0 flex items-center">
@@ -69,7 +69,7 @@ export default function HeroSlider() {
             <div className="flex flex-col sm:flex-row gap-3 justify-end">
               <Link
                 href="/admissions"
-                className="px-7 py-3.5 bg-white text-[#111480] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm shadow"
+                className="px-7 py-3.5 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm shadow"
               >
                 Apply for 2027
               </Link>

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Get in touch with Stutterheim International School — admissions, boarding, and general enquiries.",
 };
 
-const BASE = "https://www.stutterheimschool.co.za/extra-images";
+const BASE = "/extra-images";
 
 export default function ContactPage() {
   return (
@@ -21,7 +21,7 @@ export default function ContactPage() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-[#111480]/80" />
+        <div className="absolute inset-0 bg-[#0C0E6B]/80" />
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -41,33 +41,33 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Info */}
           <div>
-            <h2 className="text-xl font-bold text-[#111480] mb-6">School Details</h2>
+            <h2 className="text-xl font-bold text-[#0C0E6B] mb-6">School Details</h2>
             <div className="space-y-5 text-gray-700">
-              <div className="flex items-start gap-4 p-4 bg-[#F7F8FA] rounded-xl border border-gray-100">
+              <div className="flex items-start gap-4 p-4 bg-[#F5F6F8] rounded-xl border border-gray-100">
                 <span className="text-xl">📍</span>
                 <div>
-                  <p className="font-semibold text-[#111480] text-sm">Address</p>
+                  <p className="font-semibold text-[#0C0E6B] text-sm">Address</p>
                   <p className="mt-1 text-sm">49 Louisa Street<br />Stutterheim, Eastern Cape, 4930</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-[#F7F8FA] rounded-xl border border-gray-100">
+              <div className="flex items-start gap-4 p-4 bg-[#F5F6F8] rounded-xl border border-gray-100">
                 <span className="text-xl">📞</span>
                 <div>
-                  <p className="font-semibold text-[#111480] text-sm">Phone</p>
-                  <a href="tel:+27673977613" className="mt-1 block text-sm hover:text-[#111480] transition-colors">(067) 397-7613</a>
+                  <p className="font-semibold text-[#0C0E6B] text-sm">Phone</p>
+                  <a href="tel:+27673977613" className="mt-1 block text-sm hover:text-[#0C0E6B] transition-colors">(067) 397-7613</a>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-[#F7F8FA] rounded-xl border border-gray-100">
+              <div className="flex items-start gap-4 p-4 bg-[#F5F6F8] rounded-xl border border-gray-100">
                 <span className="text-xl">✉️</span>
                 <div>
-                  <p className="font-semibold text-[#111480] text-sm">Email</p>
-                  <a href="mailto:sis@stutterheimschool.co.za" className="mt-1 block text-sm hover:text-[#111480] transition-colors">sis@stutterheimschool.co.za</a>
+                  <p className="font-semibold text-[#0C0E6B] text-sm">Email</p>
+                  <a href="mailto:sis@stutterheimschool.co.za" className="mt-1 block text-sm hover:text-[#0C0E6B] transition-colors">sis@stutterheimschool.co.za</a>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-[#F7F8FA] rounded-xl border border-gray-100">
+              <div className="flex items-start gap-4 p-4 bg-[#F5F6F8] rounded-xl border border-gray-100">
                 <span className="text-xl">🕐</span>
                 <div>
-                  <p className="font-semibold text-[#111480] text-sm">Office Hours</p>
+                  <p className="font-semibold text-[#0C0E6B] text-sm">Office Hours</p>
                   <p className="mt-1 text-sm">Monday – Friday: 7:00 AM – 3:00 PM</p>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
             <div className="mt-6 rounded-xl overflow-hidden border border-gray-200 shadow-sm" style={{ height: "240px" }}>
               <iframe
                 title="Stutterheim International School location"
-                src="https://maps.google.com/maps?q=49+Louisa+Street,+Stutterheim,+Eastern+Cape,+4930,+South+Africa&output=embed"
+                src="https://maps.google.com/maps?q=49+Louisa+Street,+Stutterheim,+4930,+Eastern+Cape,+South+Africa&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -90,7 +90,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <div>
-            <h2 className="text-xl font-bold text-[#111480] mb-6">Send Us a Message</h2>
+            <h2 className="text-xl font-bold text-[#0C0E6B] mb-6">Send Us a Message</h2>
             <ContactForm />
           </div>
         </div>

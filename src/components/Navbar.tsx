@@ -41,10 +41,10 @@ const navItems: NavItem[] = [
     href: "/admissions",
     highlight: true,
     children: [
-      { label: "How to Apply", href: "/admissions#how" },
+      { label: "How to Apply", href: "/admissions" },
+      { label: "Apply Online", href: "/apply" },
       { label: "Fee Structure", href: "/fees" },
-      { label: "Application Form (PDF)", href: "#" },
-      { label: "Apply Online", href: "#" },
+      { label: "Request Documents", href: "mailto:sis@stutterheimschool.co.za?subject=Application%20Pack%20Request" },
     ],
   },
   {
@@ -89,7 +89,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <Image
-            src="https://www.stutterheimschool.co.za/images/logo.png"
+            src="/images/logo.png"
             alt="Stutterheim International School"
             width={200}
             height={64}
@@ -116,10 +116,10 @@ export default function Navbar() {
                   href={item.href}
                   className={`flex items-center px-3 py-2 rounded transition-all text-sm ${
                     item.highlight
-                      ? "bg-[#111480] text-white font-bold hover:bg-blue-900"
+                      ? "bg-[#0C0E6B] text-white font-bold hover:bg-blue-900"
                       : isActive
-                      ? "text-[#111480] font-semibold"
-                      : "text-gray-600 hover:text-[#111480]"
+                      ? "text-[#0C0E6B] font-semibold"
+                      : "text-gray-600 hover:text-[#0C0E6B]"
                   }`}
                 >
                   {item.label}
@@ -135,7 +135,7 @@ export default function Navbar() {
                       <Link
                         key={child.label}
                         href={child.href}
-                        className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-blue-50 hover:text-[#111480] font-medium transition-colors"
+                        className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-blue-50 hover:text-[#0C0E6B] font-medium transition-colors"
                       >
                         {child.label}
                       </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
 
           {/* Search icon */}
           <button
-            className="p-2 text-gray-400 hover:text-[#111480] transition-colors ml-1"
+            className="p-2 text-gray-400 hover:text-[#0C0E6B] transition-colors ml-1"
             onClick={() => setSearchOpen(true)}
             aria-label="Search site"
           >
@@ -159,14 +159,14 @@ export default function Navbar() {
         {/* Mobile controls */}
         <div className="xl:hidden flex items-center gap-1">
           <button
-            className="p-2 text-gray-400 hover:text-[#111480] transition-colors"
+            className="p-2 text-gray-400 hover:text-[#0C0E6B] transition-colors"
             onClick={() => setSearchOpen(true)}
             aria-label="Search site"
           >
             <Search size={20} />
           </button>
           <button
-            className="p-2 text-[#111480] hover:text-blue-700 transition-colors"
+            className="p-2 text-[#0C0E6B] hover:text-blue-700 transition-colors"
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation menu"
           >
@@ -189,8 +189,8 @@ export default function Navbar() {
                   <button
                     className={`w-full flex items-center justify-between py-2.5 px-2 text-sm font-medium rounded transition-colors ${
                       item.highlight
-                        ? "text-[#111480] font-bold"
-                        : "text-gray-700 hover:text-[#111480]"
+                        ? "text-[#0C0E6B] font-bold"
+                        : "text-gray-700 hover:text-[#0C0E6B]"
                     }`}
                     onClick={() =>
                       setMobileExpanded(
@@ -212,7 +212,7 @@ export default function Navbar() {
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="block py-2 px-2 text-sm text-gray-500 hover:text-[#111480] transition-colors"
+                          className="block py-2 px-2 text-sm text-gray-500 hover:text-[#0C0E6B] transition-colors"
                           onClick={() => {
                             setOpen(false);
                             setMobileExpanded(null);
@@ -229,8 +229,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`block py-2.5 px-2 text-sm font-medium rounded transition-colors ${
                     pathname === item.href
-                      ? "text-[#111480] font-semibold"
-                      : "text-gray-700 hover:text-[#111480]"
+                      ? "text-[#0C0E6B] font-semibold"
+                      : "text-gray-700 hover:text-[#0C0E6B]"
                   }`}
                   onClick={() => setOpen(false)}
                 >
@@ -243,7 +243,7 @@ export default function Navbar() {
           <div className="pt-3">
             <Link
               href="/admissions"
-              className="block text-center px-4 py-3 bg-[#111480] text-white font-bold rounded text-sm hover:bg-blue-900 transition-colors"
+              className="block text-center px-4 py-3 bg-[#0C0E6B] text-white font-bold rounded text-sm hover:bg-blue-900 transition-colors"
               onClick={() => setOpen(false)}
             >
               Apply for 2027

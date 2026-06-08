@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Learn about our mission, vision, history, leadership, and boarding facilities at Stutterheim International School.",
 };
 
-const BASE = "https://www.stutterheimschool.co.za/extra-images";
+const BASE = "/extra-images";
 
 const galleryImages = [
   { src: `${BASE}/banner1.jpg`, alt: "SIS learners in maroon uniform on campus steps" },
@@ -36,7 +36,7 @@ export default function AboutPage() {
           backgroundPosition: "center top",
         }}
       >
-        <div className="absolute inset-0 bg-[#111480]/80" />
+        <div className="absolute inset-0 bg-[#0C0E6B]/80" />
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -56,11 +56,11 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <FadeIn delay={0}>
-              <div className="bg-[#F7F8FA] rounded-2xl p-8 h-full">
-                <div className="w-10 h-10 bg-[#111480] rounded-lg flex items-center justify-center mb-4">
+              <div className="bg-[#F5F6F8] rounded-2xl p-8 h-full">
+                <div className="w-10 h-10 bg-[#0C0E6B] rounded-lg flex items-center justify-center mb-4">
                   <span className="text-white font-bold text-sm">M</span>
                 </div>
-                <h2 className="text-xl font-bold text-[#111480] mb-3">Our Mission</h2>
+                <h2 className="text-xl font-bold text-[#0C0E6B] mb-3">Our Mission</h2>
                 <p className="text-gray-600 leading-relaxed text-sm">
                   To provide a safe and conducive environment where everyone is valued and respected.
                   All staff members, in partnership with parents and families, are fully committed
@@ -69,7 +69,7 @@ export default function AboutPage() {
               </div>
             </FadeIn>
             <FadeIn delay={100}>
-              <div className="bg-[#111480] rounded-2xl p-8 h-full">
+              <div className="bg-[#0C0E6B] rounded-2xl p-8 h-full">
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-white font-bold text-sm">V</span>
                 </div>
@@ -86,16 +86,16 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story + images */}
-      <section className="py-16 px-4 bg-[#F7F8FA]" id="story">
+      <section className="py-16 px-4 bg-[#F5F6F8]" id="story">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Our Story</p>
-              <h2 className="text-2xl font-bold text-[#111480] mb-5">Building Leaders in the Eastern Cape</h2>
+              <h2 className="text-2xl font-bold text-[#0C0E6B] mb-5">Building Leaders in the Eastern Cape</h2>
               <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                 Stutterheim International School is situated at 49 Louisa Street, Stutterheim, Eastern Cape.
-                Under the visionary leadership of Director Dr Suraj Haruna, the school has grown into a
-                thriving community of learners and educators committed to excellence.
+                Stutterheim International School has grown into a
+                thriving community of learners and educators committed to excellence under dedicated leadership.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                 With over 60 enrolled students, 6+ qualified teachers, and more than 20 subjects on offer,
@@ -107,10 +107,10 @@ export default function AboutPage() {
                 sports, community outreach, and academic achievement programmes designed to develop the whole child.
               </p>
               <div className="mt-6 flex gap-3">
-                <Link href="/staff" className="text-sm font-semibold text-[#111480] border border-[#111480] px-5 py-2.5 rounded-lg hover:bg-[#111480] hover:text-white transition-colors">
+                <Link href="/staff" className="text-sm font-semibold text-[#0C0E6B] border border-[#0C0E6B] px-5 py-2.5 rounded-lg hover:bg-[#0C0E6B] hover:text-white transition-colors">
                   Meet Our Staff
                 </Link>
-                <Link href="/admissions" className="text-sm font-semibold bg-[#111480] text-white px-5 py-2.5 rounded-lg hover:bg-blue-900 transition-colors">
+                <Link href="/admissions" className="text-sm font-semibold bg-[#0C0E6B] text-white px-5 py-2.5 rounded-lg hover:bg-blue-900 transition-colors">
                   Apply Now
                 </Link>
               </div>
@@ -151,15 +151,15 @@ export default function AboutPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-[#111480]">What We Stand For</h2>
-            <div className="mt-3 w-12 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-2xl font-bold text-[#0C0E6B]">What We Stand For</h2>
+            <div className="mt-3 w-12 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {values.map((v, i) => (
               <FadeIn key={v.title} delay={i * 80}>
                 <div className="text-center p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
                   <p className="text-3xl mb-3">{v.icon}</p>
-                  <h3 className="font-bold text-[#111480] text-sm mb-2">{v.title}</h3>
+                  <h3 className="font-bold text-[#0C0E6B] text-sm mb-2">{v.title}</h3>
                   <p className="text-gray-600 text-xs leading-relaxed">{v.desc}</p>
                 </div>
               </FadeIn>
@@ -169,7 +169,7 @@ export default function AboutPage() {
       </section>
 
       {/* More photos */}
-      <section className="py-12 px-4 bg-[#F7F8FA]">
+      <section className="py-12 px-4 bg-[#F5F6F8]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {galleryImages.slice(2).map((img, i) => (
@@ -194,35 +194,43 @@ export default function AboutPage() {
       <section className="py-16 px-4 bg-white" id="leadership">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-[#111480]">School Leadership</h2>
-            <div className="mt-3 w-12 h-1 bg-[#111480] mx-auto rounded" />
+            <h2 className="text-2xl font-bold text-[#0C0E6B]">School Leadership</h2>
+            <div className="mt-3 w-12 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
-          <FadeIn>
-            <div className="bg-[#F7F8FA] rounded-2xl p-8 flex flex-col sm:flex-row gap-8 items-start">
-              {/* Headshot placeholder */}
-              <div className="w-28 h-28 rounded-full bg-[#111480]/10 border-4 border-[#111480]/20 flex items-center justify-center shrink-0 mx-auto sm:mx-0">
-                <span className="text-3xl font-bold text-[#111480]">S</span>
-              </div>
-              <div>
-                <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.15em] mb-1">Director &amp; Principal</p>
-                <h3 className="text-xl font-bold text-[#111480] mb-3">Dr Suraj Haruna</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                  Dr Suraj Haruna is the founding Director and Principal of Stutterheim International School.
-                  His leadership has shaped SIS into a centre of academic excellence in the Eastern Cape,
-                  committed to the holistic development of every learner.
-                </p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Under his guidance, the school has expanded its curriculum offering, established boarding
-                  facilities, and built a culture of achievement and community service.
-                </p>
-              </div>
-            </div>
-          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              {
+                initials: "ZK", role: "Co-Director", name: "Zimaseka Kalimashe",
+                bio: "Zimaseka Kalimashe co-directs Stutterheim International School with a commitment to inclusive, high-quality education for every learner in the Eastern Cape. Photo coming soon.",
+              },
+              {
+                initials: "MV", role: "Principal", name: "Mdingi Vuyelwa",
+                bio: "Mdingi Vuyelwa leads the school's academic and operational excellence, nurturing a learning environment where every child can thrive. Photo coming soon.",
+              },
+              {
+                initials: "AS", role: "Assistant Principal", name: "Amanda Salzwedel",
+                bio: "Amanda Salzwedel supports school leadership across curriculum, learner affairs, and staff development. Photo coming soon.",
+              },
+            ].map((leader) => (
+              <FadeIn key={leader.name}>
+                <div className="bg-[#F5F6F8] rounded-2xl p-6 flex gap-5 items-start">
+                  <div className="w-16 h-16 rounded-full bg-[#0C0E6B]/10 border-4 border-[#0C0E6B]/20 flex items-center justify-center shrink-0">
+                    <span className="text-xl font-bold text-[#0C0E6B]">{leader.initials}</span>
+                  </div>
+                  <div>
+                    <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.15em] mb-1">{leader.role}</p>
+                    <h3 className="text-base font-bold text-[#0C0E6B] mb-2">{leader.name}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{leader.bio}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Boarding */}
-      <section className="bg-[#111480] py-14 px-4">
+      <section className="bg-[#0C0E6B] py-14 px-4">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
@@ -238,7 +246,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block px-6 py-3 bg-white text-[#111480] font-bold rounded-lg text-sm hover:bg-blue-50 transition-colors"
+                className="inline-block px-6 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg text-sm hover:bg-blue-50 transition-colors"
               >
                 Enquire About Boarding
               </Link>
