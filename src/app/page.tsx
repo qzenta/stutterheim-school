@@ -267,9 +267,8 @@ export default function HomePage() {
               <div className="group flex flex-col items-center text-center bg-white/5 border border-white/10 rounded-2xl p-10 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default h-full min-h-[420px] justify-center">
                 {/* Avatar — larger for director */}
                 <div className="relative w-36 h-36 mb-6">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-indigo-400/20 to-indigo-600/10 border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500" />
-                  <div className="w-full h-full rounded-full flex items-center justify-center relative z-10">
-                    <span className="text-3xl font-bold text-white/60 group-hover:text-white/90 transition-colors duration-300">ZK</span>
+                  <div className="absolute inset-0 rounded-full border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500 overflow-hidden">
+                    <img src="/extra-images/zimaseka-kalimashe.jpg" alt="Zimaseka Kalimashe" className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="absolute inset-[-8px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
                 </div>

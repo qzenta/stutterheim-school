@@ -13,6 +13,7 @@ export default function ApplyPage() {
     medicalConditions: "no", medicalDetails: "", hearAboutUs: "", notes: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [ref, setRef] = useState<string>("");
 
   const set = (field: string, value: string) => setForm((f) => ({ ...f, [field]: value }));
 
@@ -26,6 +27,8 @@ export default function ApplyPage() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Failed");
+      const json = await res.json();
+      if (json.ref) setRef(json.ref);
       setStatus("success");
     } catch {
       setStatus("error");
@@ -40,12 +43,19 @@ export default function ApplyPage() {
             <span className="text-3xl">✅</span>
           </div>
           <h1 className="text-2xl font-bold text-[#0C0E6B] mb-3">Enquiry Received!</h1>
+          {ref && (
+            <div className="bg-[#E8E9F4] border border-[#0C0E6B]/20 rounded-xl px-6 py-4 mb-5">
+              <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Your reference number</p>
+              <p className="text-2xl font-bold text-[#0C0E6B] tracking-widest">{ref}</p>
+              <p className="text-xs text-gray-600 mt-2">Write this on your paper application form before submitting it to the school.</p>
+            </div>
+          )}
           <p className="text-gray-600 text-sm leading-relaxed mb-6">
             Thank you for your interest in Stutterheim International School. We have received your enquiry
             and will contact you within 5 business days with the full application pack and next steps.
           </p>
           <p className="text-gray-500 text-sm mb-8">
-            A confirmation has been sent to your email address.
+            A confirmation with your reference number has been sent to your email address.
           </p>
           <Link href="/" className="inline-block px-8 py-3 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-colors text-sm">
             Back to Home
@@ -234,6 +244,14 @@ export default function ApplyPage() {
                 className="shrink-0 px-5 py-2 bg-[#0C0E6B] text-white font-bold rounded-lg text-sm hover:bg-blue-900 transition-colors">
                 Download PDF Form
               </a>
+            </div>
+
+            {/* Reference number notice */}
+            <div className="bg-[#fff3cd] border border-yellow-300 rounded-xl px-6 py-4 text-center">
+              <p className="text-sm text-gray-700">
+                <strong>Upon submission you will receive a unique reference number.</strong><br />
+                Please write this on your application form when submitting it to the school.
+              </p>
             </div>
 
             {/* Submit */}

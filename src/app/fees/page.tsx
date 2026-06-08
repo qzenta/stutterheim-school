@@ -48,18 +48,14 @@ export default function FeesPage() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-gray-100 bg-[#F5F6F8]">
-                    <th className="text-left px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500">Payment Option</th>
+                    <th className="text-left px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500">Item</th>
                     <th className="text-right px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500">Amount</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-gray-50 bg-white">
-                    <td className="px-6 py-4 text-sm text-gray-700">11-Month Payment Option</td>
-                    <td className="px-6 py-4 text-sm font-bold text-[#0C0E6B] text-right">R1,200 / month</td>
-                  </tr>
-                  <tr className="border-b border-gray-50 bg-[#F5F6F8]">
-                    <td className="px-6 py-4 text-sm text-gray-700">12-Month Payment Option</td>
-                    <td className="px-6 py-4 text-sm font-bold text-[#0C0E6B] text-right">R1,100 / month</td>
+                  <tr className="bg-white">
+                    <td className="px-6 py-4 text-sm text-gray-700">Monthly School Fees (all grades)</td>
+                    <td className="px-6 py-4 text-sm font-bold text-[#0C0E6B] text-right">R1,300 / month</td>
                   </tr>
                 </tbody>
               </table>
@@ -83,7 +79,7 @@ export default function FeesPage() {
                 <tbody>
                   <tr className="bg-white">
                     <td className="px-6 py-4 text-sm text-gray-700">Registration Fee (new learners, non-refundable)</td>
-                    <td className="px-6 py-4 text-sm font-bold text-[#0C0E6B] text-right">R210</td>
+                    <td className="px-6 py-4 text-sm font-bold text-[#0C0E6B] text-right">R250</td>
                   </tr>
                 </tbody>
               </table>
