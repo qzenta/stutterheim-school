@@ -152,7 +152,7 @@ export default function HomePage() {
           <FadeIn>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="/downloads/SIS-Application-Form-2027.docx"
+                href="/downloads/SIS-Application-Form-2027.pdf"
                 className="flex items-center gap-2 px-6 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm"
               >
                 📄 Download Application Form
@@ -268,7 +268,7 @@ export default function HomePage() {
                 {/* Avatar — larger for director */}
                 <div className="relative w-36 h-36 mb-6">
                   <div className="absolute inset-0 rounded-full border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500 overflow-hidden">
-                    <img src="/extra-images/zimaseka-kalimashe.jpg" alt="Zimaseka Kalimashe" className="w-full h-full object-cover object-top" />
+                    <img src="/extra-images/zimaseka-kalimashe.jpg" alt="Ms Zimaseka Kalimashe – Co-Director" className="w-full h-full object-cover object-center" />
                   </div>
                   <div className="absolute inset-[-8px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
                 </div>
@@ -332,6 +332,15 @@ export default function HomePage() {
             </div>
 
           </div>
+
+          {/* Leadership CTA */}
+          <FadeIn className="text-center mt-10">
+            <a href="/leadership" className="inline-flex items-center gap-2 text-blue-300 hover:text-white text-sm font-semibold transition-colors group">
+              Learn more about our leadership team
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </FadeIn>
+
         </div>
       </section>
 

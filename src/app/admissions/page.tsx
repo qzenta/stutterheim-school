@@ -99,16 +99,17 @@ export default function AdmissionsPage() {
           <FadeIn className="text-center mb-8">
             <h2 className="text-2xl font-bold text-[#0C0E6B]">Application Materials</h2>
             <p className="text-gray-500 mt-2 text-sm">
-              PDFs will be available once confirmed by Dr Haruna. In the meantime, contact us directly to receive any documents by email.
+              Download the official 2027 application form or apply online. Contact us for brochures and additional documents.
             </p>
           </FadeIn>
           <FadeIn>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="mailto:sis@stutterheimschool.co.za?subject=Application%20Form%20Request"
+                href="/downloads/SIS-Application-Form-2027.pdf"
+                download
                 className="flex items-center gap-2 px-7 py-3.5 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
-                📄 Request Application Form
+                📄 Download Application Form (PDF)
               </a>
               <a
                 href="mailto:sis@stutterheimschool.co.za?subject=Fee%20Structure%20Request"

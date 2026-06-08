@@ -240,7 +240,7 @@ export default function ApplyPage() {
             {/* Download paper form link */}
             <div className="bg-[#E8E9F4] border border-[#0C0E6B]/15 rounded-xl px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
               <p className="text-[#0C0E6B] text-sm font-medium">Prefer a paper form? Download the full official application.</p>
-              <a href="/downloads/SIS-Application-Form-2027.docx"
+              <a href="/downloads/SIS-Application-Form-2027.pdf"
                 className="shrink-0 px-5 py-2 bg-[#0C0E6B] text-white font-bold rounded-lg text-sm hover:bg-blue-900 transition-colors">
                 Download PDF Form
               </a>

@@ -115,27 +115,88 @@ export default function StaffPage() {
         </div>
       </div>
 
-      {/* Teaching staff */}
-      <section className="py-16 px-4 bg-[#F5F6F8]">
+      {/* School Leadership */}
+      <section className="py-16 px-4 bg-[#0C0E6B]">
         <div className="max-w-6xl mx-auto">
-          {/* Leadership callout */}
-          <FadeIn className="mb-12">
-            <div className="bg-[#0C0E6B] rounded-xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                <p className="text-white font-bold text-sm">School Leadership</p>
-                <p className="text-blue-200 text-xs mt-1">
-                  Meet Co-Director Zimaseka Kalimashe on the homepage leadership section.
-                </p>
+          <FadeIn className="mb-10 text-center">
+            <p className="text-blue-300 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Our People</p>
+            <h2 className="text-3xl font-bold text-white">School Leadership</h2>
+            <div className="mt-4 w-16 h-1 bg-white/30 mx-auto rounded" />
+          </FadeIn>
+
+          {/* Zimaseka full card */}
+          <FadeIn>
+            <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden max-w-3xl mx-auto">
+              <div className="flex flex-col sm:flex-row">
+                {/* Photo */}
+                <div className="sm:w-56 h-56 sm:h-auto flex-shrink-0 overflow-hidden bg-[#0A0D5E]">
+                  <img
+                    src="/extra-images/zimaseka-kalimashe.jpg"
+                    alt="Ms Zimaseka Kalimashe – Co-Director"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+                {/* Bio */}
+                <div className="p-7 flex flex-col justify-center flex-1">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300 bg-blue-900/40 border border-blue-400/20 rounded-full px-3 py-1 mb-3 self-start">
+                    Co-Director
+                  </span>
+                  <h3 className="font-bold text-white text-xl mb-1">Ms Zimaseka Kalimashe</h3>
+                  <p className="text-blue-300 text-xs font-medium mb-4">Physical Sciences &amp; NSTECH</p>
+                  <p className="text-blue-200 text-sm leading-relaxed mb-5">
+                    Ms Kalimashe brings 23 years of dedicated teaching in Physical Sciences and Natural Sciences &amp; Technology (NSTECH). She holds a Diploma in Education, BEd Honours, and an Advanced Certificate in Education.
+                  </p>
+                  <p className="text-blue-200 text-sm leading-relaxed mb-5">
+                    A distinguished marker and educator, she has served as a Physics Senior Marker for over 15 years and as Physics Deputy Chief Marker for 7+ years — demonstrating a deep commitment to assessment standards and curriculum excellence. She has also served as Departmental Head for the Intermediate Phase for 13 years, shaping both teachers and learners at a foundational level.
+                  </p>
+                  <p className="text-blue-200 text-sm leading-relaxed mb-6">
+                    Ms Kalimashe is focused on conceptual teaching, assessment excellence, and developing teachers and learners for STEM success.
+                  </p>
+                  {/* Credential badges */}
+                  <div className="flex flex-wrap gap-2">
+                    {["Dip. Ed", "BEd Hons Ed", "Advanced Cert Ed", "Physics Senior Marker 15+ yrs", "Physics Deputy Chief Marker 7+ yrs", "Dept. Head (Intermediate) 13 yrs"].map((c) => (
+                      <span key={c} className="text-[11px] font-semibold text-blue-200 bg-white/10 border border-white/15 rounded-full px-3 py-1">
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <a
-                href="/#leadership"
-                className="shrink-0 px-5 py-2 bg-white text-[#0C0E6B] font-bold rounded-lg text-xs hover:bg-blue-50 transition-colors whitespace-nowrap"
-              >
-                View Leadership →
-              </a>
             </div>
           </FadeIn>
 
+          {/* Mdingi + Amanda placeholder cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mt-6">
+            {[
+              { name: "Mdingi Vuyelwa", role: "Principal", initials: "MV" },
+              { name: "Amanda Salzwedel", role: "Assistant Principal", initials: "AS" },
+            ].map((l) => (
+              <FadeIn key={l.name}>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-5">
+                  <div className="w-16 h-16 rounded-full bg-[#0A0D5E] border-2 border-white/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-xl font-bold text-white/50">{l.initials}</span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-blue-300">{l.role}</span>
+                    <h4 className="font-bold text-white text-base mt-0.5">{l.name}</h4>
+                    <p className="text-blue-300 text-xs mt-1">Bio coming soon</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn className="text-center mt-8">
+            <a href="/leadership" className="inline-block px-6 py-2.5 border border-white/30 text-white text-sm font-semibold rounded-lg hover:bg-white/10 transition-colors">
+              Full Leadership Profiles →
+            </a>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Teaching staff */}
+      <section className="py-16 px-4 bg-[#F5F6F8]">
+        <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-8">
             <h2 className="text-xl font-bold text-[#0C0E6B]">Teaching Staff</h2>
             <div className="mt-2 w-10 h-1 bg-[#0C0E6B] rounded" />

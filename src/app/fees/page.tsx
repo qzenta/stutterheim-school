@@ -168,7 +168,7 @@ export default function FeesPage() {
               Apply Online
             </Link>
             <a
-              href="/downloads/SIS-Application-Form-2027.docx"
+              href="/downloads/SIS-Application-Form-2027.pdf"
               className="px-8 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#0C0E6B] transition-all hover:scale-105 text-sm"
             >
               Download Application Form

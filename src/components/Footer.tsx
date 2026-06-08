@@ -16,7 +16,7 @@ const quickLinks = [
 
 const downloads = [
   { href: "/apply", label: "Apply Online" },
-  { href: "/downloads/SIS-Application-Form-2027.docx", label: "Download Application Form" },
+  { href: "/downloads/SIS-Application-Form-2027.pdf", label: "Download Application Form" },
   { href: "/fees", label: "Fee Structure" },
   { href: "mailto:sis@stutterheimschool.co.za?subject=School%20Brochure%20Request", label: "Request School Brochure" },
 ];
