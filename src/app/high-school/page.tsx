@@ -130,6 +130,55 @@ export default function HighSchoolPage() {
         </div>
       </section>
 
+      {/* Future Facilities */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <FadeIn className="text-center mb-10">
+            <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-2">On the Horizon</p>
+            <h2 className="text-2xl font-bold text-[#0C0E6B]">Future Facilities</h2>
+            <p className="text-gray-500 text-sm mt-2 max-w-xl mx-auto">
+              We are committed to continuously upgrading our learning environment. The facilities below are
+              planned and in progress — watch this space.
+            </p>
+            <div className="mt-3 w-12 h-1 bg-[#0C0E6B] mx-auto rounded" />
+          </FadeIn>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <FadeIn delay={80}>
+              <div className="bg-[#E8EAEE] rounded-xl p-6 flex gap-4 items-start border border-blue-100">
+                <div className="w-12 h-12 rounded-lg bg-[#0C0E6B]/10 flex items-center justify-center shrink-0 text-2xl">🔬</div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-[#0C0E6B] text-sm">Science Laboratory</h3>
+                    <span className="text-[10px] font-bold uppercase tracking-wide bg-[#0C0E6B] text-white px-2 py-0.5 rounded-full">Coming Soon</span>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    A fully equipped science lab is being developed to support hands-on experiments across
+                    Natural Sciences, Life Sciences, and Physical Sciences. Learners will soon have access
+                    to a dedicated space for practical, inquiry-based learning.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={160}>
+              <div className="bg-[#E8EAEE] rounded-xl p-6 flex gap-4 items-start border border-blue-100">
+                <div className="w-12 h-12 rounded-lg bg-[#0C0E6B]/10 flex items-center justify-center shrink-0 text-2xl">💻</div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-[#0C0E6B] text-sm">Computer Lab</h3>
+                    <span className="text-[10px] font-bold uppercase tracking-wide bg-[#0C0E6B] text-white px-2 py-0.5 rounded-full">Coming Soon</span>
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    A dedicated Computer Literacy and Information Technology lab is planned to give every
+                    learner structured access to digital tools, internet research, and coding fundamentals —
+                    preparing them for the digital world ahead.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-[#0C0E6B] py-14 px-4">
         <FadeIn className="max-w-2xl mx-auto text-center">

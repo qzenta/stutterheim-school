@@ -1,67 +1,90 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
-export const metadata: Metadata = {
-  title: "Gallery | School Life at SIS",
-  description:
-    "Browse photos of school life at Stutterheim International School — academics, sports, events, boarding, and community activities.",
-};
-
 const BASE = "/extra-images";
 
-const categories = ["All", "Campus Life", "Sports & Activities", "Events", "Academics"] as const;
+const categories = [
+  "All",
+  "Beauty Contest 2026",
+  "Sports & Activities",
+  "Campus Life",
+  "Events",
+  "Academics",
+] as const;
 type Category = (typeof categories)[number];
 
-const images: { src: string; alt: string; category: Category }[] = [
-  // Campus / Learners
-  { src: `${BASE}/banner1.jpg`, alt: "SIS learners in maroon uniform on campus steps", category: "Campus Life" },
-  { src: `${BASE}/banner2.jpg`, alt: "Learners and teacher on outdoor school activity", category: "Campus Life" },
-  { src: `${BASE}/banner4.jpg`, alt: "Learner focused at school desk", category: "Academics" },
-  { src: `${BASE}/banner3.jpg`, alt: "Young children learning with technology", category: "Academics" },
-  { src: `${BASE}/banner5.jpg`, alt: "Learner ready for school", category: "Campus Life" },
-  { src: `${BASE}/about-us.jpg`, alt: "About Stutterheim International School", category: "Campus Life" },
-  { src: `${BASE}/campus-history.jpg`, alt: "SIS campus", category: "Campus Life" },
-  { src: `${BASE}/mission.jpg`, alt: "School mission in action", category: "Campus Life" },
+interface GalleryImage {
+  src: string;
+  label: string;
+  category: Category;
+}
 
-  // Gallery set
-  { src: `${BASE}/gallery-01.jpg`, alt: "School gallery — life at SIS", category: "Campus Life" },
-  { src: `${BASE}/gallery-02.jpg`, alt: "School gallery — activities", category: "Campus Life" },
-  { src: `${BASE}/gallery-03.jpg`, alt: "School gallery — learners", category: "Campus Life" },
-  { src: `${BASE}/gallery-04.jpg`, alt: "School gallery — events", category: "Events" },
-  { src: `${BASE}/gallery-05.jpg`, alt: "School gallery — sports", category: "Sports & Activities" },
-  { src: `${BASE}/gallery-06.jpg`, alt: "School gallery — academics", category: "Academics" },
-  { src: `${BASE}/gallery-07.jpg`, alt: "School gallery — school life", category: "Campus Life" },
+const images: GalleryImage[] = [
+  // ── Beauty Contest 2026 ──────────────────────────────────────────────────
+  { src: `${BASE}/beauty-contest-20260606-1.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
+  { src: `${BASE}/beauty-contest-20260606-2.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
+  { src: `${BASE}/beauty-contest-20260606-3.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
+  { src: `${BASE}/beauty-contest-20260606-4.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
+  { src: `${BASE}/beauty-contest-20260606-5.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
+  { src: `${BASE}/beauty-contest-20260606-6.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
+  { src: `${BASE}/beauty-contest-20260606-7.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
+  { src: `${BASE}/beauty-contest-20260606-8.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
+  { src: `${BASE}/beauty-contest-20260606-9.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
 
-  // Sports & Activities
-  { src: `${BASE}/swimming.jpg`, alt: "SIS swimming programme", category: "Sports & Activities" },
-  { src: `${BASE}/ballet.jpg`, alt: "Ballet programme at SIS", category: "Sports & Activities" },
-  { src: `${BASE}/ballet-2.webp`, alt: "Ballet performance by SIS learners", category: "Sports & Activities" },
-  { src: `${BASE}/Racing.jpg`, alt: "SIS learners at racing event", category: "Sports & Activities" },
-  { src: `${BASE}/Tournament.jpg`, alt: "SIS sports tournament", category: "Sports & Activities" },
-  { src: `${BASE}/field-day.webp`, alt: "SIS field day activities", category: "Sports & Activities" },
-  { src: `${BASE}/theatre.webp`, alt: "Theatre and performing arts at SIS", category: "Sports & Activities" },
+  // ── Sports & Activities ──────────────────────────────────────────────────
+  { src: `${BASE}/swimming.jpg`,    label: "Swimming Programme",          category: "Sports & Activities" },
+  { src: `${BASE}/ballet.jpg`,      label: "Ballet — SIS Dancers",        category: "Sports & Activities" },
+  { src: `${BASE}/ballet-2.webp`,   label: "Ballet Performance",          category: "Sports & Activities" },
+  { src: `${BASE}/Racing.jpg`,      label: "Racing Day",                  category: "Sports & Activities" },
+  { src: `${BASE}/Tournament.jpg`,  label: "Sports Tournament",           category: "Sports & Activities" },
+  { src: `${BASE}/field-day.webp`,  label: "Field Day Activities",        category: "Sports & Activities" },
+  { src: `${BASE}/theatre.webp`,    label: "Performing Arts & Theatre",   category: "Sports & Activities" },
 
-  // Events & Trips
-  { src: `${BASE}/field-trip.jpg`, alt: "SIS learners on field trip", category: "Events" },
-  { src: `${BASE}/Camping.webp`, alt: "SIS camping and outdoor experience", category: "Events" },
-  { src: `${BASE}/book-fair.jpg`, alt: "Annual book fair at SIS", category: "Events" },
-  { src: `${BASE}/make-a-difference.jpg`, alt: "SIS community outreach programme", category: "Events" },
-  { src: `${BASE}/event1.jpg`, alt: "School event 1", category: "Events" },
-  { src: `${BASE}/event2.jpg`, alt: "School event 2", category: "Events" },
-  { src: `${BASE}/event3.jpg`, alt: "School event 3", category: "Events" },
-  { src: `${BASE}/event4.jpg`, alt: "School event 4", category: "Events" },
+  // ── Campus Life ──────────────────────────────────────────────────────────
+  { src: `${BASE}/banner1.jpg`,       label: "Learners on Campus",          category: "Campus Life" },
+  { src: `${BASE}/banner2.jpg`,       label: "Outdoor School Activity",     category: "Campus Life" },
+  { src: `${BASE}/banner5.jpg`,       label: "School Life at SIS",          category: "Campus Life" },
+  { src: `${BASE}/about-us.jpg`,      label: "Our School Community",        category: "Campus Life" },
+  { src: `${BASE}/campus-history.jpg`,label: "SIS Campus",                  category: "Campus Life" },
+  { src: `${BASE}/mission.jpg`,       label: "Living Our Mission",          category: "Campus Life" },
+  { src: `${BASE}/gallery-01.jpg`,    label: "Daily Life at SIS",           category: "Campus Life" },
+  { src: `${BASE}/gallery-02.jpg`,    label: "Learners at Work",            category: "Campus Life" },
+  { src: `${BASE}/gallery-03.jpg`,    label: "Together We Learn",           category: "Campus Life" },
+  { src: `${BASE}/gallery-07.jpg`,    label: "School Spirit",               category: "Campus Life" },
 
-  // Academics
-  { src: `${BASE}/learning-arts.jpg`, alt: "Creative arts and learning", category: "Academics" },
-  { src: `${BASE}/lerning-eng.jpg`, alt: "English language learning", category: "Academics" },
-  { src: `${BASE}/learnig-math.webp`, alt: "Mathematics in the classroom", category: "Academics" },
-  { src: `${BASE}/learnig-science.avif`, alt: "Science lessons at SIS", category: "Academics" },
-  { src: `${BASE}/learning-afr.webp`, alt: "Afrikaans language learning", category: "Academics" },
-  { src: `${BASE}/learnig-tech.avif`, alt: "Technology and digital learning", category: "Academics" },
+  // ── Events ───────────────────────────────────────────────────────────────
+  { src: `${BASE}/field-trip.jpg`,       label: "Educational Field Trip",    category: "Events" },
+  { src: `${BASE}/Camping.webp`,         label: "Camping & Outdoor Experience", category: "Events" },
+  { src: `${BASE}/book-fair.jpg`,        label: "Annual Book Fair",          category: "Events" },
+  { src: `${BASE}/make-a-difference.jpg`,label: "Community Outreach Day",    category: "Events" },
+  { src: `${BASE}/table-mount.jpg`,      label: "Table Mountain Excursion",  category: "Events" },
+  { src: `${BASE}/gallery-04.jpg`,       label: "School Event Highlights",   category: "Events" },
+  { src: `${BASE}/event1.jpg`,           label: "School Event",              category: "Events" },
+  { src: `${BASE}/event2.jpg`,           label: "School Event",              category: "Events" },
+  { src: `${BASE}/event3.jpg`,           label: "School Event",              category: "Events" },
+  { src: `${BASE}/event4.jpg`,           label: "School Event",              category: "Events" },
+
+  // ── Academics ────────────────────────────────────────────────────────────
+  { src: `${BASE}/banner3.jpg`,       label: "Young Learners with Technology", category: "Academics" },
+  { src: `${BASE}/banner4.jpg`,       label: "Focused Learning",               category: "Academics" },
+  { src: `${BASE}/gallery-05.jpg`,    label: "Sports on the Fields",           category: "Sports & Activities" },
+  { src: `${BASE}/gallery-06.jpg`,    label: "Classroom Engagement",           category: "Academics" },
+  { src: `${BASE}/learning-arts.jpg`, label: "Creative Arts",                  category: "Academics" },
+  { src: `${BASE}/lerning-eng.jpg`,   label: "English Language Learning",      category: "Academics" },
+  { src: `${BASE}/learnig-math.webp`, label: "Mathematics in Action",          category: "Academics" },
+  { src: `${BASE}/learning-afr.webp`, label: "Afrikaans in the Classroom",     category: "Academics" },
 ];
 
 export default function GalleryPage() {
+  const [active, setActive] = useState<Category>("All");
+
+  const filtered = active === "All" ? images : images.filter((img) => img.category === active);
+
+  const beautyContestImages = images.filter((img) => img.category === "Beauty Contest 2026");
+
   return (
     <>
       {/* Page header */}
@@ -93,7 +116,6 @@ export default function GalleryPage() {
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3" style={{ gridAutoRows: "200px" }}>
-              {/* Large featured */}
               <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={`${BASE}/banner1.jpg`} alt="SIS learners on campus" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
@@ -108,40 +130,98 @@ export default function GalleryPage() {
               </div>
               <div className="rounded-xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`${BASE}/field-trip.jpg`} alt="SIS field trip" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src={`${BASE}/beauty-contest-20260606-1.jpeg`} alt="Beauty Contest 2026" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="rounded-xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`${BASE}/banner2.jpg`} alt="Learners on activity" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                <img src={`${BASE}/beauty-contest-20260606-3.jpeg`} alt="Beauty Contest 2026" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Full gallery grid */}
-      <section className="pb-16 px-4 bg-white">
+      {/* Beauty Contest 2026 — featured album */}
+      <section className="py-14 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-8">
-            <h2 className="text-xl font-bold text-[#0C0E6B]">All Photos</h2>
-            <div className="mt-2 w-10 h-1 bg-[#0C0E6B] rounded" />
+            <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-2">Featured Album</p>
+            <h2 className="text-2xl font-bold text-[#0C0E6B]">Beauty Contest 2026</h2>
+            <p className="text-gray-500 text-sm mt-1 max-w-lg">
+              Celebrating elegance, confidence, and school pride — our annual Beauty Contest brought smiles and memorable moments for everyone.
+            </p>
+            <div className="mt-3 w-12 h-1 bg-[#0C0E6B] rounded" />
           </FadeIn>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {images.map((img, i) => (
-              <FadeIn key={`${img.src}-${i}`} delay={i * 30}>
-                <div className="aspect-square rounded-xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+            {beautyContestImages.map((img, i) => (
+              <FadeIn key={img.src} delay={i * 40}>
+                <div className="aspect-square rounded-xl overflow-hidden group relative shadow-sm hover:shadow-lg transition-shadow">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={img.src}
-                    alt={img.alt}
+                    alt={img.label}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <span className="text-white text-xs font-semibold px-3 pb-3 leading-tight">{img.label}</span>
+                  </div>
                 </div>
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* All photos — with filter */}
+      <section className="py-14 px-4 bg-[#E8EAEE]">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn className="mb-8">
+            <h2 className="text-2xl font-bold text-[#0C0E6B] mb-1">All Photos</h2>
+            <div className="mt-2 w-10 h-1 bg-[#0C0E6B] rounded mb-6" />
+
+            {/* Filter tabs */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActive(cat)}
+                  className={`px-4 py-1.5 rounded-full text-sm font-semibold border transition-colors ${
+                    active === cat
+                      ? "bg-[#0C0E6B] text-white border-[#0C0E6B]"
+                      : "bg-white text-[#0C0E6B] border-gray-200 hover:border-[#0C0E6B]"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {filtered.map((img, i) => (
+              <FadeIn key={`${img.src}-${i}`} delay={i * 25}>
+                <div className="aspect-square rounded-xl overflow-hidden group relative cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={img.src}
+                    alt={img.label}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  {/* Label overlay — always visible at bottom, brightens on hover */}
+                  <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent px-3 py-2 translate-y-1 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <span className="text-white text-xs font-semibold leading-tight line-clamp-2">{img.label}</span>
+                    <span className="block text-white/60 text-[10px] mt-0.5">{img.category}</span>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          {filtered.length === 0 && (
+            <p className="text-center text-gray-400 py-16 text-sm">No photos in this category yet. Check back soon!</p>
+          )}
         </div>
       </section>
 
