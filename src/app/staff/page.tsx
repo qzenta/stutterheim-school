@@ -67,11 +67,11 @@ const staff = [
   },
   // ── Support Staff ────────────────────────────────────────────────────────────
   {
-    name: "Mr Feni",
+    name: "Mr Thandile Feni",
     role: "Groundsman & Tuckshop Operator",
     subjects: "Facilities Management · School Grounds · Tuckshop",
     type: "support" as const,
-    photo: "",
+    photo: "/extra-images/thandile-feni.jpeg",
     bio: "Mr Feni keeps the Stutterheim International School grounds safe, clean, and well-maintained while also running the school tuckshop. His cheerful presence and dedication to the school environment make him a valued member of the SIS family.",
   },
 ];
