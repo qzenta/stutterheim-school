@@ -168,14 +168,13 @@ export default function LeadershipPage() {
             <FadeIn key={leader.name} delay={i * 100}>
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                 <div className="flex flex-col md:flex-row">
-                  {/* Initials avatar */}
-                  <div className="md:w-64 h-48 md:h-auto flex-shrink-0 bg-[#E8E9F4] flex items-center justify-center">
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-24 h-24 rounded-full bg-[#0C0E6B]/10 border-4 border-[#0C0E6B]/15 flex items-center justify-center">
-                        <span className="text-3xl font-bold text-[#0C0E6B]/40">{leader.initials}</span>
-                      </div>
-                      <p className="text-[#0C0E6B]/30 text-xs font-medium">Photo coming soon</p>
-                    </div>
+                  {/* Photo */}
+                  <div className="md:w-64 h-72 md:h-auto flex-shrink-0 overflow-hidden bg-[#E8E9F4]">
+                    <img
+                      src="/extra-images/mdingi.jpeg"
+                      alt="Mdingi Vuyelwa – Principal"
+                      className="w-full h-full object-cover object-center"
+                    />
                   </div>
                   {/* Content */}
                   <div className="p-8 flex flex-col justify-center flex-1">

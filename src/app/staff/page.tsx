@@ -21,8 +21,8 @@ const staff = [
     role: "Principal",
     subjects: "School Leadership · Academic Management · Staff Development",
     type: "teaching" as const,
-    photo: "",
-    bio: "Mdingi Vuyelwa leads Stutterheim International School with passion and purpose, ensuring academic excellence and a nurturing environment for every learner from Grade R through Grade 12. Photo and full bio coming soon.",
+    photo: "/extra-images/mdingi.jpeg",
+    bio: "Mdingi Vuyelwa leads Stutterheim International School with passion and purpose, ensuring academic excellence and a nurturing environment for every learner from Grade R through Grade 12. Full bio coming soon.",
   },
   {
     name: "Amanda Salzwedel",
@@ -34,28 +34,36 @@ const staff = [
   },
   // ── Teaching Staff ──────────────────────────────────────────────────────────
   {
-    name: "Teacher Name",
+    name: "Mihlali Alleta Nzuzo",
     role: "Foundation Phase Educator",
-    subjects: "Grade R · Grades 1–3 · Early Literacy & Numeracy",
+    subjects: "Grade 1 · Play-Based Learning · Early Literacy & Social Skills",
     type: "teaching" as const,
-    photo: "",
-    bio: "A passionate foundation phase educator dedicated to nurturing early literacy, numeracy, and social skills in our youngest learners. Bio to be updated by the school.",
+    photo: "/extra-images/mihlali.jpeg",
+    bio: "Ms Nzuzo is a qualified ECD practitioner with 1 year of teaching experience. She teaches Foundation Phase Grade 1 and focuses on play-based learning, early literacy, and social skills. She is passionate about creating fun, safe, and stimulating classrooms where children can explore and build confidence for school.",
   },
   {
-    name: "Teacher Name",
-    role: "Intermediate Phase Educator",
-    subjects: "Grades 4–6 · Mathematics · Natural Sciences",
+    name: "Mrs S. Nxesi",
+    role: "Foundation Phase Educator",
+    subjects: "Grades 2–3 · English Home Language · Mathematics · Life Skills · isiXhosa",
     type: "teaching" as const,
-    photo: "",
-    bio: "Committed to making Mathematics and Sciences accessible and engaging for Intermediate Phase learners. Bio to be updated by the school.",
+    photo: "/extra-images/nxesi.jpeg",
+    bio: "Mrs Nxesi teaches Grades 2 and 3 at Stutterheim International School. She holds a Diploma in Education and is currently studying towards a Bachelor of Education (B.Ed.) in Foundation Phase Teaching. With 2 years of teaching experience, she is dedicated to creating a supportive learning environment that helps learners develop academically and personally. She is passionate about inspiring a lifelong love of learning.",
   },
   {
-    name: "Teacher Name",
-    role: "Senior Phase Educator",
-    subjects: "Grade 7 · English · Social Sciences",
+    name: "Zusiphe Tshatshisa",
+    role: "Intermediate & Senior Phase Educator",
+    subjects: "Grades 4–9 · Intermediate Phase · Senior Phase",
     type: "teaching" as const,
     photo: "",
-    bio: "A dedicated educator preparing Grade 7 learners for the transition to high school through strong language and critical thinking skills. Bio to be updated by the school.",
+    bio: "Ms Tshatshisa is a qualified educator holding a Bachelor of Education degree with 4 years of teaching experience. She teaches in both the Intermediate and Senior Phases and is passionate about creating a supportive learning environment where learners feel valued, confident, and motivated to succeed.",
+  },
+  {
+    name: "Hlonipha",
+    role: "Educator",
+    subjects: "To be updated",
+    type: "teaching" as const,
+    photo: "/extra-images/hlonipha.jpeg",
+    bio: "Full profile coming soon.",
   },
   {
     name: "Teacher Name",
@@ -72,14 +80,6 @@ const staff = [
     type: "teaching" as const,
     photo: "",
     bio: "Experienced Commerce educator bringing real-world business knowledge into the classroom to prepare learners for tertiary study and entrepreneurship. Bio to be updated by the school.",
-  },
-  {
-    name: "Teacher Name",
-    role: "Languages & Humanities Educator",
-    subjects: "Grades 8–12 · Afrikaans · isiXhosa · History",
-    type: "teaching" as const,
-    photo: "",
-    bio: "A multilingual educator passionate about South African languages and history, helping learners connect their academic work to their cultural heritage. Bio to be updated by the school.",
   },
   // ── Support Staff ────────────────────────────────────────────────────────────
   {
@@ -167,11 +167,11 @@ export default function StaffPage() {
 
           {/* Mdingi + Amanda cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mt-6">
-            {/* Mdingi — pending */}
+            {/* Mdingi — photo live, bio pending */}
             <FadeIn>
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-5">
-                <div className="w-16 h-16 rounded-full bg-[#0A0D5E] border-2 border-white/20 flex items-center justify-center flex-shrink-0 overflow-hidden">
-                  <span className="text-xl font-bold text-white/50">MV</span>
+                <div className="w-16 h-16 rounded-full border-2 border-white/20 flex-shrink-0 overflow-hidden">
+                  <img src="/extra-images/mdingi.jpeg" alt="Mdingi Vuyelwa – Principal" className="w-full h-full object-cover object-center" />
                 </div>
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-blue-300">Principal</span>
@@ -215,10 +215,10 @@ export default function StaffPage() {
               <FadeIn key={`${member.name}-${i}`} delay={i * 80}>
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                   {/* Headshot area */}
-                  <div className="h-52 bg-[#0C0E6B]/5 flex items-center justify-center relative overflow-hidden">
+                  <div className="h-72 bg-[#0C0E6B]/5 flex items-center justify-center relative overflow-hidden">
                     {member.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-center" />
                     ) : (
                       <div className="flex flex-col items-center gap-2 text-center px-4">
                         <div className="w-20 h-20 rounded-full bg-[#0C0E6B]/15 border-4 border-[#0C0E6B]/10 flex items-center justify-center">
@@ -248,10 +248,10 @@ export default function StaffPage() {
             {staff.filter(m => m.type === "support").map((member, i) => (
               <FadeIn key={`${member.name}-support-${i}`} delay={i * 80}>
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
-                  <div className="h-52 bg-[#0C0E6B]/5 flex items-center justify-center relative overflow-hidden">
+                  <div className="h-72 bg-[#0C0E6B]/5 flex items-center justify-center relative overflow-hidden">
                     {member.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-center" />
                     ) : (
                       <div className="flex flex-col items-center gap-2 text-center px-4">
                         <div className="w-20 h-20 rounded-full bg-gray-200 border-4 border-gray-100 flex items-center justify-center">

@@ -290,6 +290,7 @@ export default function HomePage() {
                   name: "Mdingi Vuyelwa",
                   role: "Principal",
                   initials: "MV",
+                  photo: "/extra-images/mdingi.jpeg",
                   quote: "Academic excellence and holistic growth go hand in hand at Stutterheim International School.",
                   accent: "from-sky-400/20 to-sky-600/10",
                   delay: 160,
@@ -298,6 +299,7 @@ export default function HomePage() {
                   name: "Amanda Salzwedel",
                   role: "Assistant Principal",
                   initials: "AS",
+                  photo: "/extra-images/amanda.jpeg",
                   quote: "Children are a promise to be anytime they want to be.",
                   accent: "from-blue-400/20 to-blue-600/10",
                   delay: 280,
@@ -307,11 +309,15 @@ export default function HomePage() {
                   <div className="group flex flex-row items-center gap-6 bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default h-full">
                     {/* Avatar */}
                     <div className="relative w-20 h-20 shrink-0">
-                      <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${leader.accent} border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500`} />
-                      <div className="w-full h-full rounded-full flex items-center justify-center relative z-10">
-                        <span className="text-xl font-bold text-white/60 group-hover:text-white/90 transition-colors duration-300">
-                          {leader.initials}
-                        </span>
+                      <div className="absolute inset-0 rounded-full border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500 overflow-hidden">
+                        {leader.photo ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-center" />
+                        ) : (
+                          <div className={`w-full h-full rounded-full bg-gradient-to-br ${leader.accent} flex items-center justify-center`}>
+                            <span className="text-xl font-bold text-white/60 group-hover:text-white/90 transition-colors duration-300">{leader.initials}</span>
+                          </div>
+                        )}
                       </div>
                       <div className="absolute inset-[-5px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
                     </div>
