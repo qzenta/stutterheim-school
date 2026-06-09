@@ -27,10 +27,10 @@ const staff = [
   {
     name: "Amanda Salzwedel",
     role: "Assistant Principal",
-    subjects: "School Administration · Learner Affairs · Curriculum Support",
+    subjects: "ECD Education · Counselling & Mediation · Gestalt Logotherapy",
     type: "teaching" as const,
-    photo: "",
-    bio: "Amanda Salzwedel supports the Principal in all aspects of school management, learner welfare, and curriculum delivery. Photo and full bio coming soon.",
+    photo: "/extra-images/amanda.jpeg",
+    bio: "Ms Salzwedel is an ECD educator at Stutterheim International School, a certified counsellor and mediator, and qualified in Gestalt Logotherapy. She brings a deeply human approach to learner development, believing wholeheartedly that children are \"a promise to be anytime they want to be.\"",
   },
   // ── Teaching Staff ──────────────────────────────────────────────────────────
   {
@@ -165,25 +165,34 @@ export default function StaffPage() {
             </div>
           </FadeIn>
 
-          {/* Mdingi + Amanda placeholder cards */}
+          {/* Mdingi + Amanda cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto mt-6">
-            {[
-              { name: "Mdingi Vuyelwa", role: "Principal", initials: "MV" },
-              { name: "Amanda Salzwedel", role: "Assistant Principal", initials: "AS" },
-            ].map((l) => (
-              <FadeIn key={l.name}>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-5">
-                  <div className="w-16 h-16 rounded-full bg-[#0A0D5E] border-2 border-white/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl font-bold text-white/50">{l.initials}</span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-blue-300">{l.role}</span>
-                    <h4 className="font-bold text-white text-base mt-0.5">{l.name}</h4>
-                    <p className="text-blue-300 text-xs mt-1">Bio coming soon</p>
-                  </div>
+            {/* Mdingi — pending */}
+            <FadeIn>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-5">
+                <div className="w-16 h-16 rounded-full bg-[#0A0D5E] border-2 border-white/20 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  <span className="text-xl font-bold text-white/50">MV</span>
                 </div>
-              </FadeIn>
-            ))}
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-blue-300">Principal</span>
+                  <h4 className="font-bold text-white text-base mt-0.5">Mdingi Vuyelwa</h4>
+                  <p className="text-blue-300 text-xs mt-1">Bio coming soon</p>
+                </div>
+              </div>
+            </FadeIn>
+            {/* Amanda — photo live */}
+            <FadeIn>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-5">
+                <div className="w-16 h-16 rounded-full border-2 border-white/20 flex-shrink-0 overflow-hidden">
+                  <img src="/extra-images/amanda.jpeg" alt="Ms Amanda Salzwedel – Assistant Principal" className="w-full h-full object-cover object-center" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-blue-300">Assistant Principal</span>
+                  <h4 className="font-bold text-white text-base mt-0.5">Amanda Salzwedel</h4>
+                  <p className="text-blue-300 text-xs mt-1">ECD Educator · Counsellor · Gestalt Logotherapist</p>
+                </div>
+              </div>
+            </FadeIn>
           </div>
 
           <FadeIn className="text-center mt-8">

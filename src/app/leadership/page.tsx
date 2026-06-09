@@ -28,18 +28,30 @@ const zimaseka = {
   ],
 };
 
+const amanda = {
+  name: "Ms Amanda Salzwedel",
+  role: "Assistant Principal",
+  subjects: "ECD Education · Counselling & Mediation · Gestalt Logotherapy",
+  photo: "/extra-images/amanda.jpeg",
+  bio: [
+    "Ms Salzwedel is an ECD educator at Stutterheim International School with a deep commitment to holistic child development from the earliest years.",
+    "She is a certified counsellor and mediator, and is additionally qualified in Gestalt Logotherapy — a therapeutic approach that helps individuals find meaning and purpose through self-awareness and growth.",
+    "Her philosophy is rooted in the belief that children are \"a promise to be anytime they want to be\" — a conviction that shapes her approach to every learner she works with.",
+  ],
+  credentials: [
+    "ECD Educator",
+    "Certified Counsellor",
+    "Certified Mediator",
+    "Qualified Gestalt Logotherapist",
+  ],
+};
+
 const pending = [
   {
     name: "Mdingi Vuyelwa",
     role: "Principal",
     initials: "MV",
     subjects: "School Leadership · Academic Management",
-  },
-  {
-    name: "Amanda Salzwedel",
-    role: "Assistant Principal",
-    initials: "AS",
-    subjects: "Curriculum Support · Learner Affairs",
   },
 ];
 
@@ -117,7 +129,41 @@ export default function LeadershipPage() {
             </div>
           </FadeIn>
 
-          {/* ── Mdingi + Amanda — pending cards ── */}
+          {/* ── Amanda — full featured card ── */}
+          <FadeIn delay={100}>
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-64 h-72 md:h-auto flex-shrink-0 overflow-hidden bg-[#E8E9F4]">
+                  <img
+                    src={amanda.photo}
+                    alt={`${amanda.name} – ${amanda.role}`}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-start flex-1">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-white bg-[#0C0E6B] rounded-full px-3 py-1 mb-4 self-start">
+                    {amanda.role}
+                  </span>
+                  <h2 className="text-2xl font-bold text-[#0C0E6B] mb-1">{amanda.name}</h2>
+                  <p className="text-blue-500 text-sm font-medium mb-6">{amanda.subjects}</p>
+                  <div className="space-y-3 mb-7">
+                    {amanda.bio.map((para, i) => (
+                      <p key={i} className="text-gray-600 text-sm leading-relaxed">{para}</p>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {amanda.credentials.map((c) => (
+                      <span key={c} className="text-[11px] font-semibold text-[#0C0E6B] bg-[#E8E9F4] border border-[#0C0E6B]/15 rounded-full px-3 py-1">
+                        {c}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* ── Mdingi — pending card ── */}
           {pending.map((leader, i) => (
             <FadeIn key={leader.name} delay={i * 100}>
               <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">

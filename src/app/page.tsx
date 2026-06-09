@@ -298,7 +298,7 @@ export default function HomePage() {
                   name: "Amanda Salzwedel",
                   role: "Assistant Principal",
                   initials: "AS",
-                  quote: "Every learner has unique potential — our role is to discover it, develop it, and celebrate it.",
+                  quote: "Children are a promise to be anytime they want to be.",
                   accent: "from-blue-400/20 to-blue-600/10",
                   delay: 280,
                 },
