@@ -54,7 +54,7 @@ const staff = [
     role: "Intermediate & Senior Phase Educator",
     subjects: "Grades 4–9 · Intermediate Phase · Senior Phase",
     type: "teaching" as const,
-    photo: "",
+    photo: "/extra-images/zusiphe.jpeg",
     bio: "Ms Tshatshisa is a qualified educator holding a Bachelor of Education degree with 4 years of teaching experience. She teaches in both the Intermediate and Senior Phases and is passionate about creating a supportive learning environment where learners feel valued, confident, and motivated to succeed.",
   },
   {
