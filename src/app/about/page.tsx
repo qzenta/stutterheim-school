@@ -3,8 +3,9 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "About Us | Stutterheim International School",
-  description: "Learn about our mission, vision, history, leadership, and boarding facilities at Stutterheim International School.",
+  title: "About Us | Private School Stutterheim Eastern Cape",
+  description:
+    "Learn about Stutterheim International School — our mission, values, history, and boarding facilities. A leading independent school in the Eastern Cape.",
 };
 
 const BASE = "/extra-images";

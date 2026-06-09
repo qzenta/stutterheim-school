@@ -3,7 +3,8 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Events & Notices | Stutterheim International School",
-  description: "Current notices, term dates, and upcoming events at Stutterheim International School.",
+  description:
+    "Stay up to date with school events, notices, and calendar highlights at Stutterheim International School.",
 };
 
 const BASE = "/extra-images";

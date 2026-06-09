@@ -3,8 +3,9 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Pre-School (Grade R) | Stutterheim International School",
-  description: "SIS Pre-School offers a nurturing, play-based foundation phase for Grade R learners in Stutterheim, Eastern Cape.",
+  title: "Pre-School (Grade R) | Private School Stutterheim",
+  description:
+    "Stutterheim International School offers a stimulating Pre-School programme for Grade R learners — play-based, nurturing, and CAPS-aligned.",
 };
 
 const activities = [

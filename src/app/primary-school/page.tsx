@@ -3,8 +3,9 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Primary School (Grades 1–7) | Stutterheim International School",
-  description: "SIS Primary School offers Grades 1–7 with a balanced curriculum covering all core subjects, arts, and sports in Stutterheim, Eastern Cape.",
+  title: "Primary School (Grades 1–7) | Private School Eastern Cape",
+  description:
+    "SIS Primary School offers Grades 1–7 with a strong CAPS curriculum, qualified teachers, and a supportive learning environment in Stutterheim.",
 };
 
 const subjects = [

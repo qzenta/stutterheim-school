@@ -4,7 +4,7 @@ import FadeIn from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "Leadership Team | Stutterheim International School",
   description:
-    "Meet the experienced leadership team at Stutterheim International School — qualified educators committed to academic excellence and holistic learner development.",
+    "Meet the experienced leadership of Stutterheim International School — qualified educators guiding academic excellence in the Eastern Cape.",
 };
 
 const zimaseka = {

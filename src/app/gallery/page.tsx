@@ -3,8 +3,9 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Gallery | Stutterheim International School",
-  description: "Photos from events, activities, and life at Stutterheim International School — ballet, swimming, sports, academics and more.",
+  title: "Gallery | School Life at SIS",
+  description:
+    "Browse photos of school life at Stutterheim International School — academics, sports, events, boarding, and community activities.",
 };
 
 const BASE = "/extra-images";

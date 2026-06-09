@@ -4,7 +4,8 @@ import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Contact Us | Stutterheim International School",
-  description: "Get in touch with Stutterheim International School — admissions, boarding, and general enquiries.",
+  description:
+    "Get in touch with Stutterheim International School. Visit us at 49 Louisa Street, Stutterheim, Eastern Cape, or contact us by phone or email.",
 };
 
 const BASE = "/extra-images";

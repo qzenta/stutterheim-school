@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "What grades does SIS offer?",
-    a: "We offer Grade R (Pre-School) through Grade 12, covering Foundation Phase, Intermediate Phase, Senior Phase, and FET Phase.",
+    a: "We offer Grade R (Pre-School) through Grade 9, covering Foundation Phase, Intermediate Phase, and Senior Phase.",
   },
   {
     q: "How many subjects are offered?",

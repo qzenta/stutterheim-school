@@ -3,9 +3,9 @@ import { Trophy, BookOpen, Users, Star } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Achievements | Stutterheim International School",
+  title: "Achievements & Honours | Stutterheim International School",
   description:
-    "Discover the academic, sporting, and community achievements of Stutterheim International School learners.",
+    "Celebrating the academic, sports, and community achievements of SIS learners — Eastern Cape private school excellence.",
 };
 
 const categories = [

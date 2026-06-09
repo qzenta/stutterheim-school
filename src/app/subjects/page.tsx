@@ -3,8 +3,9 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "All Subjects | Stutterheim International School",
-  description: "Explore the 20+ subjects offered across all phases at Stutterheim International School.",
+  title: "Subjects Offered | Private School Stutterheim",
+  description:
+    "Explore the 20+ CAPS subjects offered at Stutterheim International School across Foundation, Intermediate, and Senior Phase.",
 };
 
 const BASE = "/extra-images";

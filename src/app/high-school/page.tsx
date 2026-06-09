@@ -3,8 +3,9 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Senior Phase (Grades 8–9) | Stutterheim International School",
-  description: "SIS Senior Phase offers Grades 8–9 with a broad subject range, boarding facilities, and personalised academic support in Stutterheim, Eastern Cape.",
+  title: "Senior Phase (Grades 8–9) | Private School Eastern Cape",
+  description:
+    "Stutterheim International School Senior Phase offers Grades 8–9 with 20+ subjects, boarding facilities, and personalised support in the Eastern Cape.",
 };
 
 const subjects = [

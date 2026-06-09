@@ -4,9 +4,9 @@ import { CheckCircle, ChevronDown } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Admissions | Stutterheim International School",
+  title: "Admissions 2027 | Private School Stutterheim",
   description:
-    "Apply to Stutterheim International School for 2027. Download application forms, fee structures, and learn about our admissions process.",
+    "Apply to Stutterheim International School for 2027. Enrol in one of the Eastern Cape's top private schools — Grade R to Grade 9, boarding available.",
 };
 
 const steps = [

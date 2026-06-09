@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Staff & Teachers | Stutterheim International School",
-  description: "Meet the qualified teaching staff and school leadership at Stutterheim International School.",
+  title: "Our Educators | Qualified Teachers Eastern Cape",
+  description:
+    "Meet the dedicated, qualified teaching staff at Stutterheim International School — passionate educators committed to learner success.",
 };
 
 // ─── UPDATE THIS ARRAY when client sends headshots and bios ───────────────────

@@ -3,8 +3,9 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Fee Structure | Stutterheim International School",
-  description: "View the 2027 fee structure at Stutterheim International School. School fees, registration fees, boarding fees and banking details.",
+  title: "School Fees 2027 | Private School Eastern Cape",
+  description:
+    "Transparent fee structure for Stutterheim International School. R1,300/month school fees, boarding fees, and registration for 2027.",
 };
 
 export default function FeesPage() {

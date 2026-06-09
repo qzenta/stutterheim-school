@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const grades = ["R", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+const grades = ["R", "1", "2", "3", "4", "5", "6", "7", "8", "9", ];
 
 export default function ApplyPage() {
   const [form, setForm] = useState({
