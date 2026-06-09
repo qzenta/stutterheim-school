@@ -58,12 +58,12 @@ const staff = [
     bio: "Ms Tshatshisa is a qualified educator holding a Bachelor of Education degree with 4 years of teaching experience. She teaches in both the Intermediate and Senior Phases and is passionate about creating a supportive learning environment where learners feel valued, confident, and motivated to succeed.",
   },
   {
-    name: "Hlonipha",
-    role: "Educator",
-    subjects: "To be updated",
+    name: "Mrs Hlonipha Qibi",
+    role: "Intermediate Phase Educator",
+    subjects: "Grades 4–6 · Natural Sciences & Technology · Social Sciences · isiXhosa",
     type: "teaching" as const,
     photo: "/extra-images/hlonipha.jpeg",
-    bio: "Full profile coming soon.",
+    bio: "Mrs Qibi holds a Bachelor of Science (B.Sc.) degree and a Postgraduate Certificate in Education (PGCE). She joined Stutterheim International School in March 2025 and teaches Natural Sciences and Technology, Social Sciences, and isiXhosa. Known for being caring, motivated, and inspiring, she is passionate about helping learners reach their full potential and creating a positive learning environment where every child feels valued and supported. She believes that education is a powerful tool for transforming lives and works tirelessly to inspire learners to become confident, responsible, and lifelong learners.",
   },
   {
     name: "Teacher Name",
