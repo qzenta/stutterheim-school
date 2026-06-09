@@ -3,7 +3,7 @@
 :root {
   --royal-blue: #0C0E6B;
   --white: #FFFFFF;
-  --offwhite: #F5F6F8;
+  --offwhite: #E8EAEE;
   --light-navy: #E8E9F4;
   --charcoal: #1F1F1F;
   --muted: #6B7280;
@@ -11,7 +11,7 @@
 
 @theme inline {
   --color-royal-blue: #0C0E6B;
-  --color-offwhite: #F5F6F8;
+  --color-offwhite: #E8EAEE;
   --color-light-navy: #E8E9F4;
   --color-charcoal: #1F1F1F;
   --color-muted: #6B7280;

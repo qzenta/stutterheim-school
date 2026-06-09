@@ -35,7 +35,7 @@ export default function FeesPage() {
       </div>
 
       {/* Fee tables */}
-      <section className="py-20 px-4 bg-[#F5F6F8]">
+      <section className="py-20 px-4 bg-[#E8EAEE]">
         <div className="max-w-4xl mx-auto space-y-8">
 
           {/* School Fees */}
@@ -47,7 +47,7 @@ export default function FeesPage() {
               </div>
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-100 bg-[#F5F6F8]">
+                  <tr className="border-b border-gray-100 bg-[#E8EAEE]">
                     <th className="text-left px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500">Item</th>
                     <th className="text-right px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500">Amount</th>
                   </tr>
@@ -71,7 +71,7 @@ export default function FeesPage() {
               </div>
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-100 bg-[#F5F6F8]">
+                  <tr className="border-b border-gray-100 bg-[#E8EAEE]">
                     <th className="text-left px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500">Item</th>
                     <th className="text-right px-6 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500">Amount</th>
                   </tr>
@@ -118,7 +118,7 @@ export default function FeesPage() {
       </section>
 
       {/* Banking details */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="text-center mb-10">
             <h2 className="text-2xl font-bold text-[#0C0E6B]">Banking Details</h2>
@@ -126,7 +126,7 @@ export default function FeesPage() {
             <div className="mt-3 w-12 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
           <FadeIn>
-            <div className="bg-[#F5F6F8] rounded-2xl border border-gray-100 overflow-hidden max-w-lg mx-auto">
+            <div className="bg-[#E8EAEE] rounded-2xl border border-gray-100 overflow-hidden max-w-lg mx-auto">
               <div className="bg-[#0C0E6B] px-6 py-4">
                 <p className="text-white font-bold text-sm">FNB — Electronic Transfer</p>
               </div>
@@ -137,7 +137,7 @@ export default function FeesPage() {
                 { label: "Branch Code", value: "210835" },
                 { label: "Payment Reference", value: "Learner's surname" },
               ].map((row, i) => (
-                <div key={row.label} className={`flex justify-between px-6 py-3 text-sm border-b border-gray-100 last:border-0 ${i % 2 === 0 ? "bg-white" : "bg-[#F5F6F8]"}`}>
+                <div key={row.label} className={`flex justify-between px-6 py-3 text-sm border-b border-gray-100 last:border-0 ${i % 2 === 0 ? "bg-white" : "bg-[#E8EAEE]"}`}>
                   <span className="text-gray-500 font-medium">{row.label}</span>
                   <span className="text-[#0C0E6B] font-bold">{row.value}</span>
                 </div>

@@ -44,26 +44,26 @@ export async function POST(req: NextRequest) {
             <div style="padding:20px 28px;">
               <h3 style="color:#0C0E6B;font-size:13px;margin:0 0 8px;text-transform:uppercase;letter-spacing:0.05em;">Learner Details</h3>
               <table style="border-collapse:collapse;width:100%;font-size:13px;margin-bottom:16px;">
-                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;width:180px;background:#f5f6f8;">Full Name</td><td style="padding:7px 10px;">${learnerName}</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;width:180px;background:#E8EAEE;">Full Name</td><td style="padding:7px 10px;">${learnerName}</td></tr>
                 <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#fff;">Date of Birth</td><td style="padding:7px 10px;background:#fff;">${dob || "Not provided"}</td></tr>
-                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#f5f6f8;">Gender</td><td style="padding:7px 10px;background:#f5f6f8;">${gender || "Not provided"}</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#E8EAEE;">Gender</td><td style="padding:7px 10px;background:#E8EAEE;">${gender || "Not provided"}</td></tr>
                 <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#fff;">Grade Applying For</td><td style="padding:7px 10px;background:#fff;font-weight:bold;color:#0C0E6B;">Grade ${gradeApplying} — 2027</td></tr>
-                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#f5f6f8;">Current School</td><td style="padding:7px 10px;background:#f5f6f8;">${currentSchool || "Not provided"}</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#E8EAEE;">Current School</td><td style="padding:7px 10px;background:#E8EAEE;">${currentSchool || "Not provided"}</td></tr>
                 <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#fff;">Current Grade</td><td style="padding:7px 10px;background:#fff;">${currentGrade || "Not provided"}</td></tr>
               </table>
               <h3 style="color:#0C0E6B;font-size:13px;margin:0 0 8px;text-transform:uppercase;letter-spacing:0.05em;">Parent / Guardian Details</h3>
               <table style="border-collapse:collapse;width:100%;font-size:13px;margin-bottom:16px;">
-                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;width:180px;background:#f5f6f8;">Full Name</td><td style="padding:7px 10px;">${parentName}</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;width:180px;background:#E8EAEE;">Full Name</td><td style="padding:7px 10px;">${parentName}</td></tr>
                 <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#fff;">Relationship</td><td style="padding:7px 10px;background:#fff;">${relationship || "Not provided"}</td></tr>
-                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#f5f6f8;">Cell Number</td><td style="padding:7px 10px;background:#f5f6f8;"><a href="tel:${cell}">${cell}</a></td></tr>
+                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#E8EAEE;">Cell Number</td><td style="padding:7px 10px;background:#E8EAEE;"><a href="tel:${cell}">${cell}</a></td></tr>
                 <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#fff;">Email</td><td style="padding:7px 10px;background:#fff;"><a href="mailto:${email}">${email}</a></td></tr>
-                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#f5f6f8;">Town / Area</td><td style="padding:7px 10px;background:#f5f6f8;">${town || "Not provided"}</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#E8EAEE;">Town / Area</td><td style="padding:7px 10px;background:#E8EAEE;">${town || "Not provided"}</td></tr>
               </table>
               <h3 style="color:#0C0E6B;font-size:13px;margin:0 0 8px;text-transform:uppercase;letter-spacing:0.05em;">Additional Information</h3>
               <table style="border-collapse:collapse;width:100%;font-size:13px;">
-                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;width:180px;background:#f5f6f8;">Medical Conditions</td><td style="padding:7px 10px;">${medicalConditions === "yes" ? `Yes — ${medicalDetails || "details not provided"}` : "None declared"}</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;width:180px;background:#E8EAEE;">Medical Conditions</td><td style="padding:7px 10px;">${medicalConditions === "yes" ? `Yes — ${medicalDetails || "details not provided"}` : "None declared"}</td></tr>
                 <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#fff;">Heard About SIS Via</td><td style="padding:7px 10px;background:#fff;">${hearAboutUs || "Not provided"}</td></tr>
-                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#f5f6f8;vertical-align:top;">Notes / Questions</td><td style="padding:7px 10px;background:#f5f6f8;white-space:pre-wrap;">${notes || "None"}</td></tr>
+                <tr><td style="padding:7px 10px;font-weight:bold;color:#555;background:#E8EAEE;vertical-align:top;">Notes / Questions</td><td style="padding:7px 10px;background:#E8EAEE;white-space:pre-wrap;">${notes || "None"}</td></tr>
               </table>
             </div>
             <p style="font-size:11px;color:#999;text-align:center;padding:12px 28px;">Submitted from stutterheimschool.co.za/apply</p>

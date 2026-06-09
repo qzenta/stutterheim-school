@@ -88,7 +88,7 @@ export default function GalleryPage() {
       </div>
 
       {/* Featured hero mosaic */}
-      <section className="py-12 px-4 bg-white">
+      <section className="py-12 px-4 bg-[#E8EAEE]">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3" style={{ gridAutoRows: "200px" }}>

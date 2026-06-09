@@ -55,7 +55,7 @@ export default function EventsPage() {
           </FadeIn>
           {notices.length === 0 ? (
             <FadeIn>
-              <div className="bg-[#F5F6F8] border border-gray-100 rounded-xl p-8 text-center">
+              <div className="bg-[#E8EAEE] border border-gray-100 rounded-xl p-8 text-center">
                 <p className="text-3xl mb-3">📋</p>
                 <p className="text-gray-500 font-medium">No notices at this time.</p>
                 <p className="text-gray-400 text-sm mt-1">Check back soon — notices will appear here as the school publishes them.</p>
@@ -92,7 +92,7 @@ export default function EventsPage() {
                 </thead>
                 <tbody>
                   {termDates.map((t, i) => (
-                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#F5F6F8]"}>
+                    <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-[#E8EAEE]"}>
                       <td className="px-5 py-4 text-gray-700 font-medium">{t.term}</td>
                       <td className="px-5 py-4 text-gray-500">{t.start}</td>
                       <td className="px-5 py-4 text-gray-500">{t.end}</td>

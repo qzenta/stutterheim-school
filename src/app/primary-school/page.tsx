@@ -63,7 +63,7 @@ export default function PrimarySchoolPage() {
       </div>
 
       {/* Phases */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-10">
             <h2 className="text-2xl font-bold text-[#0C0E6B]">Three Distinct Learning Phases</h2>
@@ -84,7 +84,7 @@ export default function PrimarySchoolPage() {
       </section>
 
       {/* Subjects + image */}
-      <section className="py-16 px-4 bg-[#F5F6F8]">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>

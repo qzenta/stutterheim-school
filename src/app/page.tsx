@@ -77,7 +77,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {pillars.map((p, i) => (
               <FadeIn key={p.title} delay={i * 120}>
-                <div className="bg-[#F5F6F8] rounded-xl p-8 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
+                <div className="bg-[#E8EAEE] rounded-xl p-8 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
                   <div className="w-12 h-12 bg-[#0C0E6B] rounded-lg flex items-center justify-center mb-5">
                     <p.icon className="w-6 h-6 text-white" />
                   </div>
@@ -175,7 +175,7 @@ export default function HomePage() {
       </section>
 
       {/* Achievements */}
-      <section className="py-20 px-4 bg-[#F5F6F8]">
+      <section className="py-20 px-4 bg-[#E8EAEE]">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="text-center mb-14">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">

@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Content */}
-      <section className="py-16 px-4 bg-[#F5F6F8]">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-3xl mx-auto space-y-6">
           {sections.map((s, i) => (
             <FadeIn key={s.title} delay={i * 40}>

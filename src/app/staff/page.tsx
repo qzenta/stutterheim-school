@@ -204,7 +204,7 @@ export default function StaffPage() {
       </section>
 
       {/* Teaching staff */}
-      <section className="py-16 px-4 bg-[#F5F6F8]">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-8">
             <h2 className="text-xl font-bold text-[#0C0E6B]">Teaching Staff</h2>

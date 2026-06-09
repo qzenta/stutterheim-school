@@ -65,7 +65,7 @@ export default function HighSchoolPage() {
       </section>
 
       {/* Subject groups */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-10">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-2">CAPS Curriculum</p>
@@ -75,7 +75,7 @@ export default function HighSchoolPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {subjects.map((g, i) => (
               <FadeIn key={g.group} delay={i * 80}>
-                <div className="bg-[#F5F6F8] rounded-xl p-5 border border-gray-100">
+                <div className="bg-[#E8EAEE] rounded-xl p-5 border border-gray-100">
                   <h3 className="font-bold text-[#0C0E6B] text-sm mb-3 border-b border-gray-200 pb-2">{g.group}</h3>
                   <ul className="space-y-1.5">
                     {g.items.map((s) => (
@@ -98,7 +98,7 @@ export default function HighSchoolPage() {
       </section>
 
       {/* Boarding callout */}
-      <section className="py-16 px-4 bg-[#F5F6F8]">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div className="rounded-2xl overflow-hidden shadow-lg aspect-video">

@@ -71,7 +71,7 @@ export default function SubjectsPage() {
       </div>
 
       {/* Subject groups */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="text-center mb-10">
             <p className="text-xs text-gray-400 bg-blue-50 border border-blue-100 rounded-lg px-5 py-2.5 inline-block text-sm">
@@ -82,7 +82,7 @@ export default function SubjectsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {subjectGroups.map((sg, i) => (
               <FadeIn key={sg.group} delay={i * 80}>
-                <div className="bg-[#F5F6F8] rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow h-full">
+                <div className="bg-[#E8EAEE] rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow h-full">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-[#0C0E6B] rounded-lg flex items-center justify-center text-lg shrink-0">
                       {sg.icon}
@@ -105,7 +105,7 @@ export default function SubjectsPage() {
       </section>
 
       {/* Learning in action photos */}
-      <section className="py-12 px-4 bg-[#F5F6F8]">
+      <section className="py-12 px-4 bg-[#E8EAEE]">
         <div className="max-w-6xl mx-auto">
           <FadeIn className="mb-6 text-center">
             <h2 className="text-xl font-bold text-[#0C0E6B]">Learning in Action</h2>

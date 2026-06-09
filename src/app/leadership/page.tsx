@@ -91,7 +91,7 @@ export default function LeadershipPage() {
       </div>
 
       {/* Leadership cards */}
-      <section className="py-20 px-4 bg-[#F5F6F8]">
+      <section className="py-20 px-4 bg-[#E8EAEE]">
         <div className="max-w-4xl mx-auto space-y-10">
 
           {/* ── Zimaseka — full featured card ── */}

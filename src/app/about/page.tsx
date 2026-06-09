@@ -52,11 +52,11 @@ export default function AboutPage() {
       </div>
 
       {/* Mission + Vision */}
-      <section className="py-16 px-4 bg-white" id="mission">
+      <section className="py-16 px-4 bg-[#E8EAEE]" id="mission">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <FadeIn delay={0}>
-              <div className="bg-[#F5F6F8] rounded-2xl p-8 h-full">
+              <div className="bg-[#E8EAEE] rounded-2xl p-8 h-full">
                 <div className="w-10 h-10 bg-[#0C0E6B] rounded-lg flex items-center justify-center mb-4">
                   <span className="text-white font-bold text-sm">M</span>
                 </div>
@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story + images */}
-      <section className="py-16 px-4 bg-[#F5F6F8]" id="story">
+      <section className="py-16 px-4 bg-[#E8EAEE]" id="story">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -148,7 +148,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-10">
             <h2 className="text-2xl font-bold text-[#0C0E6B]">What We Stand For</h2>
@@ -169,7 +169,7 @@ export default function AboutPage() {
       </section>
 
       {/* More photos */}
-      <section className="py-12 px-4 bg-[#F5F6F8]">
+      <section className="py-12 px-4 bg-[#E8EAEE]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {galleryImages.slice(2).map((img, i) => (
@@ -187,45 +187,6 @@ export default function AboutPage() {
               </div>
             ))}
           </FadeIn>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-16 px-4 bg-white" id="leadership">
-        <div className="max-w-4xl mx-auto">
-          <FadeIn className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-[#0C0E6B]">School Leadership</h2>
-            <div className="mt-3 w-12 h-1 bg-[#0C0E6B] mx-auto rounded" />
-          </FadeIn>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              {
-                initials: "ZK", role: "Co-Director", name: "Zimaseka Kalimashe",
-                bio: "Zimaseka Kalimashe co-directs Stutterheim International School with a commitment to inclusive, high-quality education for every learner in the Eastern Cape. Photo coming soon.",
-              },
-              {
-                initials: "MV", role: "Principal", name: "Mdingi Vuyelwa",
-                bio: "Mdingi Vuyelwa leads the school's academic and operational excellence, nurturing a learning environment where every child can thrive. Photo coming soon.",
-              },
-              {
-                initials: "AS", role: "Assistant Principal", name: "Amanda Salzwedel",
-                bio: "Amanda Salzwedel supports school leadership across curriculum, learner affairs, and staff development. Photo coming soon.",
-              },
-            ].map((leader) => (
-              <FadeIn key={leader.name}>
-                <div className="bg-[#F5F6F8] rounded-2xl p-6 flex gap-5 items-start">
-                  <div className="w-16 h-16 rounded-full bg-[#0C0E6B]/10 border-4 border-[#0C0E6B]/20 flex items-center justify-center shrink-0">
-                    <span className="text-xl font-bold text-[#0C0E6B]">{leader.initials}</span>
-                  </div>
-                  <div>
-                    <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.15em] mb-1">{leader.role}</p>
-                    <h3 className="text-base font-bold text-[#0C0E6B] mb-2">{leader.name}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{leader.bio}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </section>
 

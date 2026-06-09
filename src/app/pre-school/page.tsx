@@ -45,7 +45,7 @@ export default function PreSchoolPage() {
       </div>
 
       {/* Overview */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -92,7 +92,7 @@ export default function PreSchoolPage() {
       </section>
 
       {/* Activities */}
-      <section className="py-16 px-4 bg-[#F5F6F8]">
+      <section className="py-16 px-4 bg-[#E8EAEE]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-12">
             <h2 className="text-2xl font-bold text-[#0C0E6B]">What We Learn & Do</h2>

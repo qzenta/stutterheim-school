@@ -43,28 +43,28 @@ export default function ContactPage() {
           <div>
             <h2 className="text-xl font-bold text-[#0C0E6B] mb-6">School Details</h2>
             <div className="space-y-5 text-gray-700">
-              <div className="flex items-start gap-4 p-4 bg-[#F5F6F8] rounded-xl border border-gray-100">
+              <div className="flex items-start gap-4 p-4 bg-[#E8EAEE] rounded-xl border border-gray-100">
                 <span className="text-xl">📍</span>
                 <div>
                   <p className="font-semibold text-[#0C0E6B] text-sm">Address</p>
                   <p className="mt-1 text-sm">49 Louisa Street<br />Stutterheim, Eastern Cape, 4930</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-[#F5F6F8] rounded-xl border border-gray-100">
+              <div className="flex items-start gap-4 p-4 bg-[#E8EAEE] rounded-xl border border-gray-100">
                 <span className="text-xl">📞</span>
                 <div>
                   <p className="font-semibold text-[#0C0E6B] text-sm">Phone</p>
                   <a href="tel:+27673977613" className="mt-1 block text-sm hover:text-[#0C0E6B] transition-colors">(067) 397-7613</a>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-[#F5F6F8] rounded-xl border border-gray-100">
+              <div className="flex items-start gap-4 p-4 bg-[#E8EAEE] rounded-xl border border-gray-100">
                 <span className="text-xl">✉️</span>
                 <div>
                   <p className="font-semibold text-[#0C0E6B] text-sm">Email</p>
                   <a href="mailto:sis@stutterheimschool.co.za" className="mt-1 block text-sm hover:text-[#0C0E6B] transition-colors">sis@stutterheimschool.co.za</a>
                 </div>
               </div>
-              <div className="flex items-start gap-4 p-4 bg-[#F5F6F8] rounded-xl border border-gray-100">
+              <div className="flex items-start gap-4 p-4 bg-[#E8EAEE] rounded-xl border border-gray-100">
                 <span className="text-xl">🕐</span>
                 <div>
                   <p className="font-semibold text-[#0C0E6B] text-sm">Office Hours</p>

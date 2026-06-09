@@ -94,7 +94,7 @@ export default function AdmissionsPage() {
       </div>
 
       {/* Application downloads */}
-      <section className="py-14 px-4 bg-[#F5F6F8] border-b border-gray-100">
+      <section className="py-14 px-4 bg-[#E8EAEE] border-b border-gray-100">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-8">
             <h2 className="text-2xl font-bold text-[#0C0E6B]">Application Materials</h2>
@@ -135,7 +135,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* How to apply — steps */}
-      <section className="py-20 px-4 bg-[#F5F6F8]">
+      <section className="py-20 px-4 bg-[#E8EAEE]">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-14">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -160,7 +160,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Requirements */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#E8EAEE]">
         <div className="max-w-4xl mx-auto">
           <FadeIn className="text-center mb-12">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
@@ -173,7 +173,7 @@ export default function AdmissionsPage() {
           <FadeIn>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {requirements.map((req) => (
-                <div key={req} className="flex items-start gap-3 p-4 bg-[#F5F6F8] rounded-lg border border-gray-100">
+                <div key={req} className="flex items-start gap-3 p-4 bg-[#E8EAEE] rounded-lg border border-gray-100">
                   <CheckCircle className="w-5 h-5 text-[#0C0E6B] shrink-0 mt-0.5" />
                   <span className="text-gray-700 text-sm">{req}</span>
                 </div>
@@ -210,7 +210,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* FAQ accordion */}
-      <section className="py-20 px-4 bg-[#F5F6F8]">
+      <section className="py-20 px-4 bg-[#E8EAEE]">
         <div className="max-w-3xl mx-auto">
           <FadeIn className="text-center mb-12">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
