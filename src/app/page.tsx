@@ -250,7 +250,7 @@ export default function HomePage() {
 
       {/* School Leadership */}
       <section id="leadership" className="py-20 px-4 bg-[#0C0E6B] text-white overflow-hidden">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-14">
             <p className="text-blue-300 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
               The People Behind SIS
@@ -259,84 +259,49 @@ export default function HomePage() {
             <div className="mt-4 w-16 h-1 bg-white/30 mx-auto rounded" />
           </FadeIn>
 
-          {/* Director left (tall) · Principal + Asst Principal stacked right */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 items-stretch">
-
-            {/* ── LEFT: Co-Director (tall vertical card) ── */}
-            <FadeIn delay={0}>
-              <div className="group flex flex-col items-center text-center bg-white/5 border border-white/10 rounded-2xl p-10 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default h-full min-h-[420px] justify-center">
-                {/* Avatar — larger for director */}
-                <div className="relative w-36 h-36 mb-6">
-                  <div className="absolute inset-0 rounded-full border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500 overflow-hidden">
-                    <img src="/extra-images/zimaseka-kalimashe.jpg" alt="Ms Zimaseka Kalimashe – Co-Director" className="w-full h-full object-cover object-center" />
+          {/* 3 equal portrait cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Zimaseka Kalimashe",
+                role: "Co-Director",
+                photo: "/extra-images/zimaseka-kalimashe.jpg",
+                delay: 0,
+              },
+              {
+                name: "Mdingi Vuyelwa",
+                role: "Principal",
+                photo: "/extra-images/mdingi.jpeg",
+                delay: 120,
+              },
+              {
+                name: "Amanda Salzwedel",
+                role: "Assistant Principal",
+                photo: "/extra-images/amanda.jpeg",
+                delay: 240,
+              },
+            ].map((leader) => (
+              <FadeIn key={leader.name} delay={leader.delay}>
+                <a href="/leadership" className="group block relative rounded-2xl overflow-hidden shadow-xl cursor-pointer" style={{ aspectRatio: "3/4" }}>
+                  {/* Photo — zooms on hover */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={leader.photo}
+                    alt={leader.name}
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-in-out group-hover:scale-110"
+                  />
+                  {/* Dark gradient overlay — stronger on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0C0E6B]/90 via-[#0C0E6B]/30 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
+                  {/* Name + role at bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 px-5 pb-6 translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300 bg-white/10 border border-white/20 rounded-full px-3 py-1 mb-2">
+                      {leader.role}
+                    </span>
+                    <h3 className="font-bold text-white text-lg leading-tight">{leader.name}</h3>
                   </div>
-                  <div className="absolute inset-[-8px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
-                </div>
-                <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300 bg-blue-900/40 border border-blue-400/20 rounded-full px-3 py-1 mb-3 group-hover:bg-blue-800/60 transition-colors">
-                  Co-Director
-                </span>
-                <h3 className="font-bold text-white text-xl leading-tight mb-4">Zimaseka Kalimashe</h3>
-                <div className="w-10 h-px bg-white/20 mb-4 group-hover:w-20 transition-all duration-500" />
-                <blockquote className="text-blue-200 text-sm leading-relaxed italic max-w-xs">
-                  &ldquo;We are committed to nurturing confident, compassionate, and globally competitive individuals.&rdquo;
-                </blockquote>
-              </div>
-            </FadeIn>
-
-            {/* ── RIGHT: Principal (top) + Asst Principal (bottom) ── */}
-            <div className="flex flex-col gap-6 h-full">
-              {[
-                {
-                  name: "Mdingi Vuyelwa",
-                  role: "Principal",
-                  initials: "MV",
-                  photo: "/extra-images/mdingi.jpeg",
-                  quote: "Academic excellence and holistic growth go hand in hand at Stutterheim International School.",
-                  accent: "from-sky-400/20 to-sky-600/10",
-                  delay: 160,
-                },
-                {
-                  name: "Amanda Salzwedel",
-                  role: "Assistant Principal",
-                  initials: "AS",
-                  photo: "/extra-images/amanda.jpeg",
-                  quote: "Children are a promise to be anytime they want to be.",
-                  accent: "from-blue-400/20 to-blue-600/10",
-                  delay: 280,
-                },
-              ].map((leader) => (
-                <FadeIn key={leader.name} delay={leader.delay} className="flex-1 flex flex-col">
-                  <div className="group flex flex-row items-center gap-6 bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-black/30 cursor-default h-full">
-                    {/* Avatar */}
-                    <div className="relative w-20 h-20 shrink-0">
-                      <div className="absolute inset-0 rounded-full border-2 border-white/20 group-hover:border-white/50 transition-colors duration-500 overflow-hidden">
-                        {leader.photo ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img src={leader.photo} alt={leader.name} className="w-full h-full object-cover object-center" />
-                        ) : (
-                          <div className={`w-full h-full rounded-full bg-gradient-to-br ${leader.accent} flex items-center justify-center`}>
-                            <span className="text-xl font-bold text-white/60 group-hover:text-white/90 transition-colors duration-300">{leader.initials}</span>
-                          </div>
-                        )}
-                      </div>
-                      <div className="absolute inset-[-5px] rounded-full border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-500" />
-                    </div>
-                    {/* Text */}
-                    <div className="flex flex-col text-left">
-                      <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-blue-300 bg-blue-900/40 border border-blue-400/20 rounded-full px-3 py-1 mb-2 self-start group-hover:bg-blue-800/60 transition-colors">
-                        {leader.role}
-                      </span>
-                      <h3 className="font-bold text-white text-lg leading-tight mb-2">{leader.name}</h3>
-                      <div className="w-8 h-px bg-white/20 mb-3 group-hover:w-14 transition-all duration-500" />
-                      <blockquote className="text-blue-200 text-sm leading-relaxed italic">
-                        &ldquo;{leader.quote}&rdquo;
-                      </blockquote>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
-
+                </a>
+              </FadeIn>
+            ))}
           </div>
 
           {/* Leadership CTA */}
