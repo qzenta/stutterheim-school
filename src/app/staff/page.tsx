@@ -65,30 +65,14 @@ const staff = [
     photo: "/extra-images/hlonipha.jpeg",
     bio: "Mrs Qibi holds a Bachelor of Science (B.Sc.) degree and a Postgraduate Certificate in Education (PGCE). She joined Stutterheim International School in March 2025 and teaches Natural Sciences and Technology, Social Sciences, and isiXhosa. Known for being caring, motivated, and inspiring, she is passionate about helping learners reach their full potential and creating a positive learning environment where every child feels valued and supported. She believes that education is a powerful tool for transforming lives and works tirelessly to inspire learners to become confident, responsible, and lifelong learners.",
   },
-  {
-    name: "Teacher Name",
-    role: "FET Phase Educator",
-    subjects: "Grades 8–12 · Physical Sciences · Life Sciences",
-    type: "teaching" as const,
-    photo: "",
-    bio: "Specialist in Science subjects for the FET phase, with a focus on hands-on learning and matric exam preparation. Bio to be updated by the school.",
-  },
-  {
-    name: "Teacher Name",
-    role: "FET Phase Educator",
-    subjects: "Grades 8–12 · Accounting · Business Studies · Economics",
-    type: "teaching" as const,
-    photo: "",
-    bio: "Experienced Commerce educator bringing real-world business knowledge into the classroom to prepare learners for tertiary study and entrepreneurship. Bio to be updated by the school.",
-  },
   // ── Support Staff ────────────────────────────────────────────────────────────
   {
-    name: "Staff Member Name",
-    role: "School Administrator & Support Staff",
-    subjects: "Administration · Learner Welfare · Office Management",
+    name: "Mr Feni",
+    role: "Groundsman & Tuckshop Operator",
+    subjects: "Facilities Management · School Grounds · Tuckshop",
     type: "support" as const,
     photo: "",
-    bio: "Our dedicated support staff member ensures the smooth daily operation of the school — from learner records and communications to welfare and logistics. Details to be updated by the school.",
+    bio: "Mr Feni keeps the Stutterheim International School grounds safe, clean, and well-maintained while also running the school tuckshop. His cheerful presence and dedication to the school environment make him a valued member of the SIS family.",
   },
 ];
 
