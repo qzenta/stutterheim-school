@@ -35,6 +35,7 @@ const navItems: NavItem[] = [
       { label: "Primary School (Grades 1–7)", href: "/primary-school" },
       { label: "Senior Phase (Grades 8–9)", href: "/high-school" },
       { label: "All Subjects", href: "/subjects" },
+      { label: "Activities & Sport", href: "/about#activities" },
     ],
   },
   {
@@ -48,15 +49,8 @@ const navItems: NavItem[] = [
       { label: "Request Documents", href: "mailto:sis@stutterheimschool.co.za?subject=Application%20Pack%20Request" },
     ],
   },
-  {
-    label: "School Life",
-    href: "/gallery",
-    children: [
-      { label: "Gallery", href: "/gallery" },
-      { label: "Events & Notices", href: "/events" },
-      { label: "Activities", href: "/about#activities" },
-    ],
-  },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Events", href: "/events" },
   { label: "Staff", href: "/staff" },
   { label: "Achievements", href: "/achievements" },
   { label: "Contact", href: "/contact" },
