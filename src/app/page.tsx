@@ -270,7 +270,7 @@ export default function HomePage() {
               },
               {
                 name: "Mdingi Vuyelwa",
-                role: "Principal",
+                role: "Senior Educator",
                 photo: "/extra-images/mdingi.jpeg",
                 delay: 120,
               },

@@ -46,14 +46,21 @@ const amanda = {
   ],
 };
 
-const pending = [
-  {
-    name: "Mdingi Vuyelwa",
-    role: "Principal",
-    initials: "MV",
-    subjects: "School Leadership · Academic Management",
-  },
-];
+const mdingi = {
+  name: "Mdingi Vuyelwa",
+  role: "Senior Educator",
+  subjects: "Senior Phase & FET · Academic Management",
+  photo: "/extra-images/mdingi.jpeg",
+  bio: [
+    "Vuyelwa Mdingi is a qualified educator with a BTech in Internal Auditing and a Postgraduate Certificate in Education (PGCE) in Senior Phase and FET.",
+    "She has been teaching at Stutterheim International School since 2022 and is passionate about helping learners grow with confidence and achieve their full potential.",
+  ],
+  credentials: [
+    "BTech Internal Auditing",
+    "PGCE (Senior Phase & FET)",
+    "Teaching since 2022",
+  ],
+};
 
 export default function LeadershipPage() {
   return (
@@ -96,7 +103,7 @@ export default function LeadershipPage() {
                   <img
                     src={zimaseka.photo}
                     alt={`${zimaseka.name} – ${zimaseka.role}`}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 {/* Content */}
@@ -137,7 +144,7 @@ export default function LeadershipPage() {
                   <img
                     src={amanda.photo}
                     alt={`${amanda.name} – ${amanda.role}`}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="p-8 flex flex-col justify-start flex-1">
@@ -163,34 +170,39 @@ export default function LeadershipPage() {
             </div>
           </FadeIn>
 
-          {/* ── Mdingi — pending card ── */}
-          {pending.map((leader, i) => (
-            <FadeIn key={leader.name} delay={i * 100}>
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div className="flex flex-col md:flex-row">
-                  {/* Photo */}
-                  <div className="md:w-64 h-72 md:h-auto flex-shrink-0 overflow-hidden bg-[#E8E9F4]">
-                    <img
-                      src="/extra-images/mdingi.jpeg"
-                      alt="Mdingi Vuyelwa – Principal"
-                      className="w-full h-full object-cover object-center"
-                    />
+          {/* ── Mdingi — full card ── */}
+          <FadeIn delay={200}>
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-64 h-72 md:h-auto flex-shrink-0 overflow-hidden bg-[#E8E9F4]">
+                  <img
+                    src={mdingi.photo}
+                    alt={`${mdingi.name} – ${mdingi.role}`}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="p-8 flex flex-col justify-start flex-1">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-white bg-[#0C0E6B] rounded-full px-3 py-1 mb-4 self-start">
+                    {mdingi.role}
+                  </span>
+                  <h2 className="text-2xl font-bold text-[#0C0E6B] mb-1">{mdingi.name}</h2>
+                  <p className="text-blue-500 text-sm font-medium mb-6">{mdingi.subjects}</p>
+                  <div className="space-y-3 mb-7">
+                    {mdingi.bio.map((para, i) => (
+                      <p key={i} className="text-gray-600 text-sm leading-relaxed">{para}</p>
+                    ))}
                   </div>
-                  {/* Content */}
-                  <div className="p-8 flex flex-col justify-center flex-1">
-                    <span className="inline-block text-[10px] font-bold uppercase tracking-[0.18em] text-white bg-[#0C0E6B] rounded-full px-3 py-1 mb-4 self-start">
-                      {leader.role}
-                    </span>
-                    <h2 className="text-2xl font-bold text-[#0C0E6B] mb-1">{leader.name}</h2>
-                    <p className="text-blue-500 text-sm font-medium mb-6">{leader.subjects}</p>
-                    <p className="text-gray-400 text-sm italic">
-                      Full biography coming soon. We look forward to introducing {leader.name.split(" ")[0]} to our school community.
-                    </p>
+                  <div className="flex flex-wrap gap-2">
+                    {mdingi.credentials.map((c) => (
+                      <span key={c} className="text-[11px] font-semibold text-[#0C0E6B] bg-[#E8E9F4] border border-[#0C0E6B]/15 rounded-full px-3 py-1">
+                        {c}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
-            </FadeIn>
-          ))}
+            </div>
+          </FadeIn>
 
         </div>
       </section>

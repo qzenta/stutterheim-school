@@ -18,11 +18,11 @@ const staff = [
   // ── School Leadership (also on homepage) ────────────────────────────────────
   {
     name: "Mdingi Vuyelwa",
-    role: "Principal",
+    role: "Senior Educator",
     subjects: "School Leadership · Academic Management · Staff Development",
     type: "teaching" as const,
     photo: "/extra-images/mdingi.jpeg",
-    bio: "Mdingi Vuyelwa leads Stutterheim International School with passion and purpose, ensuring academic excellence and a nurturing environment for every learner from Grade R through Grade 12. Full bio coming soon.",
+    bio: "Vuyelwa Mdingi is a qualified educator with a BTech in Internal Auditing and a PGCE (Senior Phase and FET). She has been teaching at Stutterheim International School since 2022 and is passionate about helping learners grow with confidence and achieve their full potential.",
   },
   {
     name: "Amanda Salzwedel",
@@ -171,12 +171,12 @@ export default function StaffPage() {
             <FadeIn>
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-5">
                 <div className="w-16 h-16 rounded-full border-2 border-white/20 flex-shrink-0 overflow-hidden">
-                  <img src="/extra-images/mdingi.jpeg" alt="Mdingi Vuyelwa – Principal" className="w-full h-full object-cover object-center" />
+                  <img src="/extra-images/mdingi.jpeg" alt="Mdingi Vuyelwa – Senior Educator" className="w-full h-full object-cover object-top" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-blue-300">Principal</span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-blue-300">Senior Educator</span>
                   <h4 className="font-bold text-white text-base mt-0.5">Mdingi Vuyelwa</h4>
-                  <p className="text-blue-300 text-xs mt-1">Bio coming soon</p>
+                  <p className="text-blue-300 text-xs mt-1">BTech Internal Auditing · PGCE Senior/FET</p>
                 </div>
               </div>
             </FadeIn>
@@ -218,7 +218,7 @@ export default function StaffPage() {
                   <div className="h-72 bg-[#0C0E6B]/5 flex items-center justify-center relative overflow-hidden">
                     {member.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-center" />
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
                     ) : (
                       <div className="flex flex-col items-center gap-2 text-center px-4">
                         <div className="w-20 h-20 rounded-full bg-[#0C0E6B]/15 border-4 border-[#0C0E6B]/10 flex items-center justify-center">
@@ -251,7 +251,7 @@ export default function StaffPage() {
                   <div className="h-72 bg-[#0C0E6B]/5 flex items-center justify-center relative overflow-hidden">
                     {member.photo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-center" />
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
                     ) : (
                       <div className="flex flex-col items-center gap-2 text-center px-4">
                         <div className="w-20 h-20 rounded-full bg-gray-200 border-4 border-gray-100 flex items-center justify-center">
