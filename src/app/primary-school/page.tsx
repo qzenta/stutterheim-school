@@ -29,7 +29,7 @@ const phases = [
   {
     phase: "Senior Phase",
     grades: "Grade 7",
-    focus: "Transition preparation: deeper subject work and study skills for high school.",
+    focus: "Transition preparation: deeper subject work and study skills for the Senior Phase.",
     color: "bg-navy-50 border-[#0C0E6B]/20",
   },
 ];

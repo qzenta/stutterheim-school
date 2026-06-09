@@ -43,7 +43,7 @@ export default function FeesPage() {
             <div className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm">
               <div className="bg-[#0C0E6B] px-6 py-4">
                 <h2 className="text-white font-bold text-base">School Fees</h2>
-                <p className="text-blue-200 text-xs mt-0.5">Monthly — all grades, Grade R through Grade 12</p>
+                <p className="text-blue-200 text-xs mt-0.5">Monthly — all grades, Grade R through Grade 9</p>
               </div>
               <table className="w-full">
                 <thead>

@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 const messages = [
   "🎓  Now Open: Admissions for 2027 — Limited spaces available.",
   "🏠  Boarding Facility Available — Secure your space early.",
-  "📚  Pre-School · Primary School · High School — All under one roof.",
+  "📚  Pre-School · Primary School · Senior Phase — All under one roof.",
   "📞  Call us: (067) 397-7613 · sis@stutterheimschool.co.za",
   "🏅  20+ Subjects · 60+ Enrolled Learners · 6+ Qualified Teachers.",
 ];

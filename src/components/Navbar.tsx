@@ -32,7 +32,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Pre-School (Grade R)", href: "/pre-school" },
       { label: "Primary School (Grades 1–7)", href: "/primary-school" },
-      { label: "High School (Grades 8–12)", href: "/high-school" },
+      { label: "Senior Phase (Grades 8–9)", href: "/high-school" },
       { label: "All Subjects", href: "/subjects" },
     ],
   },

@@ -18,7 +18,7 @@ const galleryImages = [
 ];
 
 const values = [
-  { icon: "🎯", title: "Academic Excellence", desc: "High standards across all grades, from Grade R to Grade 12." },
+  { icon: "🎯", title: "Academic Excellence", desc: "High standards across all grades, from Grade R to Grade 9." },
   { icon: "🤝", title: "Inclusivity", desc: "Every learner is valued, respected and empowered to succeed." },
   { icon: "🌍", title: "Global Citizenship", desc: "Preparing learners to contribute to a non-racial, global world." },
   { icon: "❤️", title: "Community", desc: "A partnership between school, parents, families and learners." },
@@ -99,8 +99,8 @@ export default function AboutPage() {
               </p>
               <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                 With over 60 enrolled students, 6+ qualified teachers, and more than 20 subjects on offer,
-                SIS delivers a comprehensive academic programme across Pre-School, Primary School and High School —
-                all under one roof.
+                SIS delivers a comprehensive academic programme across Pre-School, Primary School and Senior Phase —
+                All under one roof.
               </p>
               <p className="text-gray-600 leading-relaxed text-sm">
                 Beyond the classroom, learners enjoy a rich extracurricular life including ballet, swimming,

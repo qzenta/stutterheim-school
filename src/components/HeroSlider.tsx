@@ -63,7 +63,7 @@ export default function HeroSlider() {
               Shaping Tomorrow&apos;s<br />Leaders Today
             </h1>
             <p className="text-blue-100 text-base sm:text-lg leading-relaxed mb-8">
-              A premier private school offering Pre-School, Primary &amp; High School
+              A premier private school offering Pre-School, Primary &amp; Senior Phase
               education — academic excellence, holistic development, and boarding facilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-end">

@@ -12,7 +12,7 @@ const pages = [
   { title: "Admissions", href: "/admissions", desc: "Apply for 2027 — download forms, fee schedule, and application process." },
   { title: "Pre-School (Grade R)", href: "/pre-school", desc: "Foundation phase education for Grade R learners at SIS." },
   { title: "Primary School (Grades 1–7)", href: "/primary-school", desc: "Intermediate and senior phase primary education at SIS." },
-  { title: "High School (Grades 8–12)", href: "/high-school", desc: "FET phase high school education and matric at SIS." },
+  { title: "Senior Phase (Grades 8–9)", href: "/high-school", desc: "Senior Phase education (Grades 8–9) at SIS." },
   { title: "Subjects Offered", href: "/subjects", desc: "20+ subjects across all grades offered by qualified teachers." },
   { title: "Fee Structure", href: "/fees", desc: "Tuition, boarding, and co-curricular fees — download full schedule." },
   { title: "Achievements", href: "/achievements", desc: "Academic, sports, and community honours and awards." },

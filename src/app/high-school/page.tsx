@@ -3,24 +3,24 @@ import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "High School (Grades 8–12) | Stutterheim International School",
-  description: "SIS High School offers Grades 8–12 with 20+ subjects, matric preparation, and boarding facilities in Stutterheim, Eastern Cape.",
+  title: "Senior Phase (Grades 8–9) | Stutterheim International School",
+  description: "SIS Senior Phase offers Grades 8–9 with a broad subject range, boarding facilities, and personalised academic support in Stutterheim, Eastern Cape.",
 };
 
 const subjects = [
   { group: "Languages", items: ["English Home Language", "Afrikaans FAL", "isiXhosa FAL"] },
   { group: "Mathematics", items: ["Mathematics", "Mathematical Literacy"] },
-  { group: "Sciences", items: ["Physical Sciences", "Life Sciences", "Agricultural Sciences"] },
-  { group: "Commerce", items: ["Accounting", "Business Studies", "Economics"] },
-  { group: "Humanities", items: ["Geography", "History", "Tourism", "Consumer Studies"] },
-  { group: "Technology", items: ["Computer Applications Technology", "Information Technology"] },
+  { group: "Sciences", items: ["Natural Sciences & Technology", "Life Sciences"] },
+  { group: "Commerce & Social Sciences", items: ["Economic Management Sciences", "Social Sciences"] },
+  { group: "Humanities", items: ["Geography", "History", "Consumer Studies"] },
+  { group: "Arts & Technology", items: ["Creative Arts", "Technology", "Computer Literacy"] },
 ];
 
 const highlights = [
-  { icon: "🎓", stat: "100%", label: "Matric pass rate target" },
   { icon: "📖", stat: "20+", label: "Subjects offered" },
   { icon: "🏠", stat: "Boarding", label: "Residential facility" },
   { icon: "👨‍🏫", stat: "6+", label: "Qualified educators" },
+  { icon: "🎯", stat: "Gr 8–9", label: "Senior Phase" },
 ];
 
 export default function HighSchoolPage() {
@@ -39,12 +39,13 @@ export default function HighSchoolPage() {
         <div className="relative max-w-4xl mx-auto text-center">
           <FadeIn>
             <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
-              FET Phase
+              Senior Phase
             </p>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">High School</h1>
-            <p className="text-xl font-light text-blue-100 mb-2">Grades 8 – 12</p>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-4">Senior Phase</h1>
+            <p className="text-xl font-light text-blue-100 mb-2">Grades 8 – 9</p>
             <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
-              Preparing learners for matric, tertiary education and life beyond school with rigour and purpose.
+              Building strong academic foundations and equipping learners with the skills and confidence
+              for the next stage of their education journey.
             </p>
             <div className="mt-6 w-16 h-1 bg-white/40 mx-auto rounded" />
           </FadeIn>
@@ -75,7 +76,7 @@ export default function HighSchoolPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {subjects.map((g, i) => (
               <FadeIn key={g.group} delay={i * 80}>
-                <div className="bg-[#E8EAEE] rounded-xl p-5 border border-gray-100">
+                <div className="bg-white rounded-xl p-5 border border-gray-100">
                   <h3 className="font-bold text-[#0C0E6B] text-sm mb-3 border-b border-gray-200 pb-2">{g.group}</h3>
                   <ul className="space-y-1.5">
                     {g.items.map((s) => (
@@ -131,7 +132,7 @@ export default function HighSchoolPage() {
       {/* CTA */}
       <section className="bg-[#0C0E6B] py-14 px-4">
         <FadeIn className="max-w-2xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-white mb-3">Ready for High School?</h2>
+          <h2 className="text-2xl font-bold text-white mb-3">Enrol for 2027</h2>
           <p className="text-blue-200 text-sm mb-6">2027 enrolments open. Day scholar and boarding options available.</p>
           <div className="flex gap-3 justify-center">
             <Link href="/admissions" className="inline-block px-8 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-colors text-sm">

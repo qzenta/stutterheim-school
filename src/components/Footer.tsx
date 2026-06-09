@@ -9,7 +9,7 @@ const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/pre-school", label: "Pre-School (Grade R)" },
   { href: "/primary-school", label: "Primary School (Gr 1–7)" },
-  { href: "/high-school", label: "High School (Gr 8–12)" },
+  { href: "/high-school", label: "Senior Phase (Gr 8–9)" },
   { href: "/admissions", label: "Admissions" },
   { href: "/contact", label: "Contact" },
 ];

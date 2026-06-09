@@ -17,7 +17,7 @@ const categories = [
     items: [
       {
         title: "Certificates & Academic Honours",
-        desc: "Learners have consistently achieved distinction-level results across our full range of subjects. Our Grade 12 pass rate exceeds the provincial average.",
+        desc: "Learners have consistently achieved distinction-level results across our full range of subjects. Our Learners consistently achieve outstanding results across all subjects.",
         year: "2024–2025",
       },
       {
