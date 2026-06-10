@@ -15,7 +15,7 @@ export default function FeesPage() {
       <div
         className="relative text-white pt-24 pb-20 px-4"
         style={{
-          backgroundImage: `url(/extra-images/campus-history.jpg)`,
+          backgroundImage: `url(/extra-images/banner2.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
