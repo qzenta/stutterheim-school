@@ -88,48 +88,52 @@ export default function WelcomePage() {
                   <p>Dear Prospective Parents and Learners,</p>
 
                   <p>
-                    Welcome to Stutterheim International School. It is with great pride and
-                    deep commitment that I extend this personal invitation to you and your
-                    family to become part of our growing school community.
+                    It is with immense joy and a heart full of purpose that I welcome you to
+                    Stutterheim International School — a place where every child matters, every
+                    voice is heard, and every dream is taken seriously.
                   </p>
 
                   <p>
-                    At SIS, we believe that every child has the right to a quality education
-                    in a safe, nurturing, and stimulating environment. Our school was founded
-                    on the principle that academic excellence and holistic development go hand
-                    in hand — and this belief continues to guide everything we do.
+                    I have dedicated over two decades of my life to education, and with each
+                    passing year, my conviction grows stronger: the greatest gift we can give a
+                    child is a safe space to learn, grow, and discover who they truly are. That
+                    is exactly what SIS was built to be.
                   </p>
 
                   <p>
-                    Our dedicated team of qualified educators brings passion and purpose to
-                    every classroom, working tirelessly to ensure that each learner reaches
-                    their full potential. We do not simply teach — we inspire, guide, and
-                    walk alongside your children as they grow.
+                    Our school is not simply a place of academic instruction. It is a community.
+                    A family. We believe that excellence in the classroom must be matched by
+                    excellence in character — and so we invest equally in both. Our learners
+                    achieve, but more importantly, they care. They lead, and they serve.
                   </p>
 
                   <p>
-                    We offer a comprehensive academic programme from Grade R through Grade 9,
-                    covering over 20 subjects under the CAPS curriculum. Beyond the classroom,
-                    our learners enjoy a rich extracurricular life including ballet, swimming,
-                    outreach, and sporting activities — because we believe that character is
-                    built both inside and outside the classroom.
+                    From Grade R through Grade 9, our qualified and passionate educators walk
+                    alongside every learner — celebrating their wins, supporting them through
+                    their struggles, and never allowing them to settle for less than their best.
+                    Whether your child is in the classroom, on the athletics track, in a ballet
+                    rehearsal, or at the swimming pool, they are seen, valued, and encouraged
+                    every single day.
                   </p>
 
                   <p>
-                    For families outside Stutterheim, our boarding facility provides a safe,
-                    structured, and supportive home-away-from-home — with supervised study,
-                    wholesome meals, and monitored recreation.
+                    For families who travel to be part of our community, our boarding facility
+                    offers a warm, structured, and nurturing home-away-from-home. Your child
+                    will never feel far from family here.
                   </p>
 
                   <p>
-                    I warmly invite you to visit our campus, meet our staff, and experience
-                    the SIS difference for yourself. We would be honoured to welcome your
-                    child into our family.
+                    I invite you to come and experience the SIS difference for yourself. Walk
+                    our grounds, meet our staff, and speak to our learners. The warmth you will
+                    feel is not manufactured — it is who we are.
                   </p>
 
-                  <p className="pt-2">
-                    With warm regards,
+                  <p>
+                    On behalf of our entire SIS family, I look forward to welcoming your child
+                    through our doors. Together, let us build something extraordinary.
                   </p>
+
+                  <p className="pt-2">With warm regards and great hope,</p>
                 </div>
 
                 {/* Signature block */}
@@ -155,7 +159,7 @@ export default function WelcomePage() {
         </div>
       </section>
 
-      {/* Values strip */}
+      {/* Core Commitments */}
       <section className="py-14 px-4 bg-[#0C0E6B] text-white">
         <div className="max-w-5xl mx-auto">
           <FadeIn className="text-center mb-10">
