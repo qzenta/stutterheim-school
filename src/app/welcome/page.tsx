@@ -39,12 +39,12 @@ export default function WelcomePage() {
       {/* Welcome content */}
       <section className="py-20 px-4 bg-[#E8EAEE]">
         <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-12 items-stretch">
 
             {/* Director photo + credentials */}
-            <FadeIn className="lg:w-72 shrink-0">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-                <div className="h-80 overflow-hidden">
+            <FadeIn className="lg:w-72 shrink-0 flex flex-col">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col flex-1">
+                <div className="flex-1 min-h-0 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/extra-images/zimaseka-kalimashe.jpg"
@@ -74,8 +74,8 @@ export default function WelcomePage() {
             </FadeIn>
 
             {/* Welcome letter */}
-            <FadeIn delay={100} className="flex-1">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 lg:p-10">
+            <FadeIn delay={100} className="flex-1 flex flex-col">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 lg:p-10 flex-1">
                 {/* Opening quote */}
                 <blockquote className="border-l-4 border-[#0C0E6B] pl-5 mb-8">
                   <p className="text-[#0C0E6B] text-lg font-semibold italic leading-relaxed">
