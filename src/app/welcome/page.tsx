@@ -13,7 +13,7 @@ export default function WelcomePage() {
     <>
       {/* Banner */}
       <div
-        className="relative text-white pt-24 pb-20 px-4"
+        className="relative text-white pt-20 pb-8 px-4"
         style={{
           backgroundImage: "url(/extra-images/banner3.jpg)",
           backgroundSize: "cover",
@@ -37,8 +37,8 @@ export default function WelcomePage() {
       </div>
 
       {/* Welcome content */}
-      <section className="py-20 px-4 bg-[#E8EAEE]">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-12 px-4 bg-[#E8EAEE]">
+        <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 items-stretch">
 
             {/* Director photo + credentials */}
