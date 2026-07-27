@@ -189,6 +189,7 @@ export default function Footer() {
                 <li key={d.label}>
                   <a
                     href={d.href}
+                    {...(d.href.endsWith(".pdf") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="text-blue-200 text-sm hover:text-white transition-colors flex items-center gap-1.5"
                   >
                     <span className="text-white">↓</span>

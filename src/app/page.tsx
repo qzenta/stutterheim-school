@@ -10,16 +10,19 @@ const pillars = [
     icon: GraduationCap,
     title: "Academic Excellence",
     desc: "Rigorous curriculum across 20+ subjects with dedicated, qualified educators committed to learner attainment and success.",
+    image: "/extra-images/learnig-math.webp",
   },
   {
     icon: Building2,
     title: "State-of-the-Art Facilities",
     desc: "Modern classrooms, laboratories, and sporting infrastructure designed to create an optimal learning environment.",
+    image: "/extra-images/about-us.jpg",
   },
   {
     icon: Heart,
     title: "Holistic Development",
     desc: "Ballet, swimming, outreach, and extracurricular programmes nurture each learner's unique talents and character.",
+    image: "/extra-images/swimming.jpg",
   },
 ];
 
@@ -74,16 +77,53 @@ export default function HomePage() {
             <div className="mt-4 w-16 h-1 bg-[#0C0E6B] mx-auto rounded" />
           </FadeIn>
 
+          <style>{`
+            .flip-card { perspective: 1000px; }
+            .flip-card-inner {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+              transform-style: preserve-3d;
+            }
+            .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+            .flip-card-front, .flip-card-back {
+              position: absolute;
+              inset: 0;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+              border-radius: 0.75rem;
+            }
+            .flip-card-back { transform: rotateY(180deg); }
+          `}</style>
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {pillars.map((p, i) => (
               <FadeIn key={p.title} delay={i * 120}>
-                <div className="bg-[#E8EAEE] rounded-xl p-8 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 bg-[#0C0E6B] rounded-lg flex items-center justify-center mb-5">
-                    <p.icon className="w-6 h-6 text-white" />
+                <div className="flip-card h-72 cursor-pointer">
+                  <div className="flip-card-inner">
+                    {/* Front */}
+                    <div className="flip-card-front bg-[#E8EAEE] p-8 flex flex-col border border-gray-100 shadow-sm">
+                      <div className="w-12 h-12 bg-[#0C0E6B] rounded-lg flex items-center justify-center mb-5">
+                        <p.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div className="w-8 h-1 bg-[#0C0E6B] rounded mb-4" />
+                      <h3 className="font-bold text-[#0C0E6B] text-lg mb-3">{p.title}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
+                    </div>
+                    {/* Back */}
+                    <div className="flip-card-back overflow-hidden shadow-lg">
+                      <img
+                        src={p.image}
+                        alt={p.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0C0E6B]/90 via-[#0C0E6B]/20 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 p-6">
+                        <h3 className="text-white font-bold text-lg">{p.title}</h3>
+                      </div>
+                    </div>
                   </div>
-                  <div className="w-8 h-1 bg-[#0C0E6B] rounded mb-4" />
-                  <h3 className="font-bold text-[#0C0E6B] text-lg mb-3">{p.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
                 </div>
               </FadeIn>
             ))}
@@ -153,6 +193,8 @@ export default function HomePage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/downloads/SIS-Application-Form-2027.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm"
               >
                 📄 Download Application Form

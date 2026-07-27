@@ -103,6 +103,8 @@ export default function FeesPage() {
                       <a
                         href="/downloads/SIS-Boarding-Application-Form-2027.pdf"
                         download
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block text-xs text-gray-500 underline hover:text-[#0C0E6B] mt-1"
                       >
                         Download Boarding Application Form
@@ -179,6 +181,8 @@ export default function FeesPage() {
             </Link>
             <a
               href="/downloads/SIS-Application-Form-2027.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#0C0E6B] transition-all hover:scale-105 text-sm"
             >
               Download Application Form
