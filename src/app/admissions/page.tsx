@@ -107,6 +107,8 @@ export default function AdmissionsPage() {
               <a
                 href="/downloads/SIS-Application-Form-2027.pdf"
                 download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 px-7 py-3.5 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
                 📄 Download Application Form (PDF)
@@ -114,6 +116,8 @@ export default function AdmissionsPage() {
               <a
                 href="/downloads/SIS-Boarding-Application-Form-2027.pdf"
                 download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 px-7 py-3.5 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
                 📄 Download Boarding Application Form (PDF)
