@@ -98,7 +98,16 @@ export default function FeesPage() {
                 <tbody>
                   <tr className="bg-white">
                     <td className="px-6 py-4 text-sm text-gray-700">Full Boarding (accommodation + meals)</td>
-                    <td className="px-6 py-4 text-sm text-gray-500 text-right">Contact school directly</td>
+                    <td className="px-6 py-4 text-sm text-right">
+                      <span className="font-bold text-[#0C0E6B]">R3,000 / month</span>
+                      <a
+                        href="/downloads/SIS-Boarding-Application-Form-2027.pdf"
+                        download
+                        className="block text-xs text-gray-500 underline hover:text-[#0C0E6B] mt-1"
+                      >
+                        Download Boarding Application Form
+                      </a>
+                    </td>
                   </tr>
                 </tbody>
               </table>
