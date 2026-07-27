@@ -112,6 +112,13 @@ export default function AdmissionsPage() {
                 📄 Download Application Form (PDF)
               </a>
               <a
+                href="/downloads/SIS-Boarding-Application-Form-2027.pdf"
+                download
+                className="flex items-center gap-2 px-7 py-3.5 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
+              >
+                📄 Download Boarding Application Form (PDF)
+              </a>
+              <a
                 href="mailto:sis@stutterheimschool.co.za?subject=Fee%20Structure%20Request"
                 className="flex items-center gap-2 px-7 py-3.5 bg-[#0C0E6B] text-white font-bold rounded-lg hover:bg-blue-900 transition-all hover:scale-105 text-sm shadow"
               >
