@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/events",         priority: 0.6, changeFrequency: "weekly"  },
     { url: "/contact",        priority: 0.7, changeFrequency: "monthly" },
     { url: "/apply",          priority: 0.9, changeFrequency: "monthly" },
+    { url: "/careers",        priority: 0.7, changeFrequency: "weekly"  },
   ] as const;
 
   return pages.map(({ url, priority, changeFrequency }) => ({

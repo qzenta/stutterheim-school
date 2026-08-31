@@ -53,6 +53,7 @@ const navItems: NavItem[] = [
   { label: "Events", href: "/events" },
   { label: "Staff", href: "/staff" },
   { label: "Achievements", href: "/achievements" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
