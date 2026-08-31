@@ -192,8 +192,12 @@ export default async function CareersPage() {
       </section>
 
       {/* Current Vacancies */}
-      <section className="py-16 px-4 bg-[#E8EAEE]">
-        <div className="max-w-4xl mx-auto">
+      <section
+        className="relative py-16 px-4"
+        style={{ backgroundImage: "url(/extra-images/careers-hallway-bg.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
+      >
+        <div className="absolute inset-0 bg-[#E8EAEE]/93" />
+        <div className="relative max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Open Positions</p>
             <h2 className="text-3xl font-bold text-[#0C0E6B]">Current Vacancies</h2>
