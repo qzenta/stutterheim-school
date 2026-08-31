@@ -10,8 +10,10 @@ const partners = [
   { src: `${BASE}/flicker-07.jpg`, name: "Macmillan Education", h: 96, maxW: 180 },
 ];
 
-// Double the array for seamless loop
-const track = [...partners, ...partners];
+// Repeat the array so the track is always wider than the viewport at any
+// screen size — with only 2 copies, wide viewports could scroll past the
+// end of the content before the loop restarted, showing a blank gap.
+const track = [...partners, ...partners, ...partners, ...partners];
 
 export default function PartnersMarquee() {
   return (

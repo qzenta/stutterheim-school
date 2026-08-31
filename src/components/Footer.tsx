@@ -85,20 +85,20 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   return (
     <div className="border-b border-white/10 last:border-0">
       <button
-        className="w-full flex items-center justify-between py-3.5 text-left gap-4 group"
+        className="w-full flex items-center justify-between py-2.5 text-left gap-3 group"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
       >
-        <span className="text-sm text-blue-100 font-medium group-hover:text-white transition-colors leading-snug">
+        <span className="text-xs text-blue-100 font-medium group-hover:text-white transition-colors leading-snug">
           {q}
         </span>
         <ChevronDown
-          size={16}
+          size={14}
           className={`text-blue-300 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && (
-        <p className="text-blue-300 text-sm leading-relaxed pb-4 pr-6">{a}</p>
+        <p className="text-blue-300 text-xs leading-relaxed pb-3 pr-5">{a}</p>
       )}
     </div>
   );
@@ -108,28 +108,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#0d1060] text-white">
 
-      {/* FAQ strip */}
-      <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <div className="lg:col-span-1">
-              <p className="text-white font-bold text-lg mb-2">Frequently Asked Questions</p>
-              <p className="text-blue-300 text-sm leading-relaxed">
-                Quick answers to common queries. Can&apos;t find what you need?{" "}
-                <Link href="/contact" className="text-white underline hover:no-underline">
-                  Contact us directly.
-                </Link>
-              </p>
-            </div>
-            <div className="lg:col-span-2 divide-y divide-white/10">
-              {faqs.map((faq) => (
-                <FaqItem key={faq.q} q={faq.q} a={faq.a} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main columns */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -138,7 +116,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/footer-logo.png" alt="Stutterheim International School" className="h-16 w-auto object-contain" />
+              <img src="/images/logo.png" alt="Stutterheim International School" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-blue-200 text-sm leading-relaxed mb-6">
               Providing academic excellence and holistic development to learners in
@@ -243,6 +221,23 @@ export default function Footer() {
                 <span className="text-blue-200 text-sm">Mon – Fri: 7:00 AM – 3:00 PM</span>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Compact FAQ strip */}
+      <div className="border-t border-white/10 bg-black/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex items-baseline justify-between gap-4 mb-1">
+            <p className="text-white font-semibold text-sm">Frequently Asked Questions</p>
+            <Link href="/contact" className="text-blue-300 text-xs hover:text-white transition-colors shrink-0">
+              Can&apos;t find what you need? Contact us →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-10 divide-y divide-white/10 sm:divide-y-0">
+            {faqs.map((faq) => (
+              <FaqItem key={faq.q} q={faq.q} a={faq.a} />
+            ))}
           </div>
         </div>
       </div>

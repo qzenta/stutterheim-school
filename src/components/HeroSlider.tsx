@@ -31,7 +31,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden" style={{ height: "580px" }}>
+    <section className="relative overflow-hidden h-[60vh] min-h-[360px] max-h-[520px]">
       {/* Slides */}
       {slides.map((slide, i) => (
         <div
