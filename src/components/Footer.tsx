@@ -4,13 +4,16 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/pre-school", label: "Pre-School (Grade R)" },
-  { href: "/primary-school", label: "Primary School (Gr 1–7)" },
-  { href: "/high-school", label: "Senior Phase (Gr 8–9)" },
   { href: "/gallery", label: "Gallery" },
   { href: "/events", label: "Events & Notices" },
   { href: "/admissions", label: "Admissions" },
   { href: "/contact", label: "Contact" },
+];
+
+const phases = [
+  { href: "/pre-school", label: "Pre-School (Grade R)" },
+  { href: "/primary-school", label: "Primary School (Gr 1–7)" },
+  { href: "/high-school", label: "Senior Phase (Gr 8–9)" },
 ];
 
 const downloads = [
@@ -55,16 +58,16 @@ export default function Footer() {
     <footer className="bg-[#0d1060] text-white">
 
       {/* Main columns */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {/* Column 1: Logo + tagline + socials */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
+            <div className="mb-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/images/logo-transparent.png" alt="Stutterheim International School" className="h-16 w-auto object-contain" />
             </div>
-            <p className="text-blue-200 text-sm leading-relaxed mb-6">
+            <p className="text-blue-200 text-sm leading-relaxed mb-5">
               Providing academic excellence and holistic development to learners in
               Stutterheim, Eastern Cape since our founding.
             </p>
@@ -86,10 +89,10 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-5">
+            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-4">
               Quick Links
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2">
               {quickLinks.map((l) => (
                 <li key={l.href}>
                   <Link
@@ -103,12 +106,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Downloads */}
+          {/* Column 3: Downloads & Admissions */}
           <div>
-            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-5">
+            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-4">
               Downloads &amp; Admissions
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2 mb-4">
+              {phases.map((p) => (
+                <li key={p.href}>
+                  <Link
+                    href={p.href}
+                    className="text-blue-200 text-sm hover:text-white transition-colors"
+                  >
+                    {p.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className="space-y-2 pt-3 border-t border-white/10">
               {downloads.map((d) => (
                 <li key={d.label}>
                   <a
@@ -122,7 +137,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <div className="mt-6">
+            <div className="mt-5">
               <Link
                 href="/admissions"
                 className="inline-block px-5 py-2.5 bg-white text-[#0C0E6B] font-bold rounded-lg text-sm hover:bg-blue-50 transition-colors"
@@ -134,10 +149,10 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <div>
-            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-5">
+            <h3 className="text-white font-semibold text-xs uppercase tracking-wider mb-4">
               Get In Touch
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <MapPin size={15} className="text-white mt-0.5 shrink-0" />
                 <span className="text-blue-200 text-sm leading-snug">
@@ -173,7 +188,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-400">
           <p>
             &copy; {new Date().getFullYear()} Stutterheim International School (Pty) Ltd. All rights reserved.
           </p>

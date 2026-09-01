@@ -58,23 +58,23 @@ export default function AnimatedStats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#0C0E6B] py-12 px-4">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-5">
+    <section ref={sectionRef} className="bg-[#0C0E6B] py-8 px-4">
+      <div className="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((s) => (
-          <div key={s.label} className="flip-card h-40 cursor-pointer">
+          <div key={s.label} className="flip-card h-28 cursor-pointer">
             <div className="flip-card-inner">
               {/* Front — the number */}
-              <div className="flip-card-front bg-white/10 border border-white/15 p-5 flex flex-col items-center justify-center text-center">
-                <s.icon className="w-6 h-6 text-blue-300 mb-2" />
-                <p className="text-3xl sm:text-4xl font-bold text-white leading-none mb-1.5">
+              <div className="flip-card-front bg-white/10 border border-white/15 p-3 flex flex-col items-center justify-center text-center">
+                <s.icon className="w-4 h-4 text-blue-300 mb-1.5" />
+                <p className="text-2xl sm:text-3xl font-bold text-white leading-none mb-1">
                   <Counter end={s.end} suffix={s.suffix} trigger={triggered} />
                 </p>
-                <p className="text-blue-200 text-xs font-medium leading-snug">{s.label}</p>
+                <p className="text-blue-200 text-[11px] font-medium leading-snug">{s.label}</p>
               </div>
               {/* Back — the blurb */}
-              <div className="flip-card-back bg-white p-5 flex flex-col items-center justify-center text-center shadow-lg">
-                <s.icon className="w-6 h-6 text-[#0C0E6B] mb-2" />
-                <p className="text-[#0C0E6B] text-xs font-semibold leading-relaxed">{s.blurb}</p>
+              <div className="flip-card-back bg-white p-3 flex flex-col items-center justify-center text-center shadow-lg">
+                <s.icon className="w-4 h-4 text-[#0C0E6B] mb-1.5" />
+                <p className="text-[#0C0E6B] text-[11px] font-semibold leading-relaxed">{s.blurb}</p>
               </div>
             </div>
           </div>

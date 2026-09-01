@@ -31,7 +31,7 @@ export default function HeroSlider() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden h-[60vh] min-h-[360px] max-h-[520px]">
+    <section className="relative overflow-hidden h-[60vh] min-h-[420px] max-h-[540px]">
       {/* Slides */}
       {slides.map((slide, i) => (
         <div
@@ -56,47 +56,45 @@ export default function HeroSlider() {
       <div className="absolute inset-0 flex items-center">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full">
           <div className="max-w-xl ml-auto text-right">
-            <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.25em] mb-4">
+            <p className="text-blue-200 text-xs font-semibold uppercase tracking-[0.25em] mb-3">
               Stutterheim, Eastern Cape
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5 drop-shadow">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 drop-shadow">
               Shaping Tomorrow&apos;s<br />Leaders Today
             </h1>
-            <p className="text-blue-100 text-base sm:text-lg leading-relaxed mb-8">
+            <p className="text-blue-100 text-sm sm:text-base leading-relaxed mb-6">
               A premier private school offering Pre-School, Primary &amp; Senior Phase
               education — academic excellence, holistic development, and boarding facilities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-end">
+            <div className="flex flex-col sm:flex-row gap-3 justify-end mb-5">
               <Link
                 href="/admissions"
-                className="px-7 py-3.5 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm shadow"
+                className="px-7 py-3 bg-white text-[#0C0E6B] font-bold rounded-lg hover:bg-blue-50 transition-all hover:scale-105 text-sm shadow"
               >
                 Apply for 2027
               </Link>
               <Link
                 href="/about"
-                className="px-7 py-3.5 border-2 border-white/70 text-white font-semibold rounded-lg hover:bg-white/10 transition-all hover:scale-105 text-sm"
+                className="px-7 py-3 border-2 border-white/70 text-white font-semibold rounded-lg hover:bg-white/10 transition-all hover:scale-105 text-sm"
               >
                 Learn More →
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Dot indicators — bottom right to match text alignment */}
-      <div className="absolute bottom-6 left-0 right-0">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex gap-2 justify-end">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === current ? "w-8 bg-white" : "w-2 bg-white/40 hover:bg-white/70"
-              }`}
-            />
-          ))}
+            {/* Dot indicators — inline, not overlapping the CTAs */}
+            <div className="flex gap-2 justify-end">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Go to slide ${i + 1}`}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    i === current ? "w-8 bg-white" : "w-2 bg-white/40 hover:bg-white/70"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
