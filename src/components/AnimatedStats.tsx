@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { BookOpen, Users, GraduationCap, Award } from "lucide-react";
 
 const stats = [
-  { end: 20, suffix: "+", label: "Subjects Offered" },
-  { end: 60, suffix: "+", label: "Students Enrolled" },
-  { end: 6, suffix: "+", label: "Qualified Teachers" },
-  { end: 2, suffix: "+", label: "Awards & Achievements" },
+  { end: 20, suffix: "+", label: "Subjects Offered", blurb: "Languages, Sciences, Commerce, Humanities, Arts & Technology.", icon: BookOpen },
+  { end: 60, suffix: "+", label: "Students Enrolled", blurb: "A close-knit school community from Grade R to Grade 9.", icon: Users },
+  { end: 6, suffix: "+", label: "Qualified Teachers", blurb: "Experienced, dedicated educators across every phase.", icon: GraduationCap },
+  { end: 2, suffix: "+", label: "Awards & Achievements", blurb: "Recognised for academic and extracurricular excellence.", icon: Award },
 ];
 
 function Counter({ end, suffix, trigger }: { end: number; suffix: string; trigger: boolean }) {
@@ -30,7 +31,7 @@ function Counter({ end, suffix, trigger }: { end: number; suffix: string; trigge
   }, [trigger, end]);
 
   return (
-    <span className="tabular-nums text-white">
+    <span className="tabular-nums">
       {count}{suffix}
     </span>
   );
@@ -57,14 +58,25 @@ export default function AnimatedStats() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#0C0E6B] text-white py-16 px-4">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+    <section ref={sectionRef} className="bg-[#0C0E6B] py-12 px-4">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-5">
         {stats.map((s) => (
-          <div key={s.label} className="flex flex-col items-center gap-2">
-            <p className="text-5xl lg:text-6xl font-bold text-white">
-              <Counter end={s.end} suffix={s.suffix} trigger={triggered} />
-            </p>
-            <p className="text-blue-200 text-sm font-medium leading-snug max-w-[120px]">{s.label}</p>
+          <div key={s.label} className="flip-card h-40 cursor-pointer">
+            <div className="flip-card-inner">
+              {/* Front — the number */}
+              <div className="flip-card-front bg-white/10 border border-white/15 p-5 flex flex-col items-center justify-center text-center">
+                <s.icon className="w-6 h-6 text-blue-300 mb-2" />
+                <p className="text-3xl sm:text-4xl font-bold text-white leading-none mb-1.5">
+                  <Counter end={s.end} suffix={s.suffix} trigger={triggered} />
+                </p>
+                <p className="text-blue-200 text-xs font-medium leading-snug">{s.label}</p>
+              </div>
+              {/* Back — the blurb */}
+              <div className="flip-card-back bg-white p-5 flex flex-col items-center justify-center text-center shadow-lg">
+                <s.icon className="w-6 h-6 text-[#0C0E6B] mb-2" />
+                <p className="text-[#0C0E6B] text-xs font-semibold leading-relaxed">{s.blurb}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>

@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -21,33 +18,6 @@ const downloads = [
   { href: "/downloads/SIS-Application-Form-2027.pdf", label: "Download Application Form" },
   { href: "/fees", label: "Fee Structure" },
   { href: "mailto:sis@stutterheimschool.co.za?subject=School%20Brochure%20Request", label: "Request School Brochure" },
-];
-
-const faqs = [
-  {
-    q: "When do applications open for 2027?",
-    a: "Applications for the 2027 academic year are now open. We encourage early applications as spaces are limited across all grades.",
-  },
-  {
-    q: "Does SIS offer boarding?",
-    a: "Yes. SIS has a residential boarding facility for learners who travel from outside Stutterheim. Contact us early to secure a boarding space.",
-  },
-  {
-    q: "What grades does SIS offer?",
-    a: "We offer Grade R (Pre-School) through Grade 9, covering Foundation Phase, Intermediate Phase, and Senior Phase.",
-  },
-  {
-    q: "How many subjects are offered?",
-    a: "SIS offers 20+ subjects across all phases including Languages, Mathematics, Sciences, Commerce, Humanities, Arts, and Technology.",
-  },
-  {
-    q: "What are the school fees?",
-    a: "Please visit our Fees page or contact the office directly. A full fee schedule is available on request or as a download.",
-  },
-  {
-    q: "How do I contact the school?",
-    a: "Call us on (067) 397-7613, email sis@stutterheimschool.co.za, or visit 49 Louisa Street, Stutterheim, Eastern Cape.",
-  },
 ];
 
 const socials = [
@@ -80,30 +50,6 @@ const socials = [
   },
 ];
 
-function FaqItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="border-b border-white/10 last:border-0">
-      <button
-        className="w-full flex items-center justify-between py-2.5 text-left gap-3 group"
-        onClick={() => setOpen(!open)}
-        aria-expanded={open}
-      >
-        <span className="text-xs text-blue-100 font-medium group-hover:text-white transition-colors leading-snug">
-          {q}
-        </span>
-        <ChevronDown
-          size={14}
-          className={`text-blue-300 shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-        />
-      </button>
-      {open && (
-        <p className="text-blue-300 text-xs leading-relaxed pb-3 pr-5">{a}</p>
-      )}
-    </div>
-  );
-}
-
 export default function Footer() {
   return (
     <footer className="bg-[#0d1060] text-white">
@@ -116,7 +62,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/logo.png" alt="Stutterheim International School" className="h-16 w-auto object-contain" />
+              <img src="/images/logo-transparent.png" alt="Stutterheim International School" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-blue-200 text-sm leading-relaxed mb-6">
               Providing academic excellence and holistic development to learners in
@@ -225,23 +171,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Compact FAQ strip */}
-      <div className="border-t border-white/10 bg-black/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-baseline justify-between gap-4 mb-1">
-            <p className="text-white font-semibold text-sm">Frequently Asked Questions</p>
-            <Link href="/contact" className="text-blue-300 text-xs hover:text-white transition-colors shrink-0">
-              Can&apos;t find what you need? Contact us →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-10 divide-y divide-white/10 sm:divide-y-0">
-            {faqs.map((faq) => (
-              <FaqItem key={faq.q} q={faq.q} a={faq.a} />
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-400">
@@ -249,6 +178,10 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Stutterheim International School (Pty) Ltd. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
+            <Link href="/admissions#faq" className="hover:text-white transition-colors">
+              FAQ
+            </Link>
+            <span className="text-white/20">·</span>
             <Link href="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
