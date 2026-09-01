@@ -221,7 +221,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* FAQ accordion */}
-      <section className="py-20 px-4 bg-[#E8EAEE]">
+      <section id="faq" className="py-20 px-4 bg-[#E8EAEE]">
         <div className="max-w-3xl mx-auto">
           <FadeIn className="text-center mb-12">
             <p className="text-blue-500 text-xs font-semibold uppercase tracking-[0.2em] mb-3">
