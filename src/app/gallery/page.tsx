@@ -13,6 +13,7 @@ const BASE = "/extra-images";
 
 const categories = [
   "All",
+  "Venom Pit Excursion 2026",
   "Beauty Contest 2026",
   "Athletics Day 2026",
   "Sports & Activities",
@@ -29,6 +30,17 @@ interface GalleryImage {
 }
 
 const images: GalleryImage[] = [
+  // ── Venom Pit Excursion 2026 ─────────────────────────────────────────────
+  { src: `${BASE}/venom-pit-20260905-1.jpeg`, label: "Venom Pit Excursion — Group at Entrance",    category: "Venom Pit Excursion 2026" },
+  { src: `${BASE}/venom-pit-20260905-2.jpeg`, label: "Venom Pit Excursion — Handling a Snake",     category: "Venom Pit Excursion 2026" },
+  { src: `${BASE}/venom-pit-20260905-3.jpeg`, label: "Venom Pit Excursion — Corn Snake Up Close",  category: "Venom Pit Excursion 2026" },
+  { src: `${BASE}/venom-pit-20260905-4.jpeg`, label: "Venom Pit Excursion — Brave Learners",       category: "Venom Pit Excursion 2026" },
+  { src: `${BASE}/venom-pit-20260905-5.jpeg`, label: "Venom Pit Excursion — Ball Python Together", category: "Venom Pit Excursion 2026" },
+  { src: `${BASE}/venom-pit-20260905-6.jpeg`, label: "Venom Pit Excursion — Snake Handler",        category: "Venom Pit Excursion 2026" },
+  { src: `${BASE}/venom-pit-20260905-7.jpeg`, label: "Venom Pit Excursion — Meeting the Python",   category: "Venom Pit Excursion 2026" },
+  { src: `${BASE}/venom-pit-20260905-8.jpeg`, label: "Venom Pit Excursion — Python Around Neck",   category: "Venom Pit Excursion 2026" },
+  { src: `${BASE}/venom-pit-20260905-9.jpeg`, label: "Venom Pit Excursion — Facing the Fear",      category: "Venom Pit Excursion 2026" },
+
   // ── Beauty Contest 2026 ──────────────────────────────────────────────────
   { src: `${BASE}/beauty-contest-20260606-1.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
   { src: `${BASE}/beauty-contest-20260606-2.jpeg`, label: "Beauty Contest 2026", category: "Beauty Contest 2026" },
@@ -119,6 +131,13 @@ const images: GalleryImage[] = [
 const featuredAlbums: {
   key: Category; title: string; date: string; description: string;
 }[] = [
+  {
+    key: "Venom Pit Excursion 2026",
+    title: "Venom Pit Excursion 2026",
+    date: "5 September 2026",
+    description:
+      "Learners visited The Venom Pit Snake Park in East London for a hands-on wildlife encounter — handling corn snakes and pythons and getting up close with nature in the most unforgettable way.",
+  },
   {
     key: "Beauty Contest 2026",
     title: "Beauty Contest 2026",
