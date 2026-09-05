@@ -1,12 +1,12 @@
 const BASE = "/extra-images";
 
 const partners = [
-  { src: `${BASE}/flicker-01.jpg`,   name: "Dept. of Basic Education", h: 170 },
+  { src: `${BASE}/flicker-01.jpg`,   name: "Dept. of Basic Education", h: 180 },
   { src: `${BASE}/sikatrix.webp`,    name: "Sikatrix Accountants",     h: 38  },
-  { src: `${BASE}/flicker-03.jpg`,   name: "EC Dept. of Education",    h: 170 },
-  { src: `${BASE}/flicker-04.jpg`,   name: "UMALUSI",                  h: 170 },
-  { src: `${BASE}/flicker-05.jpg`,   name: "Education South Africa",   h: 170 },
-  { src: `${BASE}/flicker-06.jpg`,   name: "W&RSETA",                  h: 170 },
+  { src: `${BASE}/flicker-03.jpg`,   name: "EC Dept. of Education",    h: 180 },
+  { src: `${BASE}/flicker-04.jpg`,   name: "UMALUSI",                  h: 180 },
+  { src: `${BASE}/flicker-05.jpg`,   name: "Education South Africa",   h: 180 },
+  { src: `${BASE}/flicker-06.jpg`,   name: "W&RSETA",                  h: 180 },
 ];
 
 const track = [...partners, ...partners, ...partners, ...partners];
@@ -25,8 +25,8 @@ export default function PartnersMarquee() {
           {track.map((p, i) => (
             <div
               key={i}
-              className="flex-shrink-0 flex items-center justify-center px-1"
-              style={{ height: "170px" }}
+              className="flex-shrink-0 flex items-center justify-center"
+              style={{ height: "180px" }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
