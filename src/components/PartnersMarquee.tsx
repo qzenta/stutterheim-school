@@ -1,12 +1,12 @@
 const BASE = "/extra-images";
 
 const partners = [
-  { src: `${BASE}/flicker-01.jpg`,   name: "Dept. of Basic Education" },
-  { src: `${BASE}/sikatrix.webp`,    name: "Sikatrix Accountants" },
-  { src: `${BASE}/flicker-03.jpg`,   name: "EC Dept. of Education" },
-  { src: `${BASE}/flicker-04.jpg`,   name: "UMALUSI" },
-  { src: `${BASE}/flicker-05.jpg`,   name: "Education South Africa" },
-  { src: `${BASE}/flicker-06.jpg`,   name: "W&RSETA" },
+  { src: `${BASE}/flicker-01.jpg`,   name: "Dept. of Basic Education", h: 72 },
+  { src: `${BASE}/sikatrix.webp`,    name: "Sikatrix Accountants",     h: 38 },
+  { src: `${BASE}/flicker-03.jpg`,   name: "EC Dept. of Education",    h: 72 },
+  { src: `${BASE}/flicker-04.jpg`,   name: "UMALUSI",                  h: 72 },
+  { src: `${BASE}/flicker-05.jpg`,   name: "Education South Africa",   h: 72 },
+  { src: `${BASE}/flicker-06.jpg`,   name: "W&RSETA",                  h: 72 },
 ];
 
 const track = [...partners, ...partners, ...partners, ...partners];
@@ -32,7 +32,7 @@ export default function PartnersMarquee() {
               <img
                 src={p.src}
                 alt={p.name}
-                style={{ height: "72px", width: "auto", maxWidth: "160px", objectFit: "contain" }}
+                style={{ height: `${p.h}px`, width: "auto", maxWidth: "160px", objectFit: "contain" }}
                 className="transition-all duration-300 hover:scale-105"
                 loading="lazy"
               />
