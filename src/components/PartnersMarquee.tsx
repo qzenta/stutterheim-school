@@ -1,18 +1,14 @@
 const BASE = "/extra-images";
 
 const partners = [
-  { src: `${BASE}/flicker-01.jpg`, name: "Dept. of Basic Education", h: 96, maxW: 160 },
-  { src: `/extra-images/sikatrix.webp`, name: "Sikatrix Accountants", h: 72, maxW: 160 },
-  { src: `${BASE}/flicker-03.jpg`, name: "EC Dept. of Education", h: 96, maxW: 160 },
-  { src: `${BASE}/flicker-04.jpg`, name: "UMALUSI", h: 96, maxW: 160 },
-  { src: `${BASE}/flicker-05.jpg`, name: "Education South Africa", h: 96, maxW: 160 },
-  { src: `${BASE}/flicker-06.jpg`, name: "W&RSETA", h: 96, maxW: 180 },
-  { src: `${BASE}/flicker-07.jpg`, name: "Macmillan Education", h: 96, maxW: 180 },
+  { src: `${BASE}/flicker-01.jpg`,   name: "Dept. of Basic Education" },
+  { src: `${BASE}/sikatrix.webp`,    name: "Sikatrix Accountants" },
+  { src: `${BASE}/flicker-03.jpg`,   name: "EC Dept. of Education" },
+  { src: `${BASE}/flicker-04.jpg`,   name: "UMALUSI" },
+  { src: `${BASE}/flicker-05.jpg`,   name: "Education South Africa" },
+  { src: `${BASE}/flicker-06.jpg`,   name: "W&RSETA" },
 ];
 
-// Repeat the array so the track is always wider than the viewport at any
-// screen size — with only 2 copies, wide viewports could scroll past the
-// end of the content before the loop restarted, showing a blank gap.
 const track = [...partners, ...partners, ...partners, ...partners];
 
 export default function PartnersMarquee() {
@@ -24,20 +20,19 @@ export default function PartnersMarquee() {
         </p>
       </div>
 
-      {/* Marquee track */}
       <div className="relative flex overflow-hidden select-none">
         <div className="animate-partners flex items-center gap-2 will-change-transform">
           {track.map((p, i) => (
             <div
               key={i}
-              className="flex-shrink-0 flex items-center justify-center"
-              style={{ height: "80px" }}
+              className="flex-shrink-0 flex items-center justify-center px-6"
+              style={{ height: "72px" }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={p.src}
                 alt={p.name}
-                style={{ height: `${p.h}px`, width: "auto", maxWidth: `${p.maxW}px`, objectFit: "contain" }}
+                style={{ height: "72px", width: "auto", maxWidth: "160px", objectFit: "contain" }}
                 className="transition-all duration-300 hover:scale-105"
                 loading="lazy"
               />
